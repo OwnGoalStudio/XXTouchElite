@@ -4,44 +4,37 @@ sidebar_position: 1
 
 # Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+![Intro.001](img/Intro.001.png)
 
-## Getting Started
+XXTouch Elite is a powerful and flexible tool that allows you to create custom automation scripts for your devices. With XXTouch Elite, you can automate repetitive tasks, control smart home devices, and much more.
 
-Get started by **creating a new site**.
+XXTouch Elite uses [Lua](https://www.lua.org/) (v5.3) as its scripting language, which is a lightweight and **easy-to-learn** programming language. Lua is known for its simplicity and flexibility, making it an ideal choice for automation tasks.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+This documentation will guide you through the process of getting started with XXTouch Elite, including installation, configuration, and writing your first script. Whether you’re a beginner or an experienced programmer, you’ll find everything you need to know to start automating your devices with XXTouch Elite.
 
-### What you'll need
+## Requirements
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- XXTouch Elite is designed to work on iPhone/iPad with iOS 14 and later.
+- You need to [jailbreak your device](https://ios.cfw.guide/types-of-jailbreak/) to use XXTouch Elite. Following jailbreak methods are supported and tested:
+  - [unc0ver](https://unc0ver.dev/)
+  - [Taurine](https://taurine.app/)
+  - [Palera1n](https://palera.in/) (Rootless)
+  - [Dopamine](https://ellekit.space/dopamine/) (Rootless and RootHide)
 
-## Generate a new site
+![Requirements.002](img/Requirements.002.png)
 
-Generate a new Docusaurus site using the **classic template**.
+## Installation
 
-The classic template will automatically be added to your project after you run the command:
+1. Buy “[XXTouch Elite](https://havoc.app/package/xxtouchelite)” from Havoc Repo.
+2. Install “XXTouch Elite” from Sileo package manager.
+3. You may need to restart your device after installation.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+![Requirements.003](img/Requirements.003.png)
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+## Updating your XXTouch Elite version
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+Keep your XXTouch Elite up to date by checking for updates in Sileo. You can also enable automatic updates in Sileo settings.
 
-## Start your site
+## Problems?
 
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Ask for help on our [GitHub repository](https://github.com/OwnGoalStudio/XXTouchElite/issues) or join our [Discord server](https://discord.gg/owngoalstudio). We are happy to help you with any issues you may encounter while using XXTouch Elite.
