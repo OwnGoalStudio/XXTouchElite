@@ -82,9 +82,9 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'developerManual',
+          sidebarId: 'appendixSidebar',
           position: 'left',
-          label: 'Manual',
+          label: 'Appendix',
         },
         {
           to: '/blog',
