@@ -28,7 +28,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh-Hans'],
+    locales: ['en'],
   },
 
   presets: [
@@ -82,6 +82,12 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
+          sidebarId: 'luaManualSidebar',
+          position: 'left',
+          label: 'Lua Manual',
+        },
+        {
+          type: 'docSidebar',
           sidebarId: 'appendixSidebar',
           position: 'left',
           label: 'Appendix',
@@ -90,6 +96,11 @@ const config: Config = {
           to: '/blog',
           label: 'Blog',
           position: 'left',
+        },
+        {
+          href: 'https://elite.82flex.com',
+          label: 'Open API',
+          position: 'right',
         },
         {
           href: 'https://github.com/OwnGoalStudio/XXTouchElite',
@@ -149,6 +160,33 @@ const config: Config = {
       additionalLanguages: ['lua'],
     },
   } satisfies Preset.ThemeConfig,
+
+  themes: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        language: ["en"],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        docsRouteBasePath: "/",
+        blogRouteBasePath: "/blog",
+      },
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        quality: 70,
+        max: 1280,    // max resized image's size.
+        min: 640,     // min resized image's size. if original is lower, use that size.
+        steps: 4,     // the max number of images generated between min and max (inclusive)
+        disableInDev: false,
+      },
+    ],
+  ],
 };
 
 export default config;

@@ -22,7 +22,7 @@ Open **X.X.T.E. Application** → **More** → **User Defaults** → **Daemon Co
 
 ### Enable via OpenAPI
 
-Use the OpenAPI interface [**Set User Preferences**](https://openapi-ng.82flex.com/api-111064044) with the `script_on_daemon` field to enable or disable daemon mode.
+Use the OpenAPI interface [**Set User Preferences**](https://elite.82flex.com/api-283425315) with the `script_on_daemon` field to enable or disable daemon mode.
 
 ## Notes
 

@@ -25,7 +25,7 @@ print([ argument1, argument2, ... ])
 #### Parameters and Return Values
 
 - argument1, argument2, ...
-  - *Any type*, *optional*, *variadic arguments*, will be converted to text and output to the buffer, separated by `"\t"`.
+  - *any*, *optional*, *variadic arguments*, will be converted to text and output to the buffer, separated by `"\t"`.
 
 :::note
 [`print`](http://cloudwu.github.io/lua53doc/manual.html#pdf-print) is a built-in Lua function for printing. In XXTouch Elite, it prints content to the buffer.
@@ -69,7 +69,7 @@ nLog([ argument1, argument2, ... ])
 #### Parameters and Return Values
 
 - argument1, argument2, ...
-  - *Any type*, *optional*, *variadic arguments*, will be converted to text and output to the buffer, separated by `"\t"`.
+  - *any*, *optional*, *variadic arguments*, will be converted to text and output to the buffer, separated by `"\t"`.
 
 #### Description
 

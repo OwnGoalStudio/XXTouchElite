@@ -4,6 +4,84 @@ sidebar_position: 21
 
 # Supported URL Schemes
 
+This protocol specifies the actions and parameters supported by XXTouch Elite’s URL Scheme.
+
+- Opening URLs in the form of `xxt://`.
+- Scanning QR codes containing URLs in the form of `xxt://`.
+- Scanning QR codes containing action and parameter dictionaries.
+
+These three methods will wake up XXTouch Elite and trigger corresponding behaviors.
+
+## Open QR Scanner
+
+```txt
+xxt://scan/
+```
+
+```json
+{
+    "event": "scan"
+}
+```
+
+## Run Script
+
+```txt
+xxt://launch/
+xxt://launch/?path=%@
+```
+
+`path` is the absolute path of the script to run. If the `path` parameter is not specified, the currently selected script will run.
+
+```json
+{
+    "event": "launch",
+    "path": "Absolute path of the script to run"
+}
+```
+
+## Stop Script
+
+```txt
+xxt://stop/
+```
+
+```json
+{
+    "event": "stop"
+}
+```
+
+## Download Related
+
+```txt
+xxt://download/?path=%@&url=%@
+```
+
+Download a file from the specified URL. `path` is the filename to save as, and `url` is the specified URL.
+
+:::note
+If `path` is not specified, the filename will be automatically guessed from the target URL, or the last part of the URL will be used as the filename.
+
+`path` can be specified as an absolute path or a relative path. If specified as a relative path, it is relative to the directory currently open in the App’s file browser.
+:::
+
+## Restore Workspace
+
+```txt
+xxt://workspace/
+```
+
+Restore XXTouch Elite to the state when the application was just launched, exiting all open interfaces.
+
+```json
+{
+    "event":"workspace"
+}
+```
+
+## Settings URL Schemes
+
 - Apple ID → (root): `prefs:root=APPLE_ACCOUNT`
 - Apple ID → Name, Phone Numbers, Email: `prefs:root=APPLE_ACCOUNT&path=APPLE_ACCOUNT_CONTACT`
 - Apple ID → Password & Security: `prefs:root=APPLE_ACCOUNT&path=PASSWORD_AND_SECURITY`

@@ -7,13 +7,13 @@ sidebar_position: 5
 Each script in XXTouch Elite runs as an independent process, referred to as a **script process**. To avoid conflicts and management difficulties caused by multiple script processes running simultaneously, script processes dispatched in the following ways can only have **one instance** at a time:
 
 - Started via volume keys
-- Started via [OpenAPI](https://openapi-ng.82flex.com/api-111064056) calls
+- Started via [OpenAPI](https://elite.82flex.com/api-283425278) calls
 - Triggered by [Activator](https://cydia.saurik.com/package/libactivator/) events
 - Started via the X.X.T.E. application interface
 - Directly [debugged](../tutorial-basics/debug-your-script.md) or launched via IDEs like VSCode plugins, XXTStudio, etc.
 - Started remotely via group control software, cloud control software, etc.
 - Restarted by “[Daemon Mode](daemon-mode.md)” after unexpected termination
-- Started by features like “[Startup](https://openapi-ng.82flex.com/api-111064042)” or “Scheduled Tasks”
+- Started by features like “[Startup Script](https://elite.82flex.com/api-283425313)” or “Scheduled Tasks”
 
 :::info
 
@@ -29,7 +29,7 @@ Script processes can be terminated in the following ways:
 - [`os.exit`](https://cloudwu.github.io/lua53doc/manual.html#pdf-os.exit)
 - Script execution completion
 - Stopped via volume keys
-- Stopped via [OpenAPI](https://openapi-ng.82flex.com/api-111064052) calls
+- Stopped via [OpenAPI](https://elite.82flex.com/api-283425274) calls
 - Stopped via [Activator](https://cydia.saurik.com/package/libactivator/) events
 - Stopped via IDEs like VSCode plugins, XXTStudio, etc.
 - Stopped remotely via group control software, cloud control software, etc.
@@ -50,10 +50,10 @@ success, failure_reason = os.restart([ script_name ])
 #### Parameters and Return Values
 
 - script_name
-  - *String*, *Optional*, a valid script name. Defaults to `""`
+  - *string*, *optional*, a valid script name. Defaults to `""`
 - success
-  - *Boolean*, operation can only fail if a **script name** is provided; if successful, this function does not return
-- failure_reason *String*
+  - *boolean*, operation can only fail if a **script name** is provided; if successful, this function does not return
+- failure_reason *string*
 
 #### Description
 
@@ -93,17 +93,17 @@ success, reason, exit_code_or_signal, stdout, stderr = os.run(command[, timeout_
 
 #### Parameters and Return Values
 
-- command *String*
-- timeout_seconds *Integer*, *Optional*
-- success *Boolean*
+- command *string*
+- timeout_seconds *integer*, *optional*
+- success *boolean*
   - Returns `true` if successful
   - Returns `nil` instead of `false` if failed
-- reason *Enum*
+- reason *enum*
   - `exit`: Command completed normally; the next number is the **exit code**
   - `signal`: Command was interrupted by a signal; the next number is the **signal value**
-- exit_code_or_signal *Integer*
-- stdout *String*
-- stderr *String*
+- exit_code_or_signal *integer*
+- stdout *string*
+- stderr *string*
 
 #### Description
 
@@ -176,7 +176,7 @@ os.run("lua -e \"sys.alert(1)\"", 3)
 
 ## Script Termination Callback
 
-This is not a function but a method that utilizes Lua's garbage collection mechanism to execute some code when the script ends (or is terminated).
+This is not a function but a method that utilizes Lua’s garbage collection mechanism to execute some code when the script ends (or is terminated).
 
 ### Simple Example
 
@@ -197,7 +197,7 @@ end
 ```
 
 :::note
-Define a global object (table value) and set its **destructor** to a function. When the Lua virtual machine ends, the **destructor** of all Lua objects (including the one you defined) will be called. In Lua, a **destructor** refers to the object's [\_\_gc metamethod](http://cloudwu.github.io/lua53doc/manual.html#2.4).
+Define a global object (table value) and set its **destructor** to a function. When the Lua virtual machine ends, the **destructor** of all Lua objects (including the one you defined) will be called. In Lua, a **destructor** refers to the object’s [\_\_gc metamethod](http://cloudwu.github.io/lua53doc/manual.html#2.4).
 :::
 
 ### Complete Encapsulation Example
@@ -246,7 +246,7 @@ notify_post(notification_name)
 
 #### Parameters and Return Values
 
-- notification_name *String*
+- notification_name *string*
   - `ch.xxtou.notification.remote-access.on`: [Enable Remote Access](../tutorial-basics/create-a-workspace.md#enable-remote-access)
   - `ch.xxtou.notification.remote-access.off`: Disable Remote Access
   - `ch.xxtou.notification.restart`: Immediately terminate the script and restart the XXTouch Elite daemon
@@ -266,12 +266,12 @@ success = lockfile(file_path)
 
 #### Parameters and Return Values
 
-- file_path *String*
-- success *Boolean*
+- file_path *string*
+- success *boolean*
 
 #### Description
 
-Creates or locks the **file path** and writes the script process's process ID as text. This is equivalent to a [`pidfile`](https://unix.stackexchange.com/questions/12815/what-are-pid-and-lock-files-for), preventing multiple singleton scripts from running simultaneously.
+Creates or locks the **file path** and writes the script process’s process ID as text. This is equivalent to a [`pidfile`](https://unix.stackexchange.com/questions/12815/what-are-pid-and-lock-files-for), preventing multiple singleton scripts from running simultaneously.
 
 #### Example
 

@@ -16,10 +16,10 @@ The startup script can be selected through **X.X.T.E. Application** → **More**
 
 Use the following OpenAPI interfaces to retrieve or modify the startup settings:
 
-* [Enable Startup](https://openapi-ng.82flex.com/api-111064040)
-* [Disable Startup](https://openapi-ng.82flex.com/api-111064041)
-* [Select Startup Script](https://openapi-ng.82flex.com/api-111064042)
-* [Retrieve Startup Settings](https://openapi-ng.82flex.com/api-111064039)
+* [Enable Startup Script](https://elite.82flex.com/api-283425310)
+* [Disable Startup Script](https://elite.82flex.com/api-283425311)
+* [Select Startup Script](https://elite.82flex.com/api-283425313)
+* [Retrieve Startup Settings](https://elite.82flex.com/api-283425312)
 
 ## Timing of Startup Execution
 

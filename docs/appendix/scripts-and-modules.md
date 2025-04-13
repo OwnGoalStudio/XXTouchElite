@@ -12,7 +12,7 @@ The supported script and module file extensions for XXTouch Elite are:
 
 ## Encrypted Scripts
 
-You can use [OpenAPI](https://openapi-ng.82flex.com/api-111064051) to encrypt plain Lua scripts. During encryption, you can choose whether to retain debug symbols. If debug symbols are retained, the script can display function names and line numbers from the source file when errors occur; otherwise, this information is removed to ensure the security of the source code.
+You can use [OpenAPI](https://elite.82flex.com/api-283425279) to encrypt plain Lua scripts. During encryption, you can choose whether to retain debug symbols. If debug symbols are retained, the script can display function names and line numbers from the source file when errors occur; otherwise, this information is removed to ensure the security of the source code.
 
 XXTouch Elite does not support encrypted scripts from XXTouch, nor does it support `.luac` Lua bytecode that is only compiled but not encrypted.
 
