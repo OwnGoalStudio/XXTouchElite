@@ -156,7 +156,7 @@ screen_capture_count = screen.keep()
 #### Parameters and Return Values
 
 * screen_capture_count
-  * *integer*, returns the number of times the current [script process](../basic-concepts/process-control-flow.md) has captured the screen content
+  * *integer*, returns the number of times the current [script process](../appendix/process-scheduling.md) has captured the screen content
 
 #### Description
 
@@ -202,7 +202,7 @@ screen_capture_count = screen.unkeep()
 #### Parameters and Return Values
 
 * screen_capture_count
-  * *integer*, returns the number of times the current [script process](../basic-concepts/process-control-flow.md) has captured the screen content
+  * *integer*, returns the number of times the current [script process](../appendix/process-scheduling.md) has captured the screen content
 
 #### Description
 

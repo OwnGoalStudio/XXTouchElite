@@ -26,7 +26,7 @@ otp = auth.totp_next(UNIX_timestamp, QR_code_URL[, secret_key])
 #### Parameters and Return Values
 
 - UNIX_timestamp
-  - *integer*, can be obtained using the [`os.time`](https://cloudwu.github.io/lua53doc/manual.html#pdf-os.time) or [`sys.net_time`](sys.md#获取网络时间-sysnettime) functions.
+  - *integer*, can be obtained using the [`os.time`](https://cloudwu.github.io/lua53doc/manual.html#pdf-os.time) or [`sys.net_time`](sys.md#get-network-time-sysnet_time) functions.
 - QR_code_URL
   - *string*, a URL starting with `otpauth://totp/`.
 - secret_key
@@ -38,7 +38,7 @@ otp = auth.totp_next(UNIX_timestamp, QR_code_URL[, secret_key])
 The time-based one-time password algorithm defined in [RFC 6238](https://www.rfc-editor.org/rfc/rfc6238) is used to generate time-based one-time passwords. It is commonly used in two-factor authentication scenarios such as Google Authenticator.
 
 :::tip
-Use the [`screen.qr_decode`](screen.mdx#-屏幕二维码识别-screenqr_decode) or [`image:qr_decode`](img.md#图片二维码识别-imageqr_decode) functions to recognize QR codes on the screen or in images to obtain the **QR_code_URL**.
+Use the [`screen.qr_decode`](screen.md#-screen-qr-code-recognition-screenqr_decode) or [`image:qr_decode`](img.md#qr-code-recognition-in-an-image-imageqr_decode) functions to recognize QR codes on the screen or in images to obtain the **QR_code_URL**.
 :::
 
 #### Example
@@ -73,7 +73,7 @@ otp = auth.hotp_counter(counter, QR_code_URL[, secret_key])
 
 #### Description
 
-The HMAC-based one-time password algorithm defined in [RFC 4226](https://www.rfc-editor.org/rfc/rfc4226) is less commonly used than [`auth.totp_next`](#生成基于时间的一次性密码-authtotp_next).
+The HMAC-based one-time password algorithm defined in [RFC 4226](https://www.rfc-editor.org/rfc/rfc4226) is less commonly used than [`auth.totp_next`](#generate-time-based-one-time-password-authtotp_next).
 
 :::info
 `auth.hotp_next` internally maintains a counter initialized to 0. Each call increments the counter by 1 and then calls the `auth.hotp_counter` function.

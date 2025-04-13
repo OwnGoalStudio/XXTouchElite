@@ -61,7 +61,7 @@ success = clear.privileges(identifier)
 #### Parameters and Return Values
 
 - identifier
-  - *string*, [App Identifier](app.md#标识符)
+  - *string*, [App Identifier](app.md#identifier)
 - success *boolean*
 
 #### Description
@@ -163,7 +163,7 @@ success = clear.app_data(identifier)
 #### Parameters and Return Values
 
 - identifier
-  - *string*, [App Identifier](app.md#标识符)
+  - *string*, [App Identifier](app.md#identifier)
 - success *boolean*
 
 #### Description
@@ -268,7 +268,7 @@ success = clear.push_notifications(identifier)
 #### Parameters and Return Values
 
 - identifier
-  - *string*, [App Identifier](app.md#标识符)
+  - *string*, [App Identifier](app.md#identifier)
 - success *boolean*
 
 :::info

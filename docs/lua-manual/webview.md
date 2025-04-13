@@ -67,7 +67,7 @@ webview.show {  -- All parameters are optional
 
 Displays a Web View on the screen with the specified parameters. If the Web View is already displayed, its parameters will be updated.
 
-#### [Example for this section](#Example-Code)
+#### [Example for this section](#example-code)
 
 ### Hide a Web View \(**webview\.hide**\)
 
@@ -86,7 +86,7 @@ webview.hide([ view_id ])
 
 Temporarily hides a Web View.
 
-#### [Example for this section](#Example-Code)
+#### [Example for this section](#example-code)
 
 ### Execute JavaScript on a Web View \(**webview\.eval**\)
 
@@ -157,7 +157,7 @@ webview.destroy([ view_id ])
 When the script ends, all displayed Web Views will be automatically destroyed.
 :::
 
-#### [Example for this section](#Example-Code)
+#### [Example for this section](#example-code)
 
 ## Example Code
 

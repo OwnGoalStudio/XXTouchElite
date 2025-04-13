@@ -4,7 +4,7 @@ sidebar_position: 8
 
 # Command Line Tools
 
-In addition to script processes governed by global [process scheduling](./basic-concepts/process-control-flow.md#进程调度), you can also use the Lua command-line interpreter to execute other scripts.
+In addition to script processes governed by global [process scheduling](process-scheduling.md), you can also use the Lua command-line interpreter to execute other scripts.
 
 :::caution
 The command-line tools introduced in this chapter require root privileges to execute.
@@ -88,11 +88,11 @@ script.lua
 
 ### Daemon Mode `daemon.lua`
 
-Daemon mode is a lower-level mode compared to [**Daemon Mode**](./basic-concepts/daemon-mode.md#守护模式). It is a system-level service launched by [`launchd`](https://www.launchd.info/). When the device is in a non-LAN environment but requires centralized control, a daemon can be enabled to actively communicate with external servers.
+Daemon mode is a lower-level mode compared to [**Daemon Mode**](daemon-mode.md). It is a system-level service launched by [`launchd`](https://www.launchd.info/). When the device is in a non-LAN environment but requires centralized control, a daemon can be enabled to actively communicate with external servers.
 
 * The daemon can be managed using [`launchctl`](https://support.apple.com/zh-cn/guide/terminal/apdc6c1077b-5d5d-4d35-9c19-60f2397b2369/mac).
 * The daemon starts automatically with the system and will restart automatically 30 seconds after an unexpected crash.
-* Developers can further use the [`lockfile`](./basic-concepts/process-control-flow.md#锁定进程号文件-lockfile) function to lock a file to ensure its singleton state.
+* Developers can further use the [`lockfile`](process-scheduling.md#lock-process-id-file-lockfile) function to lock a file to ensure its singleton state.
 
 #### Instructions
 
@@ -104,7 +104,7 @@ Daemon mode takes effect after a reboot, soft reboot, or restarting XXTouch Eli
 
 #### Example
 
-The daemon in this example pushes a text description of the current time into the [process queue dictionary](./developer-manual/proc.md#进程队列字典) `xxtouch.daemon.test` every 3 seconds.
+The daemon in this example pushes a text description of the current time into the [process queue dictionary](../lua-manual/proc.md) `xxtouch.daemon.test` every 3 seconds.
 
 ```lua title="daemon.lua" showLineNumbers
 if not G_reload then
@@ -168,7 +168,7 @@ usage: installer.lua install   [ipa-path]
 #### Parameters and Return Values
 
 * `ipa-path` Path to the IPA installation package
-* `bundle-id` Installed [App Identifier](developer-manual/app.md#标识符)
+* `bundle-id` Installed [App Identifier](../lua-manual/app.md#identifier)
 
 #### Example
 
@@ -244,5 +244,5 @@ uninstall-xxtouch.sh
 
 :::danger
 This operation is irreversible.
-It will also remove all [user data](./basic-concepts/paths-and-permissions.md) related to XXTouch Elite.
+It will also remove all [user data](paths-and-permissions.md) related to XXTouch Elite.
 :::

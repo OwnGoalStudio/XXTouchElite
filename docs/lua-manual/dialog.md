@@ -940,7 +940,7 @@ dialog = dialog:add_image {
 #### Parameters and Return Values
 
 - dialog *dialog object*
-- image [*image object*](img.md#Image Object)
+- image [*image object*](img.md#image-object)
 - image_path
   - *string*, supports formats like `png`, `jpeg`, or `heic`
 - height *integer*, *optional*, default is **image height**
@@ -1022,7 +1022,7 @@ dialog = dialog:add_button {
 This component displays a button in the interface. Clicking the button triggers the **callback function** or opens the **url** in the default browser.
 
 :::caution Limitation
-Using **callback functions** through [Declaration 1](#Declaration-1-1) requires support from the [Thread Module](thread.md). If the thread module is not enabled, only **url** can be used through [Declaration 2](#Declaration-2-1).
+Using **callback functions** through [Declaration 1](#declaration-1) requires support from the [Thread Module](thread.md). If the thread module is not enabled, only **url** can be used through [Declaration 2](#declaration-2).
 :::
 
 #### Example
@@ -1241,7 +1241,7 @@ dialog.show(config_interface)
 
 #### Description
 
-This function is different from [`dialog:show`](#-show-the-dialog-and-return-users-selection-dialogshow) in that it does not block and has no return value.
+This function is different from [`dialog:show`](#show-a-config-interface-dialogshow) in that it does not block and has no return value.
 
 :::caution
 Before calling this function, you must first call [`dialog.setup`](#validate-a-config-interface-dialogsetup) to validate the **config_interface**.

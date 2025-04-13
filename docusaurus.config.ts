@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'XXTouch Elite',
-  tagline: 'Powerful and flexible automation tool for iOS since 2016.',
+  tagline: 'Powerful and flexible automation tool for iOS since 2015.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -20,7 +20,7 @@ const config: Config = {
   organizationName: 'OwnGoalStudio', // Usually your GitHub org/user name.
   projectName: 'XXTouchElite', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set

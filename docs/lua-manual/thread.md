@@ -305,7 +305,7 @@ end)
 
 :::info
 The coordinates in this event use the **portrait mode with HOME at the bottom** as the initial coordinate system.
-You can use [`screen.rotate_xy`](screen.mdx#coordinate-rotation-conversion-screenrotate_xy) for conversion.
+You can use [`screen.rotate_xy`](screen.md#coordinate-rotation-conversion-screenrotate_xy) for conversion.
 :::
 
 #### Example

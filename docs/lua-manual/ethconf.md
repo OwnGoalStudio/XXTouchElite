@@ -75,7 +75,7 @@ This section provides example configurations for common scenarios for reference 
 
 :::caution
 Please refer to the example configurations and ensure no fields are missing to avoid issues such as network unavailability or inability to open “Settings.”
-If network issues occur, try restoring network settings using [`sys.reset`](sys.md#restore-sysreset).
+If network issues occur, try restoring network settings using [`sys.reset`](sys.md#reset-sysreset).
 :::
 
 #### Example Configuration 1

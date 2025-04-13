@@ -511,7 +511,7 @@ app.open_url(URL)
 Open a URL in the foreground, can open [URL Scheme](https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html).
 
 :::tip
-Refer to the appendix: [Common URL Schemes in "Settings"](appendix.md#common-url-schemes-in-settings)
+Refer to the appendix: [Common URL Schemes in "Settings"](../appendix/supported-url-schemes.md#settings-url-schemes)
 :::
 
 #### Example

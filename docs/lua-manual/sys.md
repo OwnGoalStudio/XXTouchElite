@@ -21,7 +21,7 @@ sys.toast(content[, orientation])
 - content
   - *string*, the text to be displayed
 - orientation
-  - *integer*, *optional*, screen orientation, defaults to the orientation set by the last call to [`screen.init`](screen.mdx#initialize-coordinate-system-screeninit)
+  - *integer*, *optional*, screen orientation, defaults to the orientation set by the last call to [`screen.init`](screen.md#initialize-rotated-coordinate-system-screeninit)
     - `0` indicates portrait mode with home button at the bottom
     - `1` indicates landscape mode with home button on the right
     - `2` indicates landscape mode with home button on the left
@@ -534,7 +534,7 @@ Resprings SpringBoard and backboardd, equivalent to the command line `killall -9
 
 :::caution
 Many functions that depend on SpringBoard will fail until the respring is complete.
-After calling this function, it is recommended to use [`app.front_bid`](app.md#get-foreground-app-identifier-appfrontbid) to poll and check the status of SpringBoard. Once SpringBoard has restarted, proceed with other operations.
+After calling this function, it is recommended to use [`app.front_bid`](app.md#get-the-identifier-of-the-foreground-app-appfront_bid) to poll and check the status of SpringBoard. Once SpringBoard has restarted, proceed with other operations.
 :::
 
 #### Example
@@ -722,12 +722,12 @@ sys.zoom_off()              -- Disable zoom mode
 
 #### Description
 
-Enabling zoom mode will change the screen size obtained by [`screen.size`](screen.mdx#get-screen-size-screensize), and the screen and simulated touch coordinate systems will also change accordingly.
+Enabling zoom mode will change the screen size obtained by [`screen.size`](screen.md#get-screen-size-screensize), and the screen and simulated touch coordinate systems will also change accordingly.
 
 :::caution
 
 - Enabling zoom mode will automatically [respring](#respring-sysrespring).
-- Calling this function may cause subsequent script execution to fail. If the subsequent script requires the **Screen Module** or **Simulated Touch Module**, be sure to restart the script process using [`os.restart`](../basic-concepts/process-control-flow.md#restart-script-osrestart).
+- Calling this function may cause subsequent script execution to fail. If the subsequent script requires the **Screen Module** or **Simulated Touch Module**, be sure to restart the script process using [`os.restart`](../appendix/process-scheduling.md#restart-script-osrestart).
 
 :::
 
