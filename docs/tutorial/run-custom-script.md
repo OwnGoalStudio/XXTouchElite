@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Create a Script
+# Run Custom Script
 
 Playing recorded scripts is great, but it is unlikely to respond to all the possible situations that can occur in a real-world scenario. For this reason, it is important to create a script that can handle different situations.
 

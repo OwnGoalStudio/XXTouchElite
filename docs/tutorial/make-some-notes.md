@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
-# Make Notes
+# Make Some Notes
 
 Now we are ready to start developing scripts. You can use the web interface to create and edit scripts, as well as test them in real-time.
 

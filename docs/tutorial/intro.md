@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Intro
 
 ![Intro.001](img/Intro.001.png)
 

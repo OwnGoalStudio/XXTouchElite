@@ -80,7 +80,17 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          type: 'docSidebar',
+          sidebarId: 'developerManual',
+          position: 'left',
+          label: 'Manual',
+        },
+        {
+          to: '/blog',
+          label: 'Blog',
+          position: 'left',
+        },
         {
           href: 'https://github.com/OwnGoalStudio/XXTouchElite',
           label: 'GitHub',

@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
-# Ready for Development
+# Ready to Develop
 
 To get started with script development, you need to have a laptop or desktop computer with Safari or Chrome installed.
 
