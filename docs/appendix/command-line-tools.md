@@ -148,7 +148,7 @@ dofile(daemon_file_name)
 
 #### Instructions
 
-Used to dump HID event streams to standard output. See [Record and Replay Scripts](./tutorial-extras/simulate-touches.mdx#录制回放脚本) for details.
+Used to dump HID event streams to standard output. See [Record and Replay Scripts](../tutorial/record-and-replay.md) for details.
 
 #### Example
 
@@ -190,7 +190,7 @@ remote-access.lua [on|off]
 
 #### Instructions
 
-Equivalent to [Enable Remote Access](tutorial-basics/create-a-workspace.md#打开远程访问).
+Equivalent to [Enable Remote Access](../tutorial/ready-to-develop.md#enable-remote-access).
 
 #### Example
 

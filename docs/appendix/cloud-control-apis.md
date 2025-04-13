@@ -398,7 +398,7 @@ wss.on('connection', (ws) => {
 
 ## Key-Related
 
-- [Supported Key Codes List](developer-manual/key.md#supported-key-codes-list)
+- [Supported Key Codes List](../appendix/supported-keycodes.md)
 
 ### Key Down
 
