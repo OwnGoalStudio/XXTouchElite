@@ -91,12 +91,6 @@ const config: Config = {
           label: 'Manual',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'appendixSidebar',
-          position: 'left',
-          label: 'Appendix',
-        },
-        {
           to: '/blog',
           label: 'Blog',
           position: 'left',
@@ -109,11 +103,6 @@ const config: Config = {
         {
           href: 'https://elite.82flex.com',
           label: 'Open API',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/OwnGoalStudio/XXTouchElite',
-          label: 'GitHub',
           position: 'right',
         },
       ],
@@ -129,12 +118,12 @@ const config: Config = {
               to: '/docs/tutorial/intro',
             },
             {
-              label: 'Lua Manual',
+              label: 'Manual',
               to: '/docs/lua-manual/intro',
             },
             {
               label: 'Open API',
-              to: 'https://elite.82flex.com',
+              href: 'https://elite.82flex.com',
             },
           ],
         },

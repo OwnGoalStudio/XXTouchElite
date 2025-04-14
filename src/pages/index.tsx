@@ -102,10 +102,15 @@ function HomepageHeader() {
 
           <div className={styles.heroVisual}>
             <div className={styles.phoneFrame}>
-              <img
-                src={useBaseUrl('img/xxtouch-screenshot.png')}
-                alt="XXTouch Elite in action"
+              <video
+                src={useBaseUrl('assets/compressed.mp4')}
                 className={styles.phoneScreenshot}
+                autoPlay
+                muted
+                loop
+                playsInline
+                disablePictureInPicture
+                controlsList="nodownload nofullscreen noremoteplayback"
               />
             </div>
             <div className={styles.heroBackground}></div>
