@@ -97,6 +97,11 @@ const config: Config = {
           label: 'Appendix',
         },
         {
+          to: '/library',
+          label: 'Library',
+          position: 'left',
+        },
+        {
           to: '/blog',
           label: 'Blog',
           position: 'left',
