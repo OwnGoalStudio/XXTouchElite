@@ -88,7 +88,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'luaManualSidebar',
           position: 'left',
-          label: 'Lua Manual',
+          label: 'Manual',
         },
         {
           type: 'docSidebar',

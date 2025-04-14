@@ -4,15 +4,367 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+  padding: 5rem 0;  /* Increased padding top and bottom */
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+  color: white;
+  min-height: 650px;  /* Adjusted for better proportion */
+  display: flex;
+  align-items: center;
+}
+
+.heroBgLogo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroBgLogo img {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  opacity: 0.05;
+  right: -10%;
+  top: 15%;
+  filter: brightness(200%);
+  transform: rotate(15deg);
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px; /* Reduced max-width to add more padding */
+  margin: 0 auto;
+  padding: 0 2.5rem; /* Added horizontal padding */
+  position: relative;
+  z-index: 1;
+}
+
+.heroText {
+  flex: 1;
+  text-align: left;
+  padding-right: 2.5rem; /* Increased padding between text and phone */
+  max-width: 550px;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #ffffff 0%, #e0e7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.eliteText {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #63c2ff 0%, #e0e7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-shadow: 0 0 20px rgba(99, 194, 255, 0.3);
+  padding-bottom: 3px; /* 为下划线腾出空间，避免闪跳 */
+}
+
+.eliteText::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 2px;
+  width: 96%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(99, 194, 255, 0.7) 0%, rgba(224, 231, 255, 0.5) 100%);
+
+  /* 保持滑入效果，但固定变换原点和过渡属性，避免闪跳 */
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 1;
+
+  /* 使用animation-fill-mode: forwards 确保动画结束时保持最终状态 */
+  animation: slideInUnderline 0.8s ease-out 0.8s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes slideInUnderline {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+/* Remove hero features styles since we're removing those elements */
+.heroFeatures,
+.heroFeatureItem,
+.heroFeatureIcon {
+  display: none;
+}
+
+.heroVisual {
+  flex: 1;
+  position: relative;
+  height: 480px;  /* Adjusted height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.phoneFrame {
+  width: 230px;  /* Reduced width */
+  height: 470px;  /* Reduced height */
+  border-radius: 36px;
+  background: #111;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transform: rotate(-5deg);
+  overflow: hidden;
+  position: relative;
+  animation: phoneFloat 3s ease-in-out infinite;
+}
+
+.phoneScreenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.heroBackground {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(79, 172, 254, 0.4) 0%, rgba(0, 242, 254, 0) 70%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: pulse 10s ease-in-out infinite;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 2.5rem;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.button {
+  border-radius: 30px !important;
+  padding: 0.75rem 1.75rem !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+  border: none !important;
+  text-transform: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.3px !important;
+}
+
+.buttonIcon, .downloadIcon {
+  transition: transform 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.buttonPrimary {
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%) !important;
+  color: white !important;
   position: relative;
   overflow: hidden;
 }
 
+.buttonPrimary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.buttonPrimary:hover::after {
+  transform: translateX(100%);
+}
+
+.buttonPrimary:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2) !important;
+  transform: translateY(-3px) !important;
+}
+
+.buttonPrimary:hover .buttonIcon {
+  transform: translateX(5px);
+}
+
+.buttonOutline {
+  background: transparent !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  color: white !important;
+  backdrop-filter: blur(4px);
+}
+
+.buttonOutline:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: white !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15) !important;
+}
+
+.buttonOutline:hover .downloadIcon {
+  transform: translateY(5px);
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes phoneFloat {
+  0%, 100% {
+    transform: rotate(-5deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-5deg) translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 4rem 1rem;  /* Adjusted padding for responsive view */
+    min-height: auto;
+  }
+
+  .heroContent {
+    flex-direction: column;
+    padding: 0 2rem; /* Maintain horizontal padding on smaller screens */
+  }
+
+  .heroText {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 3.5rem; /* Increased spacing between text/buttons and phone */
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .heroVisual {
+    height: 400px;
+  }
+
+  .heroBgLogo img {
+    width: 90%;
+    opacity: 0.04;
+    right: -20%;
+    top: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .heroText {
+    margin-bottom: 4rem; /* Even more spacing for smaller screens */
+  }
+
+  .heroContent {
+    padding: 0 1.5rem; /* Slightly smaller padding for small screens */
+  }
+
+  .heroBgLogo img {
+    width: 100%;
+    right: -30%;
+  }
+
+  .eliteText {
+    letter-spacing: 0.5px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Keep CTA buttons normal width even on small screens */
+  .cta .button {
+    width: auto !important;
+  }
+
+  .heroContent {
+    padding: 0 1rem; /* Even smaller padding for very small screens */
   }
 }
 
@@ -20,4 +372,542 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 16px;
+  margin-top: 2rem;
+}
+
+.button {
+  border-radius: 30px !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1) !important;
+  border: none !important;
+  text-transform: none !important;
+}
+
+.buttonPrimary {
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%) !important;
+  color: white !important;
+}
+
+.buttonPrimary:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+  transform: translateY(-2px) !important;
+}
+
+.buttonSecondary {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #3578e5 !important;
+}
+
+.buttonSecondary:hover {
+  background: white !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+  transform: translateY(-2px) !important;
+}
+
+.buttonOutline {
+  background: transparent !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  color: white !important;
+}
+
+.buttonOutline:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: white !important;
+  transform: translateY(-2px) !important;
+}
+
+.features {
+  display: flex;
+  align-items: stretch;
+  padding: 4rem 0;
+  width: 100%;
+  background: #f7f7f7;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.compatibility {
+  padding: 4rem 0;
+  background: #ffffff;
+  width: 100%;
+}
+
+.compatList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.compatList span {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: #eaf2ff;
+}
+
+.jailbreakItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(240, 245, 255, 0.5);
+  width: auto;
+  min-width: 120px;
+  max-width: 180px;
+}
+
+.jailbreakItem:hover {
+  transform: translateY(-5px);
+  background: rgba(240, 245, 255, 0.8);
+}
+
+.jailbreakIcon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.jailbreakItem span {
+  font-weight: 500;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.cta {
+  padding: 5rem 0;
+  background: #f0f5ff;
+  width: 100%;
+}
+
+.cta .button {
+  display: inline-flex !important;
+  width: auto !important;
+}
+
+html[data-theme='dark'] .features {
+  background: #1e2125;
+}
+
+html[data-theme='dark'] .compatibility {
+  background: #0a0c0f;
+}
+
+html[data-theme='dark'] .cta {
+  background: #171a1f;
+}
+
+html[data-theme='dark'] .compatList span {
+  background: #2a3037;
+}
+
+html[data-theme='dark'] .jailbreakIcon {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+html[data-theme='dark'] .jailbreakItem {
+  background: rgba(40, 45, 55, 0.3);
+}
+
+html[data-theme='dark'] .jailbreakItem:hover {
+  background: rgba(40, 45, 55, 0.6);
+}
+
+html[data-theme='dark'] .jailbreakItem span {
+  color: #ccc;
+}
+
+html[data-theme='dark'] .buttonSecondary {
+  background: rgba(40, 45, 55, 0.8) !important;
+  color: #4e89e8 !important;
+}
+
+html[data-theme='dark'] .buttonSecondary:hover {
+  background: rgba(50, 55, 65, 0.9) !important;
+}
+
+html[data-theme='dark'] .buttonPrimary {
+  background: linear-gradient(90deg, #2d4b8e 0%, #0a1429 100%) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .compatList {
+    gap: 1.5rem;
+    max-width: 600px;
+  }
+
+  .jailbreakItem {
+    width: calc(50% - 1.5rem);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .compatList {
+    gap: 1rem;
+  }
+
+  .jailbreakItem {
+    width: calc(50% - 1rem);
+    min-width: 100px;
+    padding: 0.8rem;
+  }
+
+  .jailbreakIcon {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* Section shared styles */
+.sectionTitle {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionSubtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  opacity: 0.8;
+}
+
+/* Features section */
+.features {
+  display: flex;
+  align-items: stretch;
+  padding: 6rem 0;
+  width: 100%;
+  background: #f7f7f7;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.featureCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f0f5ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.featureContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.featureContent p {
+  color: #666;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Compatibility section */
+.compatibility {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  width: 100%;
+  position: relative;
+}
+
+.compatList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.jailbreakItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: white;
+  min-width: 120px;
+  max-width: 180px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.jailbreakItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.08);
+}
+
+.jailbreakIconWrapper {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: #f7faff;
+  padding: 0.5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+}
+
+.jailbreakIcon {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.jailbreakItem span {
+  font-weight: 600;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* CTA section */
+.cta {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaBgPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+                    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
+  opacity: 0.6;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ctaSubtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.ctaAction {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonCTA {
+  font-size: 1.05rem !important;
+  padding: 0.9rem 2.2rem !important;
+  background: white !important;
+  color: #4b6cb7 !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttonCTA::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(75, 108, 183, 0.1), rgba(75, 108, 183, 0));
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.buttonCTA:hover::after {
+  transform: translateX(100%);
+}
+
+.buttonCTA:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2) !important;
+}
+
+.buttonCTA:hover .buttonIcon {
+  transform: translateX(5px);
+}
+
+/* Dark theme adjustments */
+html[data-theme='dark'] .features {
+  background: #1e2125;
+}
+
+html[data-theme='dark'] .featureCard {
+  background: #272c34;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme='dark'] .featureIcon {
+  background: #2a3037;
+}
+
+html[data-theme='dark'] .featureContent h3 {
+  color: #e6e6e6;
+}
+
+html[data-theme='dark'] .featureContent p {
+  color: #b0b0b0;
+}
+
+html[data-theme='dark'] .compatibility {
+  background: linear-gradient(180deg, #1e2125 0%, #171a1d 100%);
+}
+
+html[data-theme='dark'] .jailbreakItem {
+  background: #272c34;
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+html[data-theme='dark'] .jailbreakIconWrapper {
+  background: #2a3037;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme='dark'] .jailbreakItem span {
+  color: #cccccc;
+}
+
+html[data-theme='dark'] .buttonCTA {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+html[data-theme='dark'] .buttonCTA::after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+}
+
+html[data-theme='dark'] .sectionTitle {
+  background: linear-gradient(90deg, #63b3ed 0%, #4299e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .features, .compatibility, .cta {
+    padding: 4rem 1rem;
+  }
+
+  .featureCard {
+    padding: 1.5rem;
+  }
+
+  .compatList {
+    gap: 1.5rem;
+  }
+
+  .ctaTitle {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .featureIcon {
+    font-size: 2rem;
+    padding: 0.8rem;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .ctaSubtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .jailbreakItem {
+    min-width: 100px;
+    padding: 1.2rem;
+  }
+
+  .jailbreakIconWrapper {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .button {
+    padding: 0.7rem 1.5rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  .buttonCTA {
+    padding: 0.8rem 2rem !important;
+  }
 }
