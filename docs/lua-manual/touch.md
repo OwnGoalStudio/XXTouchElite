@@ -53,7 +53,7 @@ touch.tap(x, y[, delay_ms, post_action_wait_ms ])
   - *integer*, *optional*, the waiting time after the tap is completed, in milliseconds, default is `0`
 
 :::note
-This method automatically allocates and occupies a **finger ID** before the call is completed. The number of **finger IDs** is limited (approximately 30). Calling [`touch.on`](#simulate-finger-touch-on-the-screen-touchon) or `touch.tap` beyond the limit will throw a `finger pool overflow` error. Be careful not to **simultaneously occupy** too many **finger IDs**, or release them promptly using the `touch:off` method.
+This method automatically allocates and occupies a **finger ID** before the call is completed. The number of **finger IDs** is limited (approximately 30). Calling [`touch.on`](#simulate-finger-touch-on-the-screen-touchon) or `touch.tap` beyond the limit will throw a `finger pool overflow` error. Be careful not to **simultaneously occupy** too many **finger IDs**, or release them promptly using the [`touch:off`](#simulate-finger-release-from-the-screen-touchoff) method.
 :::
 
 #### Example
@@ -85,7 +85,7 @@ touch_event = touch.on(x, y)
 Simulates a finger touching the screen at a specified position and returns a *touch event object* to manipulate the touch process.
 
 :::note
-This method automatically allocates and occupies a **finger ID** before the call is completed. The number of **finger IDs** is limited (approximately 30). Calling `touch.on` or [`touch.tap`](#simulate-a-single-tap-on-the-screen-touchtap) beyond the limit will throw a `finger pool overflow` error. Be careful not to **simultaneously occupy** too many **finger IDs**, or release them promptly using the `touch:off` method.
+This method automatically allocates and occupies a **finger ID** before the call is completed. The number of **finger IDs** is limited (approximately 30). Calling `touch.on` or [`touch.tap`](#simulate-a-single-tap-on-the-screen-touchtap) beyond the limit will throw a `finger pool overflow` error. Be careful not to **simultaneously occupy** too many **finger IDs**, or release them promptly using the [`touch:off`](#simulate-finger-release-from-the-screen-touchoff) method.
 :::
 
 :::info
@@ -107,7 +107,7 @@ touch.on(1, 100, 100)  -- Simulate a finger with ID 1 touching the screen at pos
 touch.off(1)           -- Release the finger with ID 1
 ```
 
-### Simulate Finger Release from the Screen \(**touch:off**\)
+### Simulate Finger Release from the Screen \(**touch\:off**\)
 
 #### Declaration
 
@@ -155,7 +155,7 @@ end
 touch.off(1)           -- Release the finger with ID 1
 ```
 
-### Simulate Finger Movement on the Screen \(**touch:move**\)
+### Simulate Finger Movement on the Screen \(**touch\:move**\)
 
 #### Declaration
 
@@ -210,7 +210,7 @@ end
 touch.off(1)           -- Release the finger with ID 1
 ```
 
-### Set Step Delay for Touch Event Object Movement \(**touch:step\_delay**\)
+### Set Step Delay for Touch Event Object Movement \(**touch\:step\_delay**\)
 
 #### Declaration
 
@@ -236,7 +236,7 @@ Sets the delay for each step when the current touch event object uses the [`touc
 touch.on(100, 100):step_len(3):step_delay(0.2):move(200, 200):off()
 ```
 
-### Set Step Length for Touch Event Object Movement \(**touch:step\_len**\)
+### Set Step Length for Touch Event Object Movement \(**touch\:step\_len**\)
 
 #### Declaration
 
@@ -262,7 +262,7 @@ Sets the step length for the current touch event object when using the [`touch:m
 touch.on(100, 100):step_len(3):step_delay(0.2):move(200, 200):off()
 ```
 
-### 🚥 Millisecond-Level Delay \(**touch:msleep**\)
+### 🚥 Millisecond-Level Delay \(**touch\:msleep**\)
 
 #### Declaration
 
@@ -288,7 +288,7 @@ This method does not affect the **touch event**; it simply blocks the current th
 touch.on(100, 100):msleep(300):off()
 ```
 
-### Simulate Finger Pressure on the Screen \(**touch:press**\)
+### Simulate Finger Pressure on the Screen \(**touch\:press**\)
 
 #### Declaration
 

@@ -16,14 +16,14 @@ Let’s start by creating a new script. Click on the “New Script” button on 
 
 ## Open “Notes”
 
-The first thing we need to do is to open the “Notes” app. To do this, we will use the `app.run` function. The `app.run` function takes a string as an argument, which is the bundle identifier of the app we want to open. In our case, we want to open the “Notes” app, so we will use the string `"com.apple.mobilenotes"`.
+The first thing we need to do is to open the “Notes” app. To do this, we will use the [`app.run`](../lua-manual/app.md#run-the-app-apprun) function. The [`app.run`](../lua-manual/app.md#run-the-app-apprun) function takes a string as an argument, which is the bundle identifier of the app we want to open. In our case, we want to open the “Notes” app, so we will use the string `"com.apple.mobilenotes"`.
 
 ```lua
 nLog("Open Notes...")
 app.run("com.apple.mobilenotes")
 ```
 
-Note that the `nLog` function is used to log messages to the console. This is useful for debugging and testing your scripts.
+Note that the [`nLog`](../appendix/logging-facilities.md#nlog) function is used to log messages to the console. This is useful for debugging and testing your scripts.
 
 Click “Play” button at the bottom-right corner of the page to run the script. You should see the “Notes” app open on your device.
 
@@ -35,7 +35,7 @@ Find the bundle identifier of an app from “More” → “Application List” 
 
 ## Find “New Note” Button
 
-Now that we have opened the “Notes” app, we need to find the “New Note” button. To do this, we will use the `screen.find_color` function. The `screen.find_color` function takes a color table as an argument, which is the collection of the color samples we want to find.
+Now that we have opened the “Notes” app, we need to find the “New Note” button. To do this, we will use the [`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) function. The [`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) function takes a color table as an argument, which is the collection of the color samples we want to find.
 
 ![Make_Notes](img/Make_Notes.gif)
 
@@ -66,9 +66,9 @@ touch.tap(x, y)
 sys.sleep(2)
 ```
 
-Here we’ve added 6 color samples to the color table. Use `while ... do` loop to keep searching for the button until it is found. The `sys.sleep(1)` function is used to pause the script for 1 second before searching again.
+Here we’ve added 6 color samples to the color table. Use `while ... do` loop to keep searching for the button until it is found. The [`sys.sleep(1)`](../lua-manual/sys.md#-second-level-delay-syssleep) function is used to pause the script for 1 second before searching again.
 
-The `screen.find_color` function returns the coordinates of the button if it is found, or `nil` if it is not found. We will use these coordinates with `touch.tap` to click on the button.
+The [`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) function returns the coordinates of the button if it is found, or `nil` if it is not found. We will use these coordinates with [`touch.tap`](../lua-manual/touch.md#simulate-a-single-tap-on-the-screen-touchtap) to click on the button.
 
 :::tip
 Making color samples is not an easy task. Here are some practical tips:
@@ -81,7 +81,7 @@ Making color samples is not an easy task. Here are some practical tips:
 
 ## Enter “Hello, World!”
 
-Sending text to the “Notes” app is the most straightforward part. We can use the `key.send_text` function to send text to the app. The `key.send_text` function takes a string as an argument, which is the text we want to send.
+Sending text to the “Notes” app is the most straightforward part. We can use the [`key.send_text`](../lua-manual/key.md#simulate-typing-text-keysend_text) function to send text to the app. The [`key.send_text`](../lua-manual/key.md#simulate-typing-text-keysend_text) function takes a string as an argument, which is the text we want to send.
 
 ```lua
 nLog("Enter text…")
@@ -94,7 +94,7 @@ Click “Play” button at the bottom-right corner of the page to run the script
 
 ## Tap “Done”
 
-Finally, we need to tap the “Done” button to save the note. We can use the `screen.ocr_text` function to find the “Done” button and then use `touch.tap` to click on it. This part is a bit tricky because texts are easily affected by the font and size, so we need to use OCR (Optical Character Recognition) to find it.
+Finally, we need to tap the “Done” button to save the note. We can use the [`screen.ocr_text`](../lua-manual/screen.md#-screen-optical-character-recognition-screenocr_text) function to find the “Done” button and then use [`touch.tap`](../lua-manual/touch.md#simulate-a-single-tap-on-the-screen-touchtap) to click on it. This part is a bit tricky because texts are easily affected by the font and size, so we need to use OCR (Optical Character Recognition) to find it.
 
 **Here is our final script:**
 

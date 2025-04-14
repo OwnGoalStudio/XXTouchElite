@@ -220,7 +220,7 @@ image.video_to_album(video_file_path)
 - video_file_path
   - *string*, supported formats include `mp4`, `m4v`, `mov`, etc.
 
-### Get the Dimensions of an Image Object \(**image:size**\)
+### Get the Dimensions of an Image Object \(**image\:size**\)
 
 #### Declaration
 
@@ -250,7 +250,7 @@ w, h = img:size()
 sys.alert("After counterclockwise rotation, image width: "..w.."\nImage height: "..h)
 ```
 
-### 🌟 Create a Copy of an Image Object \(**image:copy**\)
+### 🌟 Create a Copy of an Image Object \(**image\:copy**\)
 
 #### Declaration
 
@@ -272,7 +272,7 @@ scrn = screen.image()
 img2 = scrn:copy()
 ```
 
-### 🌟 Crop a Region to Create a New Image Object \(**image:crop**\)
+### 🌟 Crop a Region to Create a New Image Object \(**image\:crop**\)
 
 #### Declaration
 
@@ -296,7 +296,7 @@ scrn = screen.image()
 img2 = scrn:crop(100, 100, 200, 200)
 ```
 
-### Destroy an Image Object \(**image:destroy**\)
+### Destroy an Image Object \(**image\:destroy**\)
 
 #### Declaration
 
@@ -338,7 +338,7 @@ end
 sys.alert("The screen has moved")
 ```
 
-### Save an Image Object to the Album \(**image:save\_to\_album**\)
+### Save an Image Object to the Album \(**image\:save\_to\_album**\)
 
 #### Declaration
 
@@ -378,7 +378,7 @@ else
 end
 ```
 
-### Output an Image Object to a PNG File or Data \(**image:save\_to\_png\_file/image:png_data**\)
+### Output an Image Object to a PNG File or Data \(**image\:save\_to\_png\_file/image:png_data**\)
 
 #### Declaration
 
@@ -400,7 +400,7 @@ PNG_data = image:png_data()
 screen.image():save_to_png_file("/var/mobile/1.png")
 ```
 
-### Output an Image Object to a JPEG File or Data \(**image:save\_to\_jpeg\_file/image:jpeg_data**\)
+### Output an Image Object to a JPEG File or Data \(**image\:save\_to\_jpeg\_file/image:jpeg_data**\)
 
 #### Declaration
 
@@ -429,7 +429,7 @@ screen.image():save_to_jpeg_file("/var/mobile/1.jpg")
 screen.image():save_to_jpeg_file("/var/mobile/1.jpg", 0.4)
 ```
 
-### Rotate an Image Object \(**image:turn\_left,right,upondown**\)
+### Rotate an Image Object \(**image\:turn\_left,right,upondown**\)
 
 #### Declaration
 
@@ -451,7 +451,7 @@ Rotates the image object.
 This process does not create a data copy.
 :::
 
-### Resize an Image Object \(**image:resize**\)
+### Resize an Image Object \(**image\:resize**\)
 
 #### Declaration
 
@@ -469,7 +469,7 @@ image = image:resize(width, height)
 This function is implemented based on Apple’s [Accelerate](https://developer.apple.com/documentation/accelerate) framework, so it runs efficiently on iOS. The call process will create a data copy.
 :::
 
-### OpenCV Resize an Image Object \(**image:cv\_resize**\)
+### OpenCV Resize an Image Object \(**image\:cv\_resize**\)
 
 #### Declaration
 
@@ -487,7 +487,7 @@ image = image:cv_resize(width, height)
 This function is implemented based on [OpenCV](https://opencv.org/) [`cv::resize`](https://docs.opencv.org/3.4/da/d54/group__imgproc__transform.html#ga47a974309e9102f5f08231edc7e7529d) function. The call process will create a data copy.
 :::
 
-### Flip an Image Object \(**image:flip**\)
+### Flip an Image Object \(**image\:flip**\)
 
 #### Declaration
 
@@ -507,7 +507,7 @@ image = image:flip(direction)
 This function is implemented based on Apple’s [Accelerate](https://developer.apple.com/documentation/accelerate) framework, so it runs efficiently on iOS. The call process will create a data copy.
 :::
 
-### OpenCV Flip an Image Object \(**image:cv\_flip**\)
+### OpenCV Flip an Image Object \(**image\:cv\_flip**\)
 
 #### Declaration
 
@@ -527,7 +527,7 @@ image = image:cv_flip(direction)
 This function is implemented based on [OpenCV](https://opencv.org/) [`cv::flip`](https://docs.opencv.org/3.4/d2/de8/group__core__array.html#gaca7be533e3dac7feb70fc60635adf441) and [`cv::rotate`](https://docs.opencv.org/3.4/d2/de8/group__core__array.html#ga4ad01c0978b0ce64baa246811deeac24) functions. The call process will create a data copy.
 :::
 
-### Get the Color of a Point in an Image Object \(**image:get\_color**\)
+### Get the Color of a Point in an Image Object \(**image\:get\_color**\)
 
 #### Declaration
 
@@ -557,7 +557,7 @@ local clr = img:get_color(100, 100)
 sys.alert(string.format("The color at coordinate (100, 100) in the image is: 0x%06x", clr))
 ```
 
-### Set the Color of a Point in an Image Object \(**image:set\_color**\)
+### Set the Color of a Point in an Image Object \(**image\:set\_color**\)
 
 #### Declaration
 
@@ -577,7 +577,7 @@ image = image:set_color(x, y, color)
 
 Sets the color of a point in the image object.
 
-### Replace Color \(**image:replace\_color**\)
+### Replace Color \(**image\:replace\_color**\)
 
 #### Declaration
 
@@ -599,7 +599,7 @@ image = image:replace_color(original_color, replacement_color[, similarity])
 
 Replaces a certain color (or similar colors) in the image object with another color, usually used for background color removal or replacement.
 
-### Draw an Image on Another Image \(**image:draw\_image**\)
+### Draw an Image on Another Image \(**image\:draw\_image**\)
 
 #### Declaration
 
@@ -654,7 +654,7 @@ img:draw_image(txt, {
 })
 ```
 
-### OpenCV Threshold Binarization \(**image:cv\_binarization**\)
+### OpenCV Threshold Binarization \(**image\:cv\_binarization**\)
 
 #### Declaration
 
@@ -677,7 +677,7 @@ image = image:cv_binarization([ threshold ])
 This method is a wrapper for [OpenCV](https://opencv.org/) [cv::threshold](https://docs.opencv.org/3.4/d7/d4d/tutorial_py_thresholding.html) method.
 :::
 
-### OpenCV Adaptive Binarization \(**image:cv\_adaptive\_binarization**\)
+### OpenCV Adaptive Binarization \(**image\:cv\_adaptive\_binarization**\)
 
 #### Declaration
 
@@ -705,7 +705,7 @@ image = image:cv_adaptive_binarization(neighborhood_size[, constant_C, gaussian_
 This function is a wrapper for [OpenCV](https://opencv.org/) [cv::adaptiveThreshold](https://docs.opencv.org/3.4/d7/d4d/tutorial_py_thresholding.html) method.
 :::
 
-### Color Deviation Binarization \(**image:binaryzation**\)
+### Color Deviation Binarization \(**image\:binaryzation**\)
 
 #### Declaration 1
 
@@ -748,7 +748,7 @@ local pic = screen.image(462, 242, 569, 272)
 pic = pic:binaryzation("9D5D39-0F1F26,D3D3D2-2C2C2D")
 ```
 
-### GPU Accelerated Binarization \(**image:binarization**\)
+### GPU Accelerated Binarization \(**image\:binarization**\)
 
 #### Declaration
 
@@ -771,7 +771,7 @@ image = image:binarization([ dither_algorithm_type ])
 This method is a wrapper for Apple’s [Vision](https://developer.apple.com/documentation/vision) framework [`vImageConvert_Planar8toPlanar1`](https://developer.apple.com/documentation/accelerate/1533024-vimageconvert_planar8toplanar1) method.
 :::
 
-### Multi-Point Color Matching in an Image \(**image:is\_colors**\)
+### Multi-Point Color Matching in an Image \(**image\:is\_colors**\)
 
 #### Declaration
 
@@ -785,7 +785,7 @@ is_exact_match = image:is_colors(...)
 
 #### [Refer to `screen.is_colors` description](screen.md#-screen-multi-point-color-matching-screenis_colors)
 
-### Find Color in an Image \(**image:find\_color**\)
+### Find Color in an Image \(**image\:find\_color**\)
 
 #### Declaration
 
@@ -799,7 +799,7 @@ x, y = image:find_color(...)
 
 #### [Refer to `screen.find_color` description](screen.md#-multi-point-similarity-mode-color-finding-screenfind_color)
 
-### OpenCV Find Image in an Image \(**image:cv_find\_image**\)
+### OpenCV Find Image in an Image \(**image\:cv_find\_image**\)
 
 #### Declaration
 
@@ -826,7 +826,7 @@ This function is similar to the [`screen.find_image`](screen.md#-screen-image-fi
 - Does not support passing in **similarity** and search area.
 - Does not perform multi-scale adjustments on the **small_image**.
 
-### Optical Character Recognition (OCR) in an Image \(**image:ocr_text**\)
+### Optical Character Recognition (OCR) in an Image \(**image\:ocr_text**\)
 
 #### Common Declaration
 
@@ -840,7 +840,7 @@ result_text_list, result_details = image:ocr_text([ recognition_level, timeout ]
 
 #### [Refer to `screen.ocr_text` description](screen.md#-screen-optical-character-recognition-screenocr_text)
 
-### Tesseract Optical Character Recognition (OCR) in an Image \(**image:tess\_ocr**\)
+### Tesseract Optical Character Recognition (OCR) in an Image \(**image\:tess\_ocr**\)
 
 #### Declaration 1
 
@@ -872,7 +872,7 @@ recognition_result, result_details = image:tess_ocr([ language_library_name ])
 
 #### [Refer to `screen.tess_ocr` description](screen.md#-tesseract-screen-optical-character-recognition-screentess_ocr)
 
-### QR Code Recognition in an Image \(**image:qr\_decode**\)
+### QR Code Recognition in an Image \(**image\:qr\_decode**\)
 
 #### Common Declaration
 
@@ -886,7 +886,7 @@ recognition_result_text, result_details_table = image:qr_decode([ timeout ])
 
 #### [Refer to `screen.qr_decode` description](screen.md#-screen-qr-code-recognition-screenqr_decode)
 
-### Rectangle Detection in an Image \(**image:detect\_rectangles**\)
+### Rectangle Detection in an Image \(**image\:detect\_rectangles**\)
 
 #### Common Declaration
 
