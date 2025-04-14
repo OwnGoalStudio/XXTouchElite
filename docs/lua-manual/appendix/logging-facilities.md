@@ -7,7 +7,7 @@ sidebar_position: 3
 XXTouch Elite provides three logging methods: `print`, `sys.log`, and `nLog`. Their differences are as follows:
 
 - [`print`](#print): Outputs to **standard output (console)** and an additional buffer [`print.out`](#extract-the-content-of-the-print-buffer-printout), visible only in the command line.
-- [`sys.log`](../lua-manual/sys.md#output-standard-system-log-syslog): Based on `print`, it outputs to the **log file** `/var/mobile/Media/1ferver/log/sys.log` and the **floating log bar**.
+- [`sys.log`](../sys.md#output-standard-system-log-syslog): Based on `print`, it outputs to the **log file** `/var/mobile/Media/1ferver/log/sys.log` and the **floating log bar**.
 - [`nLog`](#nlog): Based on `sys.log`, it outputs to the log window of the current development environment. **Only available in the development environment**.
 
 This section introduces the usage of `print` and `nLog`.

@@ -23,7 +23,7 @@ nLog("Open Notes...")
 app.run("com.apple.mobilenotes")
 ```
 
-Note that the [`nLog`](../appendix/logging-facilities.md#nlog) function is used to log messages to the console. This is useful for debugging and testing your scripts.
+Note that the [`nLog`](../lua-manual/appendix/logging-facilities.md#nlog) function is used to log messages to the console. This is useful for debugging and testing your scripts.
 
 Click “Play” button at the bottom-right corner of the page to run the script. You should see the “Notes” app open on your device.
 

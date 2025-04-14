@@ -17,7 +17,7 @@ key.press(key_code)
 #### Parameters and Return Values
 
 - key_code
-  - *string*, the [key code](../appendix/supported-keycodes.md) of the physical key
+  - *string*, the [key code](./appendix/supported-keycodes.md) of the physical key
 
 #### Description
 
@@ -34,7 +34,7 @@ key.down(key_code)
 #### Parameters and Return Values
 
 - key_code
-  - *string*, the [key code](../appendix/supported-keycodes.md) of the physical key
+  - *string*, the [key code](./appendix/supported-keycodes.md) of the physical key
 
 #### Description
 
@@ -55,7 +55,7 @@ key.up(key_code)
 #### Parameters and Return Values
 
 - key_code
-  - *string*, the [key code](../appendix/supported-keycodes.md) of the physical key
+  - *string*, the [key code](./appendix/supported-keycodes.md) of the physical key
 
 #### Description
 

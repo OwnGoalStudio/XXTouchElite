@@ -131,7 +131,7 @@ launchArgs = utils.launch_args()
     - Unknown `unknown`
     - OpenAPI `openapi`
     - X.X.T. Application `application`
-    - Scheduled Task [`os.restart`](../appendix/process-scheduling.md#restart-script-osrestart) `scheduler`
+    - Scheduled Task [`os.restart`](./appendix/process-scheduling.md#restart-script-osrestart) `scheduler`
     - Terminal `terminal`
     - Volume Key `volume`
     - Startup `startup`

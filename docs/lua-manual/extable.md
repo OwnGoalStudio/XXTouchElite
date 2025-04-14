@@ -55,7 +55,7 @@ Prints the tree structure of a table.
 :::note
 
 - The printed structure **does not guarantee format compatibility** and may vary between versions.
-- The `table.deep_print` function outputs content to the [`print`](../appendix/logging-facilities.md#print) buffer, while `stringify` does not.
+- The `table.deep_print` function outputs content to the [`print`](./appendix/logging-facilities.md#print) buffer, while `stringify` does not.
 - Non-table reference types (userdata, functions) cannot be deserialized using [`table.load_string`](#load-a-table-from-a-string-tableload_string), and only human readability is guaranteed.
 
 :::

@@ -247,7 +247,7 @@ notify_post(notification_name)
 #### Parameters and Return Values
 
 - notification_name *string*
-  - `ch.xxtou.notification.remote-access.on`: [Enable Remote Access](../tutorial/ready-to-develop.md#enable-remote-access)
+  - `ch.xxtou.notification.remote-access.on`: [Enable Remote Access](../../tutorial/ready-to-develop.md#enable-remote-access)
   - `ch.xxtou.notification.remote-access.off`: Disable Remote Access
   - `ch.xxtou.notification.restart`: Immediately terminate the script and restart the XXTouch Elite daemon
   - `ch.xxtou.notification.boom`: Immediately terminate the script and uninstall XXTouch Elite

@@ -727,7 +727,7 @@ Enabling zoom mode will change the screen size obtained by [`screen.size`](scree
 :::caution
 
 - Enabling zoom mode will automatically [respring](#respring-sysrespring).
-- Calling this function may cause subsequent script execution to fail. If the subsequent script requires the **Screen Module** or **Simulated Touch Module**, be sure to restart the script process using [`os.restart`](../appendix/process-scheduling.md#restart-script-osrestart).
+- Calling this function may cause subsequent script execution to fail. If the subsequent script requires the **Screen Module** or **Simulated Touch Module**, be sure to restart the script process using [`os.restart`](./appendix/process-scheduling.md#restart-script-osrestart).
 
 :::
 

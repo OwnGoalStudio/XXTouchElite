@@ -104,7 +104,7 @@ Daemon mode takes effect after a reboot, soft reboot, or restarting XXTouch Eli
 
 #### Example
 
-The daemon in this example pushes a text description of the current time into the [process queue dictionary](../lua-manual/proc.md) `xxtouch.daemon.test` every 3 seconds.
+The daemon in this example pushes a text description of the current time into the [process queue dictionary](../proc.md) `xxtouch.daemon.test` every 3 seconds.
 
 ```lua title="daemon.lua" showLineNumbers
 if not G_reload then
@@ -148,7 +148,7 @@ dofile(daemon_file_name)
 
 #### Instructions
 
-Used to dump HID event streams to standard output. See [Record and Replay Scripts](../tutorial/record-and-replay.md) for details.
+Used to dump HID event streams to standard output. See [Record and Replay Scripts](../../tutorial/record-and-replay.md) for details.
 
 #### Example
 
@@ -168,7 +168,7 @@ usage: installer.lua install   [ipa-path]
 #### Parameters and Return Values
 
 * `ipa-path` Path to the IPA installation package
-* `bundle-id` Installed [App Identifier](../lua-manual/app.md#identifier)
+* `bundle-id` Installed [App Identifier](../app.md#identifier)
 
 #### Example
 
@@ -190,7 +190,7 @@ remote-access.lua [on|off]
 
 #### Instructions
 
-Equivalent to [Enable Remote Access](../tutorial/ready-to-develop.md#enable-remote-access).
+Equivalent to [Enable Remote Access](../../tutorial/ready-to-develop.md#enable-remote-access).
 
 #### Example
 
