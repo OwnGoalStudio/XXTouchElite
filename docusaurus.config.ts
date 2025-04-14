@@ -14,11 +14,13 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  trailingSlash: true,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'OwnGoalStudio', // Usually your GitHub org/user name.
   projectName: 'XXTouchElite', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -119,6 +121,14 @@ const config: Config = {
               label: 'Tutorial',
               to: '/docs/tutorial/intro',
             },
+            {
+              label: 'Lua Manual',
+              to: '/docs/lua-manual/intro',
+            },
+            {
+              label: 'Open API',
+              to: 'https://elite.82flex.com',
+            },
           ],
         },
         {
@@ -126,15 +136,19 @@ const config: Config = {
           items: [
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              href: 'https://stackoverflow.com/questions/tagged/xxtouch',
+            },
+            {
+              label: 'Telegram',
+              href: 'https://t.me/xxtouch_chat',
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://discord.gg/RTyMX6c9',
             },
             {
               label: 'X',
-              href: 'https://x.com/docusaurus',
+              href: 'https://x.com/82Flex',
             },
           ],
         },
