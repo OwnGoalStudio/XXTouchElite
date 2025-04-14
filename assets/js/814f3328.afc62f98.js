@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkxxtouch_lite=self.webpackChunkxxtouch_lite||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"empty","permalink":"/blog/empty","unlisted":false,"date":"2025-04-07T15:47:14.000Z"}]}')}}]);

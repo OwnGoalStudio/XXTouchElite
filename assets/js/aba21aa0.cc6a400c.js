@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkxxtouch_lite=self.webpackChunkxxtouch_lite||[]).push([[5742],{7093:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"default"}')}}]);

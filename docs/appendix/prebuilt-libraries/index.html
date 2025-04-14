@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-appendix/prebuilt-libraries" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">Prebuilt Libraries | XXTouch Elite</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://xxtou.ch/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://xxtou.ch/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://xxtou.ch/docs/appendix/prebuilt-libraries/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Prebuilt Libraries | XXTouch Elite"><meta data-rh="true" name="description" content="XXTouch Elite fully supports the Lua programming interface. You can download and install extension libraries from LuaRocks and port them to XXTouch Elite for use."><meta data-rh="true" property="og:description" content="XXTouch Elite fully supports the Lua programming interface. You can download and install extension libraries from LuaRocks and port them to XXTouch Elite for use."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://xxtou.ch/docs/appendix/prebuilt-libraries/"><link data-rh="true" rel="alternate" href="https://xxtou.ch/docs/appendix/prebuilt-libraries/" hreflang="en"><link data-rh="true" rel="alternate" href="https://xxtou.ch/docs/appendix/prebuilt-libraries/" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="XXTouch Elite RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="XXTouch Elite Atom Feed"><link rel="stylesheet" href="/assets/css/styles.f627afb1.css">
+<script src="/assets/js/runtime~main.48b91649.js" defer="defer"></script>
+<script src="/assets/js/main.6f7409c2.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/XXTouch_Logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/XXTouch_Logo.svg" alt="XXTouch Elite Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/XXTouch_Logo.svg" alt="XXTouch Elite Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">XXTouch Elite</b></a><a class="navbar__item navbar__link" href="/docs/tutorial/intro/">Tutorial</a><a class="navbar__item navbar__link" href="/docs/lua-manual/intro/">Lua Manual</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/appendix/scripts-and-modules/">Appendix</a><a class="navbar__item navbar__link" href="/blog/">Blog</a></div><div class="navbar__items navbar__items--right"><a href="https://elite.82flex.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Open API<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/OwnGoalStudio/XXTouchElite" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/appendix/scripts-and-modules/">Scripts and Modules</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/appendix/paths-and-permissions/">Paths and Permissions</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/appendix/logging-facilities/">Logging Facilities</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/appendix/error-handling/">Error Handling</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/appendix/process-scheduling/">Process Scheduling</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/appendix/daemon-mode/">Daemon Mode</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/appendix/startup-script/">Startup Script</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/appendix/command-line-tools/">Command Line Tools</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/docs/appendix/prebuilt-libraries/">Prebuilt Libraries</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/appendix/supported-keycodes/">Supported Keycodes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/appendix/supported-url-schemes/">Supported URL Schemes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/appendix/cloud-control-apis/">Cloud Control API</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/appendix/lua-cheatsheet/">Lua Cheatsheet</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Prebuilt Libraries</span><meta itemprop="position" content="1"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Prebuilt Libraries</h1></header>
+<p>XXTouch Elite fully supports the <a href="https://cloudwu.github.io/lua53doc/manual.html#4" target="_blank" rel="noopener noreferrer">Lua programming interface</a>. You can download and install extension libraries from <a href="https://luarocks.org/" target="_blank" rel="noopener noreferrer">LuaRocks</a> and port them to XXTouch Elite for use.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>You can also refer to the following template to write your own extension libraries.
+⏬ <a href="/assets/files/Extension_Template-61fd7d1cb4846067166845ef00671946.zip/" target="_blank">Extension_Template.zip (1.9 MB)</a></p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open-source-credits">Open-Source Credits<a href="#open-source-credits" class="hash-link" aria-label="Direct link to Open-Source Credits" title="Direct link to Open-Source Credits">​</a></h2>
+<p><code>/usr/local/xxtouch/lib/</code> contains many precompiled third-party open-source Lua extension libraries.
+You can find related copyright information and more details on their official websites or open-source repository pages.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-zip">lua-zip<a href="#lua-zip" class="hash-link" aria-label="Direct link to lua-zip" title="Direct link to lua-zip">​</a></h3>
+<ul>
+<li>Package Name: <code>brimworks.zip</code></li>
+<li>Author: <code>Brian Maher</code></li>
+<li>License: <a href="https://github.com/brimworks/lua-zip/blob/291ca28a5b36792c8cda23c8de37d07c69f82a8a/README.txt" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/brimworks/lua-zip" target="_blank" rel="noopener noreferrer"><code>https://github.com/brimworks/lua-zip</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-cjson">lua-cjson<a href="#lua-cjson" class="hash-link" aria-label="Direct link to lua-cjson" title="Direct link to lua-cjson">​</a></h3>
+<ul>
+<li>Package Name: <code>cjson</code></li>
+<li>Author: <code>Mark Pulford</code></li>
+<li>License: <a href="https://github.com/mpx/lua-cjson/blob/e8972ac754788d3ef10a57a36016d6c3e85ba20d/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/mpx/lua-cjson" target="_blank" rel="noopener noreferrer"><code>https://github.com/mpx/lua-cjson</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="copas">Copas<a href="#copas" class="hash-link" aria-label="Direct link to Copas" title="Direct link to Copas">​</a></h3>
+<p><code>Copas</code> is a dispatcher based on coroutines that can be used for asynchronous networking. For example TCP or UDP based servers. But it also features timers and client support for http(s), ftp and smtp requests.</p>
+<ul>
+<li>Package Name: <code>copas</code></li>
+<li>Author: <code>Thijs Schreijer</code></li>
+<li>License: <a href="https://github.com/lunarmodules/copas/blob/0e2ca2a269b379c5b7f9de31d85a9c46f10ed4eb/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/lunarmodules/copas" target="_blank" rel="noopener noreferrer"><code>https://github.com/lunarmodules/copas</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="croissant">croissant<a href="#croissant" class="hash-link" aria-label="Direct link to croissant" title="Direct link to croissant">​</a></h3>
+<p>A Lua REPL and debugger implemented in Lua.</p>
+<ul>
+<li>Author: <code>Benoit Giannangeli</code></li>
+<li>License: <a href="https://github.com/Lua-cURL/Lua-cURLv3/blob/9f8b6dba8b5ef1b26309a571ae75cda4034279e5/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/giann/croissant" target="_blank" rel="noopener noreferrer"><code>https://github.com/giann/croissant</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-curlv3">Lua-cURLv3<a href="#lua-curlv3" class="hash-link" aria-label="Direct link to Lua-cURLv3" title="Direct link to Lua-cURLv3">​</a></h3>
+<ul>
+<li>Package Name: <code>cURL</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/Lua-cURL/Lua-cURLv3/blob/9f8b6dba8b5ef1b26309a571ae75cda4034279e5/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/Lua-cURL/Lua-cURLv3" target="_blank" rel="noopener noreferrer"><code>https://github.com/Lua-cURL/Lua-cURLv3</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hump">hump<a href="#hump" class="hash-link" aria-label="Direct link to hump" title="Direct link to hump">​</a></h3>
+<p><code>hump</code> is a small collection of tools for developing games with LÖVE.</p>
+<ul>
+<li>Package Name: <code>hump</code></li>
+<li>Author: <code>Matthias Richter</code></li>
+<li>License: <a href="https://github.com/vrld/hump/blob/08937cc0ecf72d1a964a8de6cd552c5e136bf0d4/README.md" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/vrld/hump" target="_blank" rel="noopener noreferrer"><code>https://github.com/vrld/hump</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-llthreads2">lua-llthreads2<a href="#lua-llthreads2" class="hash-link" aria-label="Direct link to lua-llthreads2" title="Direct link to lua-llthreads2">​</a></h3>
+<p>A simple Lua wrapper for pthreads &amp; WIN32 threads.</p>
+<p>Each thread gets it’s own <code>lua_State</code> and there is no shared global state. The parent thread can pass data to a child thread only as parameters when creating the child thread. The child threads can return data back to the parent thread only when it return (i.e. ends). The parent needs to call child<!-- -->:join<!-- -->() to get the return values from a child thread, this call will block until the child thread ends.</p>
+<p>The design goals of this module is only provide support for creating new <code>lua_State</code> and running them in a different thread. This module will not provide any methods of thread-to-thread data passing between running threads (i.e. no locks, no shared state).</p>
+<ul>
+<li>Package Name: <code>llthreads2</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-llthreads2/blob/edd6035a955d5e12939cb5467cfd1614fea0910e/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-llthreads2" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-llthreads2</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-lluv">lua-lluv<a href="#lua-lluv" class="hash-link" aria-label="Direct link to lua-lluv" title="Direct link to lua-lluv">​</a></h3>
+<p>Lua low level binding to <a href="https://github.com/libuv/libuv" target="_blank" rel="noopener noreferrer"><code>libuv</code></a>.</p>
+<p><code>libuv</code> is a multi-platform support library with a focus on asynchronous I/O. It was primarily developed for use by Node.js, but it’s also used by <a href="http://luvit.io/" target="_blank" rel="noopener noreferrer">Luvit</a>, <a href="http://julialang.org/" target="_blank" rel="noopener noreferrer">Julia</a>, <a href="https://github.com/MagicStack/uvloop" target="_blank" rel="noopener noreferrer">uvloop</a>, and <a href="https://github.com/libuv/libuv/blob/v1.x/LINKS.md" target="_blank" rel="noopener noreferrer">others</a>.</p>
+<ul>
+<li>Package Name: <code>lluv</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-lluv/blob/9eca25458a232616f99a7d7ede79c0560cdf7941/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-lluv" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-lluv</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-lluv-ssl">lua-lluv-ssl<a href="#lua-lluv-ssl" class="hash-link" aria-label="Direct link to lua-lluv-ssl" title="Direct link to lua-lluv-ssl">​</a></h3>
+<p>SSL/TLS sockets for <code>lua-lluv</code> library.</p>
+<ul>
+<li>Package Name: <code>lluv.ssl</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-lluv-ssl/blob/8a780c3317b4a44dec28ff72425f9bec8768181a/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-lluv-ssl" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-lluv-ssl</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-lluv-websocket">lua-lluv-websocket<a href="#lua-lluv-websocket" class="hash-link" aria-label="Direct link to lua-lluv-websocket" title="Direct link to lua-lluv-websocket">​</a></h3>
+<p>This library includes stream interface for <code>lua-lluv</code> and <code>lua-lluv</code> backend for <a href="https://github.com/lipp/lua-websockets" target="_blank" rel="noopener noreferrer"><code>lua-websockets</code></a>.</p>
+<ul>
+<li>Package Name: <code>lluv.websocket</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-lluv-websocket/blob/8202354c51fb04d75b37183470ad40f3ebd35630/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-lluv-websocket" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-lluv-websocket</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-lluv-ftp">lua-lluv-ftp<a href="#lua-lluv-ftp" class="hash-link" aria-label="Direct link to lua-lluv-ftp" title="Direct link to lua-lluv-ftp">​</a></h3>
+<p>FTP client for <code>lua-lluv</code> library.</p>
+<ul>
+<li>Package Name: <code>lluv.ftp</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-lluv-ftp/blob/e6591020f732b4cc01c63c1a171aa8be2f2478dd/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-lluv-ftp" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-lluv-ftp</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-lluv-poll-zmq">lua-lluv-poll-zmq<a href="#lua-lluv-poll-zmq" class="hash-link" aria-label="Direct link to lua-lluv-poll-zmq" title="Direct link to lua-lluv-poll-zmq">​</a></h3>
+<p>ZMQ poller for <code>lua-lluv</code> library.</p>
+<ul>
+<li>Package Name: <code>lluv.poll_zmq</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-lluv-poll-zmq/blob/2385e7221e03659d37b3a81112e55757c94c5fa3/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-lluv-poll-zmq" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-lluv-poll-zmq</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-lluv-curl">lua-lluv-curl<a href="#lua-lluv-curl" class="hash-link" aria-label="Direct link to lua-lluv-curl" title="Direct link to lua-lluv-curl">​</a></h3>
+<p>Make asyncronus requests using <code>libuv</code> and <code>libcurl</code>.</p>
+<p>This module provide async version of curl multi class. Also module implement async request queue class which allows control number of parallel requests.</p>
+<ul>
+<li>Package Name: <code>lluv.curl</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-lluv-curl/blob/8a02dd8542383419060151f4de0a2e35eaf2ecbe/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-lluv-curl" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-lluv-curl</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-log">lua-log<a href="#lua-log" class="hash-link" aria-label="Direct link to lua-log" title="Direct link to lua-log">​</a></h3>
+<ul>
+<li>Package Name: <code>log</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-log/blob/2f07d4174c4caeffdcf7cc54d4dad0e1da2bad9a/LICENCE.txt" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-log" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-log</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lzmq">lzmq<a href="#lzmq" class="hash-link" aria-label="Direct link to lzmq" title="Direct link to lzmq">​</a></h3>
+<p>Lua binding to <a href="http://zeromq.org/" target="_blank" rel="noopener noreferrer"><code>ZeroMQ</code></a> library.</p>
+<ul>
+<li>Package Name: <code>lzmq</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/zeromq/lzmq/blob/210609b27c6955854a9f44e5b6df1ac8b06cc8f8/LICENCE.txt" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/zeromq/lzmq" target="_blank" rel="noopener noreferrer"><code>https://github.com/zeromq/lzmq</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="luasocket">luasocket<a href="#luasocket" class="hash-link" aria-label="Direct link to luasocket" title="Direct link to luasocket">​</a></h3>
+<p><code>LuaSocket</code> is a Lua extension library composed of two parts:</p>
+<ol>
+<li>a set of C modules that provide support for the TCP and UDP transport layers, and</li>
+<li>a set of Lua modules that provide functions commonly needed by applications that deal with the Internet.</li>
+</ol>
+<ul>
+<li>Package Name: <code>socket</code></li>
+<li>Author: <code>Caleb Maclennan</code></li>
+<li>License: <a href="https://github.com/lunarmodules/luasocket/blob/1d61853ab84f0724502205f45849c2347d6a49ac/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/lunarmodules/luasocket" target="_blank" rel="noopener noreferrer"><code>https://github.com/lunarmodules/luasocket</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="neturl">neturl<a href="#neturl" class="hash-link" aria-label="Direct link to neturl" title="Direct link to neturl">​</a></h3>
+<p>A Robust URL Parser and Builder for Lua.</p>
+<p>This small Lua library provides a few functions to parse URL with querystring and build new URL easily.</p>
+<ul>
+<li>Package Name: <code>net.url</code></li>
+<li>Author: <code>Bertrand Mansion</code></li>
+<li>License: <a href="https://github.com/golgote/neturl/blob/32acd84d06e16ddffc975adafce9cea26f3b2dd1/LICENSE.txt" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/golgote/neturl" target="_blank" rel="noopener noreferrer"><code>https://github.com/golgote/neturl</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-path">lua-path<a href="#lua-path" class="hash-link" aria-label="Direct link to lua-path" title="Direct link to lua-path">​</a></h3>
+<ul>
+<li>Package Name: <code>path</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-path/blob/5a32c7052e84cdb9dcbcd45648aae3f6927376ac/LICENCE.txt" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-path" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-path</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-pop3">lua-pop3<a href="#lua-pop3" class="hash-link" aria-label="Direct link to lua-pop3" title="Direct link to lua-pop3">​</a></h3>
+<p>POP3 client library for Lua 5.1 / 5.2 / 5.3.</p>
+<ul>
+<li>Package Name: <code>pop3</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-pop3/blob/89978f17238b8d7e57b4fb130088925620a22e5a/LICENCE.txt" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-pop3" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-pop3</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="luaposix">luaposix<a href="#luaposix" class="hash-link" aria-label="Direct link to luaposix" title="Direct link to luaposix">​</a></h3>
+<p>This is a POSIX binding for LuaJIT, Lua 5.1, 5.2, 5.3 and 5.4; like most libraries it simply binds to C APIs on the underlying system, so it won’t work on non-POSIX systems. However, it does try to detect the level of POSIX conformance of the underlying system and bind only available APIs.</p>
+<ul>
+<li>Package Name: <code>posix</code></li>
+<li>Author: <code>Gary V. Vaughan</code></li>
+<li>License: <a href="https://github.com/luaposix/luaposix/blob/aa9b3ca204ce0602a1501a0a3e50809a2a590585/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/luaposix/luaposix" target="_blank" rel="noopener noreferrer"><code>https://github.com/luaposix/luaposix</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sirocco">sirocco<a href="#sirocco" class="hash-link" aria-label="Direct link to sirocco" title="Direct link to sirocco">​</a></h3>
+<p>A collection of interactive command line prompts for Lua.</p>
+<ul>
+<li>Package Name: <code>sirocco</code></li>
+<li>Author: <code>Benoit Giannangeli</code></li>
+<li>License: <a href="https://github.com/giann/sirocco/blob/b2af2d336e808e763b424d2ea42e6a2c2b4aa24d/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/giann/sirocco" target="_blank" rel="noopener noreferrer"><code>https://github.com/giann/sirocco</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="luasec">LuaSec<a href="#luasec" class="hash-link" aria-label="Direct link to LuaSec" title="Direct link to LuaSec">​</a></h3>
+<p><code>LuaSec</code> depends on OpenSSL, and integrates with LuaSocket to make it easy to add secure connections to any Lua applications or scripts.</p>
+<ul>
+<li>Package Name: <code>ssl</code></li>
+<li>Author: <code>Bruno Silvestre</code></li>
+<li>License: <a href="https://github.com/lunarmodules/luasec/blob/2c248947df0ffa6064546d0c85f607f4a32ecbab/LICENSE" target="_blank" rel="noopener noreferrer">LuaSec 1.1.0 License</a></li>
+<li>Home Page: <a href="https://github.com/brunoos/luasec" target="_blank" rel="noopener noreferrer"><code>https://github.com/brunoos/luasec</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-term">lua-term<a href="#lua-term" class="hash-link" aria-label="Direct link to lua-term" title="Direct link to lua-term">​</a></h3>
+<p><code>lua-term</code> is a Lua module for manipulating a terminal.</p>
+<ul>
+<li>Package Name: <code>term</code></li>
+<li>Author: <code>Rob Hoelz</code></li>
+<li>License: <a href="https://github.com/hoelzro/lua-term/blob/375fa065efc9a95b289371cf0eb7bf8b3be0bc9c/COPYING" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/hoelzro/lua-term" target="_blank" rel="noopener noreferrer"><code>https://github.com/hoelzro/lua-term</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-tui">lua-tui<a href="#lua-tui" class="hash-link" aria-label="Direct link to lua-tui" title="Direct link to lua-tui">​</a></h3>
+<p>A library for doing things with terminals.</p>
+<ul>
+<li>Package Name: <code>tui</code></li>
+<li>Author: <a href="https://github.com/daurnimator" target="_blank" rel="noopener noreferrer"><code>daurnimator</code></a></li>
+<li>License: <a href="https://github.com/daurnimator/lua-tui/blob/9e854fc22074d73a26fbf25cf24690c60b042b11/LICENSE.md" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/daurnimator/lua-tui" target="_blank" rel="noopener noreferrer"><code>https://github.com/daurnimator/lua-tui</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-wcwidth">lua-wcwidth<a href="#lua-wcwidth" class="hash-link" aria-label="Direct link to lua-wcwidth" title="Direct link to lua-wcwidth">​</a></h3>
+<p>When writing output to a fixed-width output system (such as a terminal), the displayed length of a string does not always match the number of characters (also known as <a href="https://swtch.com/plan9port/unix/man/rune3.html" target="_blank" rel="noopener noreferrer">runes</a>, or code points) contained by the string. Some characters occupy two spaces (full-wide characters), and others occupy none.</p>
+<p>POSIX.1-2001 and POSIX.1-2008 specify the <a href="http://man7.org/linux/man-pages/man3/wcwidth.3.html" target="_blank" rel="noopener noreferrer">wcwidth(3)</a> function which can be used to know how many spaces (or cells) must be used to display a Unicode code point. This Lua contains a portable and standalone implementation based on the Unicode Standard release files.</p>
+<p>This module is useful mainly for implementing programs which must produce output to terminals, while handling proper alignment for double-width and zero-width Unicode code points.</p>
+<ul>
+<li>Package Name: <code>wcwidth</code></li>
+<li>Author: <code>Adrian Perez</code></li>
+<li>License: <a href="https://github.com/aperezdc/lua-wcwidth/blob/ee444b92f50ff4866c44989c37dd8077e120c148/luarocks/wcwidth-0.5-1.rockspec" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/aperezdc/lua-wcwidth" target="_blank" rel="noopener noreferrer"><code>https://github.com/aperezdc/lua-wcwidth</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="alien">Alien<a href="#alien" class="hash-link" aria-label="Direct link to Alien" title="Direct link to Alien">​</a></h3>
+<p>Alien is a Foreign Function Interface (FFI) for Lua. An FFI lets you call functions in dynamic libraries (.so, .dylib, .dll, etc.) from Lua code without having to write, compile and link a C binding from the library to Lua. In other words, it lets you write extensions that call native code using just Lua.</p>
+<ul>
+<li>Package Name: <code>alien</code></li>
+<li>Author: <code>Fabio Mascarenhas</code></li>
+<li>License: <a href="https://github.com/mascarenhas/alien/blob/d19b4022188a961af2e6931f748f71fcb36426d7/README" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/mascarenhas/alien" target="_blank" rel="noopener noreferrer"><code>https://github.com/mascarenhas/alien</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ansicolorslua">ansicolors.lua<a href="#ansicolorslua" class="hash-link" aria-label="Direct link to ansicolors.lua" title="Direct link to ansicolors.lua">​</a></h3>
+<p><code>ansicolors</code> is a simple Lua function for printing to the console in color.</p>
+<ul>
+<li>Package Name: <code>ansicolors</code></li>
+<li>Author: <code>Enrique García Cota</code></li>
+<li>License: <a href="https://github.com/kikito/ansicolors.lua/blob/a788ef99bbb54b3f1e22aaa34e2c99a44cb0606a/COPYING" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/kikito/ansicolors.lua" target="_blank" rel="noopener noreferrer"><code>https://github.com/kikito/ansicolors.lua</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="argparse">argparse<a href="#argparse" class="hash-link" aria-label="Direct link to argparse" title="Direct link to argparse">​</a></h3>
+<p><code>Argparse</code> is a feature-rich command line parser for Lua inspired by argparse for Python.</p>
+<p><code>Argparse</code> supports positional arguments, options, flags, optional arguments, subcommands and more. Argparse automatically generates usage, help and error messages.</p>
+<ul>
+<li>Package Name: <code>argphase</code></li>
+<li>Author: <code>Peter Melnichenko</code></li>
+<li>License: <a href="https://github.com/mpeterv/argparse/blob/412e6aca393e365f92c0315dfe50181b193f1ace/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/mpeterv/argparse" target="_blank" rel="noopener noreferrer"><code>https://github.com/mpeterv/argparse</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lbase64">lbase64<a href="#lbase64" class="hash-link" aria-label="Direct link to lbase64" title="Direct link to lbase64">​</a></h3>
+<p>Pure Lua <a href="https://en.wikipedia.org/wiki/Base64" target="_blank" rel="noopener noreferrer">base64</a> encoder/decoder. Works with Lua 5.1+ and LuaJIT. Fallbacks to pure Lua bit operations if bit/bit32/native bit operators are not available.</p>
+<ul>
+<li>Package Name: <code>base64</code></li>
+<li>Author: <a href="https://github.com/iskolbin" target="_blank" rel="noopener noreferrer"><code>iskolbin</code></a></li>
+<li>License: <a href="https://github.com/iskolbin/lbase64/blob/c261320edbdf82c16409d893a96c28c704aa0ab8/rockspec/base64-1.5-3.rockspec" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/iskolbin/lbase64" target="_blank" rel="noopener noreferrer"><code>https://github.com/iskolbin/lbase64</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="binaryheaplua">binaryheap.lua<a href="#binaryheaplua" class="hash-link" aria-label="Direct link to binaryheap.lua" title="Direct link to binaryheap.lua">​</a></h3>
+<p><a href="http://en.wikipedia.org/wiki/Binary_heap" target="_blank" rel="noopener noreferrer">Binary heap</a> implementation.</p>
+<ul>
+<li>Package Name: <code>binaryheap</code></li>
+<li>Author: <code>Thijs Schreijer</code></li>
+<li>License: <a href="https://github.com/Tieske/binaryheap.lua/blob/478d40df3ff32d2f3427eeb4104a6216a64f0669/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/Tieske/binaryheap.lua" target="_blank" rel="noopener noreferrer"><code>https://github.com/Tieske/binaryheap.lua</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="luadate">LuaDate<a href="#luadate" class="hash-link" aria-label="Direct link to LuaDate" title="Direct link to LuaDate">​</a></h3>
+<p>Lua Date and Time module for Lua 5.x.</p>
+<ul>
+<li>Package Name: <code>date</code></li>
+<li>Author: <code>Thijs Schreijer</code></li>
+<li>License: <a href="https://github.com/Tieske/date/blob/e5d38bb4e8b8d258d4fc07f3423aa0ac8d1deb6f/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/Tieske/date" target="_blank" rel="noopener noreferrer"><code>https://github.com/Tieske/date</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-ftp">lua-ftp<a href="#lua-ftp" class="hash-link" aria-label="Direct link to lua-ftp" title="Direct link to lua-ftp">​</a></h3>
+<p>Simple wrapper around <code>LuaSocket</code> ftp.</p>
+<ul>
+<li>Package Name: <code>ftp</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-ftp/blob/f1e2a821d853fdbed45efbfbb65c1a15eef8d822/LICENCE.txt" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-ftp" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-ftp</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="imap4lua">imap4.lua<a href="#imap4lua" class="hash-link" aria-label="Direct link to imap4.lua" title="Direct link to imap4.lua">​</a></h3>
+<p>Simple IMAP4 protocol wrapper, based on <a href="https://tools.ietf.org/html/rfc3501" target="_blank" rel="noopener noreferrer">RFC3501</a>.</p>
+<ul>
+<li>Package Name: <code>imap4</code></li>
+<li>Author: <code>Matthias Richter</code></li>
+<li><a href="https://github.com/vrld/imap4.lua/tree/027a4eea9162b95851716d531b085039b2b36da8" target="_blank" rel="noopener noreferrer">License</a></li>
+<li>Home Page: <a href="https://github.com/vrld/imap4.lua" target="_blank" rel="noopener noreferrer"><code>https://github.com/vrld/imap4.lua</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="luapanda">LuaPanda<a href="#luapanda" class="hash-link" aria-label="Direct link to LuaPanda" title="Direct link to LuaPanda">​</a></h3>
+<ul>
+<li>Package Name: <code>LuaPanda</code></li>
+<li>Author: <code>Tencent</code></li>
+<li>License: <a href="https://github.com/Tencent/LuaPanda/blob/80e5f7ff521b5789e6716d5d1f00ce04a517ea3f/LICENSE.txt" target="_blank" rel="noopener noreferrer">BSD 3-Clause License</a></li>
+<li>Home Page: <a href="https://github.com/Tencent/LuaPanda" target="_blank" rel="noopener noreferrer"><code>https://github.com/Tencent/LuaPanda</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="luaunit">LuaUnit<a href="#luaunit" class="hash-link" aria-label="Direct link to LuaUnit" title="Direct link to LuaUnit">​</a></h3>
+<p><code>LuaUnit</code> is a popular unit-testing framework for Lua, with an interface typical of xUnit libraries (Python unittest, Junit, NUnit, ...). It supports several output formats (Text, TAP, JUnit, ...) to be used directly or work with Continuous Integration platforms (Jenkins, Hudson, ...).</p>
+<p><code>LuaUnit</code> may be installed as a <a href="https://luarocks.org/modules/bluebird75/luaunit" target="_blank" rel="noopener noreferrer">rock</a> or directly added to your project. For simplicity, <code>LuaUnit</code> is contained into a single-file and has no external dependency.</p>
+<p>Tutorial and reference documentation is available on <a href="http://luaunit.readthedocs.org/en/latest/" target="_blank" rel="noopener noreferrer">read-the-docs</a>.</p>
+<p><code>LuaUnit</code> may also be used as an assertion library, to validate assertions inside a running program. In addition, it provides a pretty stringifier which converts any type into a nicely formatted string (including complex nested or recursive tables).</p>
+<ul>
+<li>Package Name: <code>luaunit</code></li>
+<li>Author: <code>Philippe F</code></li>
+<li>License: <a href="https://github.com/bluebird75/luaunit/blob/5e9ae05ba3d53e7d8f70689c589e6cf35554646f/LICENSE.txt" target="_blank" rel="noopener noreferrer">BSD License</a></li>
+<li>Home Page: <a href="https://github.com/bluebird75/luaunit" target="_blank" rel="noopener noreferrer"><code>https://github.com/bluebird75/luaunit</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="luaxml">LuaXML<a href="#luaxml" class="hash-link" aria-label="Direct link to LuaXML" title="Direct link to LuaXML">​</a></h3>
+<p><code>LuaXML</code> provides a minimal set of functions for the processing of XML data in Lua. It offers a very simple and natural mapping between the XML data format and Lua tables, which allows one to parse XML data just using Lua’s normal table access and iteration methods: Substatements and text content is represented as array data having numerical keys, attributes and tags use string keys. This representation makes sure that the structure of XML data is exactly preserved in a read/write cycle.</p>
+<p>Since version 1.7, <code>LuaXML</code> consists of a well-optimized portable ISO-standard C file and a small Lua file. It is published under the same liberal licensing conditions as Lua itself (see below). It has been successfully compiled and used under Linux, various flavours of MS Windows, and Mac OS X.</p>
+<ul>
+<li>Package Name: <code>LuaXML</code></li>
+<li>Author: <code>Peter Drahoš</code></li>
+<li>License: <a href="https://github.com/LuaDist/luaxml/blob/c5f544c3b758d7aef6c119abb520871699f4785c/readme.txt" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/LuaDist/luaxml" target="_blank" rel="noopener noreferrer"><code>https://github.com/LuaDist/luaxml</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-protobuf">lua-protobuf<a href="#lua-protobuf" class="hash-link" aria-label="Direct link to lua-protobuf" title="Direct link to lua-protobuf">​</a></h3>
+<p>This project offers a C module for Lua (5.1, 5.2, 5.3, 5.4 and LuaJIT) manipulating Google’s protobuf protocol, both for version 2 and 3 syntax and semantics. It splits to the lower-level and the high-level parts for different goals.</p>
+<p>For converting between binary protobuf data with Lua tables, using <code>pb.load()</code> loads the compiled protobuf schema content (<code>*.pb</code> file) generated by Google protobuf’s compiler named <code>protoc</code> and call <code>pb.encode()</code>/<code>pb.decode()</code>.</p>
+<p>Or use these modules to manipulate the raw wire format in lower-level way:</p>
+<ul>
+<li><code>pb.slice</code>: a wire format decoding module.</li>
+<li><code>pb.buffer</code>: a buffer implement that use to encode basic types into protobuf’s wire format. It can be used to support streaming decode protobuf data.</li>
+<li><code>pb.conv</code>: a module converting integers in the protobuf wire format.</li>
+<li><code>pb.io</code>: a module access stdin/stdout or other files in binary mode.</li>
+</ul>
+<p>If you don’t want to depend Google’s protobuf compiler, <code>protoc.lua</code> is a pure Lua module translating text-based protobuf schema content into the <code>*.pb</code> binary format.</p>
+<ul>
+<li>Package Name: <code>pb</code>, <code>protoc</code></li>
+<li>Author: <code>Xavier Wang</code></li>
+<li>License: <a href="https://github.com/starwing/lua-protobuf/blob/739bf67692cf6becc2485d502bd35f7971a9ef26/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/starwing/lua-protobuf" target="_blank" rel="noopener noreferrer"><code>https://github.com/starwing/lua-protobuf</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lpeg">LPeg<a href="#lpeg" class="hash-link" aria-label="Direct link to LPeg" title="Direct link to LPeg">​</a></h3>
+<p><code>LPeg</code> is a new pattern-matching library for Lua, based on <a href="http://pdos.csail.mit.edu/~baford/packrat/" target="_blank" rel="noopener noreferrer">Parsing Expression Grammars</a> (PEGs). This text is a reference manual for the library. For a more formal treatment of <code>LPeg</code>, as well as some discussion about its implementation, see <a href="http://www.inf.puc-rio.br/~roberto/docs/peg.pdf" target="_blank" rel="noopener noreferrer">A Text Pattern-Matching Tool based on Parsing Expression Grammars</a>. (You may also be interested in my <a href="http://vimeo.com/1485123" target="_blank" rel="noopener noreferrer">talk about <code>LPeg</code></a> given at the III Lua Workshop.)</p>
+<ul>
+<li>Package Name: <code>lpeg</code></li>
+<li>Author: <code>Lua.org, PUC-Rio.</code></li>
+<li><a href="https://www.inf.puc-rio.br/~roberto/lpeg/#license" target="_blank" rel="noopener noreferrer">License</a></li>
+<li>Home Page: <a href="http://www.inf.puc-rio.br/~roberto/lpeg/" target="_blank" rel="noopener noreferrer"><code>http://www.inf.puc-rio.br/~roberto/lpeg/</code></a></li>
+<li>Tree: <a href="http://www.inf.puc-rio.br/~roberto/lpeg/lpeg-1.0.2.tar.gz" target="_blank" rel="noopener noreferrer"><code>v1.0.2</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-sendmail">lua-sendmail<a href="#lua-sendmail" class="hash-link" aria-label="Direct link to lua-sendmail" title="Direct link to lua-sendmail">​</a></h3>
+<p>Simple wrapper around <code>LuaSocket</code> <code>smtp.send</code>.</p>
+<ul>
+<li>Package Name: <code>sendmail</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-sendmail/blob/e3c40d0f6c419a8b530104ee219c9cd2741d8e8a/LICENCE.txt" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-sendmail" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-sendmail</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="serpent">Serpent<a href="#serpent" class="hash-link" aria-label="Direct link to Serpent" title="Direct link to Serpent">​</a></h3>
+<p>Lua serializer and pretty printer.</p>
+<ul>
+<li>Package Name: <code>serpent</code></li>
+<li>Author: <code>Paul Kulchenko</code></li>
+<li>License: <a href="https://github.com/pkulchenko/serpent/blob/139fc18263bc5ffecc1729147891f1eb383046bf/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/pkulchenko/serpent" target="_blank" rel="noopener noreferrer"><code>https://github.com/pkulchenko/serpent</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-split">Lua-Split<a href="#lua-split" class="hash-link" aria-label="Direct link to Lua-Split" title="Direct link to Lua-Split">​</a></h3>
+<ul>
+<li>Package Name: <code>split</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-split/blob/ea32e4602ffd87783f9a224636455e3475c078fb/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-split" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-split</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="timerwheellua">timerwheel.lua<a href="#timerwheellua" class="hash-link" aria-label="Direct link to timerwheel.lua" title="Direct link to timerwheel.lua">​</a></h3>
+<p>Efficient timer for timeout related timers: fast insertion, deletion, and execution (all as O(1) implemented), but with lesser precision.</p>
+<p>This module will not provide the timer/runloop itself. Use your own runloop and call <code>wheel:step</code> to check and execute timers.</p>
+<ul>
+<li>Package Name: <code>timerwheel</code></li>
+<li>Author: <code>Thijs Schreijer</code></li>
+<li>License: <a href="https://github.com/Tieske/timerwheel.lua/blob/68c468e687c2c17d357644c11290112e934760c7/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/Tieske/timerwheel.lua" target="_blank" rel="noopener noreferrer"><code>https://github.com/Tieske/timerwheel.lua</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-iconv">lua-iconv<a href="#lua-iconv" class="hash-link" aria-label="Direct link to lua-iconv" title="Direct link to lua-iconv">​</a></h3>
+<p><code>Lua-iconv</code> is POSIX <code>iconv</code> binding for the Lua Programming Language. The <code>iconv</code> library converts a sequence of characters from one codeset into a sequence of corresponding characters in another codeset. The codesets are those specified in the <code>iconv.new()</code> call that returned the conversion descriptor, cd.</p>
+<ul>
+<li>Package Name: <code>iconv</code></li>
+<li>Author: <code>Alexandre Erwin Ittner</code></li>
+<li><a href="https://github.com/lunarmodules/lua-iconv/blob/b761918588736348698eb060a3a490f448786f01/COPYING" target="_blank" rel="noopener noreferrer">License</a></li>
+<li>Home Page: <a href="https://github.com/ittner/lua-iconv" target="_blank" rel="noopener noreferrer"><code>https://github.com/ittner/lua-iconv</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-utf8-simple">lua-utf8-simple<a href="#lua-utf8-simple" class="hash-link" aria-label="Direct link to lua-utf8-simple" title="Direct link to lua-utf8-simple">​</a></h3>
+<ul>
+<li>Package Name: <code>utf8_simple</code></li>
+<li>Author: <a href="https://github.com/blitmap" target="_blank" rel="noopener noreferrer"><code>blitmap</code></a></li>
+<li>License: <a href="https://github.com/blitmap/lua-utf8-simple/blob/7ef030750d8e408ac5d724aefab2ec8769731005/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/blitmap/lua-utf8-simple" target="_blank" rel="noopener noreferrer"><code>https://github.com/blitmap/lua-utf8-simple</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="luasqlite3">LuaSQLite3<a href="#luasqlite3" class="hash-link" aria-label="Direct link to LuaSQLite3" title="Direct link to LuaSQLite3">​</a></h3>
+<ul>
+<li>Package Name: <code>lsqlite3</code></li>
+<li>Author: <code>Tiago Dionizio, Doug Currie</code></li>
+<li><a href="http://lua.sqlite.org/home/doc/tip/doc/lsqlite3.wiki#license" target="_blank" rel="noopener noreferrer">License</a></li>
+<li>Home Page: <a href="http://lua.sqlite.org/index.cgi/index" target="_blank" rel="noopener noreferrer"><code>http://lua.sqlite.org</code></a></li>
+<li>Tree: <a href="http://lua.sqlite.org/index.cgi/zip/lsqlite3_fsl09y.zip?uuid=fsl_9y" target="_blank" rel="noopener noreferrer"><code>v0.9.5</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-archive">lua-archive<a href="#lua-archive" class="hash-link" aria-label="Direct link to lua-archive" title="Direct link to lua-archive">​</a></h3>
+<p>Lua 5.1 interface to <code>libarchive</code>.</p>
+<ul>
+<li>Package Name: <code>archive</code></li>
+<li>Author: <code>Brian Maher</code></li>
+<li>License: <a href="https://github.com/brimworks/lua-archive/blob/042b4be1425c11bb9b051609c8ccab68921cefc0/README" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/brimworks/lua-archive" target="_blank" rel="noopener noreferrer"><code>https://github.com/brimworks/lua-archive</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-ev">lua-ev<a href="#lua-ev" class="hash-link" aria-label="Direct link to lua-ev" title="Direct link to lua-ev">​</a></h3>
+<ul>
+<li>Package Name: <code>ev</code></li>
+<li>Author: <code>Brian Maher</code></li>
+<li>License: <a href="https://github.com/brimworks/lua-ev/blob/2d11066b6f96a7501805e8c28d92f70dd2c0ab13/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/brimworks/lua-ev" target="_blank" rel="noopener noreferrer"><code>https://github.com/brimworks/lua-ev</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-http-parser">lua-http-parser<a href="#lua-http-parser" class="hash-link" aria-label="Direct link to lua-http-parser" title="Direct link to lua-http-parser">​</a></h3>
+<p>Lua 5.1 interface to ry’s <code>http-parser</code>.</p>
+<ul>
+<li>Package Name: <code>http.parser</code></li>
+<li>Author: <code>Brian Maher</code></li>
+<li>License: <a href="https://github.com/brimworks/lua-http-parser/blob/b4225939e3413938cc674732086fe4f8578902e9/LICENSE-MIT" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/brimworks/lua-http-parser" target="_blank" rel="noopener noreferrer"><code>https://github.com/brimworks/lua-http-parser</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-openssl">lua-openssl<a href="#lua-openssl" class="hash-link" aria-label="Direct link to lua-openssl" title="Direct link to lua-openssl">​</a></h3>
+<p>A free, MIT-licensed OpenSSL binding for Lua.</p>
+<ul>
+<li>Package Name: <code>openssl</code></li>
+<li>Author: <code>George Zhao</code></li>
+<li>License: <a href="https://github.com/zhaozg/lua-openssl/blob/2a391e2be61fecbe6232e1f0a5b53dfdc00deb80/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/zhaozg/lua-openssl" target="_blank" rel="noopener noreferrer"><code>https://github.com/zhaozg/lua-openssl</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-spawn">lua-spawn<a href="#lua-spawn" class="hash-link" aria-label="Direct link to lua-spawn" title="Direct link to lua-spawn">​</a></h3>
+<p>A lua library to spawn programs.</p>
+<ul>
+<li>Package Name: <code>spawn</code></li>
+<li>Author: <a href="https://github.com/daurnimator" target="_blank" rel="noopener noreferrer"><code>daurnimator</code></a></li>
+<li>License: <a href="https://github.com/daurnimator/lua-spawn/blob/b2f1629754a3e78edab1f69c71e7d7334cbe4e92/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/daurnimator/lua-spawn" target="_blank" rel="noopener noreferrer"><code>https://github.com/daurnimator/lua-spawn</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-vararg">lua-vararg<a href="#lua-vararg" class="hash-link" aria-label="Direct link to lua-vararg" title="Direct link to lua-vararg">​</a></h3>
+<p><code>vararg</code> is a Lua library for manipulation of variable arguements (vararg) of functions. These functions basically allow you to do things with <code>vararg</code> that cannot be efficiently done in pure Lua but can be easily done through the C API.</p>
+<p>Actually, the main motivation for this library was the &#x27;pack&#x27; function, which is an elegant alternative for the possible new standard function ’table.pack&#x27; and the praised &#x27;apairs&#x27;. Also &#x27;pack&#x27; allows an interesting implementaiton of tuples in pure Lua.</p>
+<ul>
+<li>Package Name: <code>vararg</code></li>
+<li>Author: <code>Alexey Melnichuk</code></li>
+<li>License: <a href="https://github.com/moteus/lua-vararg/blob/418aa4f2a5624746869b8bbf7eab279383bcfc34/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/moteus/lua-vararg" target="_blank" rel="noopener noreferrer"><code>https://github.com/moteus/lua-vararg</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-zlib">lua-zlib<a href="#lua-zlib" class="hash-link" aria-label="Direct link to lua-zlib" title="Direct link to lua-zlib">​</a></h3>
+<p>Lua 5.1 interface to <code>zlib</code>.</p>
+<ul>
+<li>Package Name: <code>zlib</code></li>
+<li>Author: <code>Brian Maher</code></li>
+<li>License: <a href="https://github.com/brimworks/lua-zlib/blob/3f5c326760e62137a48fd8288541f51ee80b256b/README" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/brimworks/lua-zlib" target="_blank" rel="noopener noreferrer"><code>https://github.com/brimworks/lua-zlib</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="luafilesystem">luafilesystem<a href="#luafilesystem" class="hash-link" aria-label="Direct link to luafilesystem" title="Direct link to luafilesystem">​</a></h3>
+<p><code>LuaFileSystem</code> is a Lua library developed to complement the set of functions related to file systems offered by the standard Lua distribution.</p>
+<p><code>LuaFileSystem</code> offers a portable way to access the underlying directory structure and file attributes. <code>LuaFileSystem</code> is free software and uses the same license as Lua 5.x (MIT).</p>
+<ul>
+<li>Package Name: <code>lfs</code></li>
+<li>Author: <code>Hisham Muhammad</code></li>
+<li>License: <a href="https://github.com/lunarmodules/luafilesystem/blob/9cbe5cba9047b449308e1365690b0a5acfdef181/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/lunarmodules/luafilesystem" target="_blank" rel="noopener noreferrer"><code>https://github.com/lunarmodules/luafilesystem</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lunix">lunix<a href="#lunix" class="hash-link" aria-label="Direct link to lunix" title="Direct link to lunix">​</a></h3>
+<p><code>lunix</code> is a Lua bindings library module to common Unix system APIs. The module is regularly tested on recent versions of AIX, FreeBSD, Linux/glibc, Linux/musl, NetBSD, OpenBSD, OS X, and Solaris. The best way to describe it is in contradistinction to luaposix, the most popular bindings module for Unix APIs in Lua.</p>
+<ul>
+<li>Package Name: <code>unix</code></li>
+<li>Author: <code>William Ahern</code></li>
+<li>License: <a href="https://github.com/wahern/lunix/blob/b4c1a08381c4d041dc73cb1df24b7b10925c97ea/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/wahern/lunix" target="_blank" rel="noopener noreferrer"><code>https://github.com/wahern/lunix</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-websockets">lua-websockets<a href="#lua-websockets" class="hash-link" aria-label="Direct link to lua-websockets" title="Direct link to lua-websockets">​</a></h3>
+<ul>
+<li>Package Name: <code>websocket</code></li>
+<li>Author: <code>Gerhard Preuss</code></li>
+<li>License: <a href="https://github.com/lipp/lua-websockets/blob/1c6e94b27fe7cb157877987fba86299fb326be0c/COPYRIGHT" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/lipp/lua-websockets" target="_blank" rel="noopener noreferrer"><code>https://github.com/lipp/lua-websockets</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lua-imagick">Lua IMagick<a href="#lua-imagick" class="hash-link" aria-label="Direct link to Lua IMagick" title="Direct link to Lua IMagick">​</a></h3>
+<p>Pure-C Lua bindings to <code>ImageMagick</code>.</p>
+<ul>
+<li>Package Name: <code>imagick</code></li>
+<li>Author: <code>Epifanov Ivan</code></li>
+<li>License: <a href="https://github.com/isage/lua-imagick/blob/345d6b44a9c4a866e2f295a705005de4ed934964/LICENSE" target="_blank" rel="noopener noreferrer">Do What The F*ck You Want To Public License</a></li>
+<li>Home Page: <a href="https://github.com/isage/lua-imagick" target="_blank" rel="noopener noreferrer"><code>https://github.com/isage/lua-imagick</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lyaml">lyaml<a href="#lyaml" class="hash-link" aria-label="Direct link to lyaml" title="Direct link to lyaml">​</a></h3>
+<p><a href="http://pyyaml.org/wiki/LibYAML" target="_blank" rel="noopener noreferrer">LibYAML</a> binding for <a href="http://www.lua.org/" target="_blank" rel="noopener noreferrer">Lua</a>, with a fast C implementation for converting between <a href="http://yaml.org/spec/1.1/" target="_blank" rel="noopener noreferrer">%YAML 1.1</a> and <a href="http://www.lua.org/" target="_blank" rel="noopener noreferrer">Lua</a> tables, and a low-level <a href="http://yaml.org/" target="_blank" rel="noopener noreferrer">YAML</a> event parser for implementing more intricate <a href="http://yaml.org/" target="_blank" rel="noopener noreferrer">YAML</a> document loading.</p>
+<ul>
+<li>Package Name: <code>lyaml</code></li>
+<li>Author: <code>Gary V. Vaughan</code></li>
+<li>License: <a href="https://github.com/gvvaughan/lyaml/blob/0701528f79bd3d0fb118b9a6a7321dcb8512c654/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/gvvaughan/lyaml" target="_blank" rel="noopener noreferrer"><code>https://github.com/gvvaughan/lyaml</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="luaexif">luaexif<a href="#luaexif" class="hash-link" aria-label="Direct link to luaexif" title="Direct link to luaexif">​</a></h3>
+<p><a href="https://github.com/minoki/luaexif" target="_blank" rel="noopener noreferrer">luaexif</a> is a Lua binding for <a href="https://github.com/libexif/libexif" target="_blank" rel="noopener noreferrer">libexif</a>. Compatible with Lua 5.1 or later.</p>
+<ul>
+<li>Package Name: <code>exif</code></li>
+<li>Author: <code>Minoki</code></li>
+<li>License: <a href="https://github.com/minoki/luaexif/blob/9d2cc14d940e138834285bd2cd05987b8aaa3918/COPYRIGHT" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/minoki/luaexif" target="_blank" rel="noopener noreferrer"><code>https://github.com/minoki/luaexif</code></a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="inspectlua">inspect.lua<a href="#inspectlua" class="hash-link" aria-label="Direct link to inspect.lua" title="Direct link to inspect.lua">​</a></h3>
+<p>This library transforms any Lua value into a human-readable representation. It is especially useful for debugging errors in tables.</p>
+<p>The objective here is human understanding (i.e. for debugging), not serialization or compactness.</p>
+<ul>
+<li>Package Name: <code>inspect</code></li>
+<li>Author: <code>Enrique García Cota</code></li>
+<li>License: <a href="https://github.com/kikito/inspect.lua/blob/8686162bce74913c4d3a577e7324642ddc4e21c0/MIT-LICENSE.txt" target="_blank" rel="noopener noreferrer">MIT License</a></li>
+<li>Home Page: <a href="https://github.com/kikito/inspect.lua" target="_blank" rel="noopener noreferrer"><code>https://github.com/kikito/inspect.lua</code></a></li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/OwnGoalStudio/XXTouchElite/tree/main/docs/appendix/prebuilt-libraries.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/appendix/command-line-tools/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Command Line Tools</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/appendix/supported-keycodes/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Supported Keycodes</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#open-source-credits" class="table-of-contents__link toc-highlight">Open-Source Credits</a><ul><li><a href="#lua-zip" class="table-of-contents__link toc-highlight">lua-zip</a></li><li><a href="#lua-cjson" class="table-of-contents__link toc-highlight">lua-cjson</a></li><li><a href="#copas" class="table-of-contents__link toc-highlight">Copas</a></li><li><a href="#croissant" class="table-of-contents__link toc-highlight">croissant</a></li><li><a href="#lua-curlv3" class="table-of-contents__link toc-highlight">Lua-cURLv3</a></li><li><a href="#hump" class="table-of-contents__link toc-highlight">hump</a></li><li><a href="#lua-llthreads2" class="table-of-contents__link toc-highlight">lua-llthreads2</a></li><li><a href="#lua-lluv" class="table-of-contents__link toc-highlight">lua-lluv</a></li><li><a href="#lua-lluv-ssl" class="table-of-contents__link toc-highlight">lua-lluv-ssl</a></li><li><a href="#lua-lluv-websocket" class="table-of-contents__link toc-highlight">lua-lluv-websocket</a></li><li><a href="#lua-lluv-ftp" class="table-of-contents__link toc-highlight">lua-lluv-ftp</a></li><li><a href="#lua-lluv-poll-zmq" class="table-of-contents__link toc-highlight">lua-lluv-poll-zmq</a></li><li><a href="#lua-lluv-curl" class="table-of-contents__link toc-highlight">lua-lluv-curl</a></li><li><a href="#lua-log" class="table-of-contents__link toc-highlight">lua-log</a></li><li><a href="#lzmq" class="table-of-contents__link toc-highlight">lzmq</a></li><li><a href="#luasocket" class="table-of-contents__link toc-highlight">luasocket</a></li><li><a href="#neturl" class="table-of-contents__link toc-highlight">neturl</a></li><li><a href="#lua-path" class="table-of-contents__link toc-highlight">lua-path</a></li><li><a href="#lua-pop3" class="table-of-contents__link toc-highlight">lua-pop3</a></li><li><a href="#luaposix" class="table-of-contents__link toc-highlight">luaposix</a></li><li><a href="#sirocco" class="table-of-contents__link toc-highlight">sirocco</a></li><li><a href="#luasec" class="table-of-contents__link toc-highlight">LuaSec</a></li><li><a href="#lua-term" class="table-of-contents__link toc-highlight">lua-term</a></li><li><a href="#lua-tui" class="table-of-contents__link toc-highlight">lua-tui</a></li><li><a href="#lua-wcwidth" class="table-of-contents__link toc-highlight">lua-wcwidth</a></li><li><a href="#alien" class="table-of-contents__link toc-highlight">Alien</a></li><li><a href="#ansicolorslua" class="table-of-contents__link toc-highlight">ansicolors.lua</a></li><li><a href="#argparse" class="table-of-contents__link toc-highlight">argparse</a></li><li><a href="#lbase64" class="table-of-contents__link toc-highlight">lbase64</a></li><li><a href="#binaryheaplua" class="table-of-contents__link toc-highlight">binaryheap.lua</a></li><li><a href="#luadate" class="table-of-contents__link toc-highlight">LuaDate</a></li><li><a href="#lua-ftp" class="table-of-contents__link toc-highlight">lua-ftp</a></li><li><a href="#imap4lua" class="table-of-contents__link toc-highlight">imap4.lua</a></li><li><a href="#luapanda" class="table-of-contents__link toc-highlight">LuaPanda</a></li><li><a href="#luaunit" class="table-of-contents__link toc-highlight">LuaUnit</a></li><li><a href="#luaxml" class="table-of-contents__link toc-highlight">LuaXML</a></li><li><a href="#lua-protobuf" class="table-of-contents__link toc-highlight">lua-protobuf</a></li><li><a href="#lpeg" class="table-of-contents__link toc-highlight">LPeg</a></li><li><a href="#lua-sendmail" class="table-of-contents__link toc-highlight">lua-sendmail</a></li><li><a href="#serpent" class="table-of-contents__link toc-highlight">Serpent</a></li><li><a href="#lua-split" class="table-of-contents__link toc-highlight">Lua-Split</a></li><li><a href="#timerwheellua" class="table-of-contents__link toc-highlight">timerwheel.lua</a></li><li><a href="#lua-iconv" class="table-of-contents__link toc-highlight">lua-iconv</a></li><li><a href="#lua-utf8-simple" class="table-of-contents__link toc-highlight">lua-utf8-simple</a></li><li><a href="#luasqlite3" class="table-of-contents__link toc-highlight">LuaSQLite3</a></li><li><a href="#lua-archive" class="table-of-contents__link toc-highlight">lua-archive</a></li><li><a href="#lua-ev" class="table-of-contents__link toc-highlight">lua-ev</a></li><li><a href="#lua-http-parser" class="table-of-contents__link toc-highlight">lua-http-parser</a></li><li><a href="#lua-openssl" class="table-of-contents__link toc-highlight">lua-openssl</a></li><li><a href="#lua-spawn" class="table-of-contents__link toc-highlight">lua-spawn</a></li><li><a href="#lua-vararg" class="table-of-contents__link toc-highlight">lua-vararg</a></li><li><a href="#lua-zlib" class="table-of-contents__link toc-highlight">lua-zlib</a></li><li><a href="#luafilesystem" class="table-of-contents__link toc-highlight">luafilesystem</a></li><li><a href="#lunix" class="table-of-contents__link toc-highlight">lunix</a></li><li><a href="#lua-websockets" class="table-of-contents__link toc-highlight">lua-websockets</a></li><li><a href="#lua-imagick" class="table-of-contents__link toc-highlight">Lua IMagick</a></li><li><a href="#lyaml" class="table-of-contents__link toc-highlight">lyaml</a></li><li><a href="#luaexif" class="table-of-contents__link toc-highlight">luaexif</a></li><li><a href="#inspectlua" class="table-of-contents__link toc-highlight">inspect.lua</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/tutorial/intro/">Tutorial</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/lua-manual/intro/">Lua Manual</a></li><li class="footer__item"><a href="https://elite.82flex.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Open API</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/xxtouch" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://t.me/xxtouch_chat" target="_blank" rel="noopener noreferrer" class="footer__link-item">Telegram<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://discord.gg/RTyMX6c9" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://x.com/82Flex" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog/">Blog</a></li><li class="footer__item"><a href="https://github.com/OwnGoalStudio/XXTouchElite" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2014-2025 Nihao Software, LLC. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

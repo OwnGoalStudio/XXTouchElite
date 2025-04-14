@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://xxtou.ch/blog/</id>
+    <title>XXTouch Elite Blog</title>
+    <updated>2025-04-07T15:47:14.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://xxtou.ch/blog/"/>
+    <subtitle>XXTouch Elite Blog</subtitle>
+    <icon>https://xxtou.ch/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[empty]]></title>
+        <id>https://xxtou.ch/blog/empty/</id>
+        <link href="https://xxtou.ch/blog/empty/"/>
+        <updated>2025-04-07T15:47:14.000Z</updated>
+    </entry>
+</feed>
