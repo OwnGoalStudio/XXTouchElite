@@ -859,13 +859,13 @@ sys.reset(reset_type_name)
 #### Parameters and Return Values
 
 - reset_type_name
-  - *string*, the option name in **Settings** → **General** → **Reset** in English
-    - `Reset All Settings`: Reset all settings (device will reboot automatically)
-    - `Erase All Content and Settings`: Erase all content and settings (device will reboot automatically)
-    - `Reset Network Settings`: Reset network settings (device will reboot automatically)
-    - `Reset Keyboard Dictionary`: Reset keyboard dictionary
-    - `Reset Home Screen Layout`: Reset home screen layout
-    - `Reset Location & Privacy`: Reset location and privacy
+  - *enum*, the option name in **Settings** → **General** → **Reset** in English
+    - `"Reset All Settings"`: Reset all settings (device will reboot automatically)
+    - `"Erase All Content and Settings"`: Erase all content and settings (device will reboot automatically)
+    - `"Reset Network Settings"`: Reset network settings (device will reboot automatically)
+    - `"Reset Keyboard Dictionary"`: Reset keyboard dictionary
+    - `"Reset Home Screen Layout"`: Reset home screen layout
+    - `"Reset Location & Privacy"`: Reset location and privacy
 
 #### Description
 

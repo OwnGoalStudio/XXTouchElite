@@ -10,7 +10,7 @@ Each script in XXTouch Elite runs as an independent process, referred to as a *
 - Started via [OpenAPI](https://elite.82flex.com/api-283425278) calls
 - Triggered by [Activator](https://cydia.saurik.com/package/libactivator/) events
 - Started via the X.X.T.E. application interface
-- Directly [debugged](../tutorial-basics/debug-your-script.md) or launched via IDEs like VSCode plugins, XXTStudio, etc.
+- Directly debugged or launched via IDEs like VSCode plugins, XXTStudio, etc.
 - Started remotely via group control software, cloud control software, etc.
 - Restarted by “[Daemon Mode](daemon-mode.md)” after unexpected termination
 - Started by features like “[Startup Script](https://elite.82flex.com/api-283425313)” or “Scheduled Tasks”

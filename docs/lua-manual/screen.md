@@ -351,8 +351,8 @@ x, y = screen.find_color({
 
 Uses similarity mode to find (pattern matching) the position of the first fully matching multi-point color structure (pattern) in the area.
 
-:::note No way
-No way someone [writes this matching table by hand](../tutorial-extras/grab-screen-colors.mdx), right?
+:::note
+No body [writes this matching table by hand](../tutorial/make-some-notes.md#find-new-note-button), right?
 :::
 
 #### Example
@@ -685,11 +685,11 @@ text_list, details = screen.ocr_text(left, top, right, bottom[, recognition_leve
 * left, top, right, bottom
   * *integer*, *optional*, coordinates of the top-left and bottom-right corners of the recognition area. Default **full screen**
 * language_list
-  * *Enum List*, *optional*, list of recognition languages, default `{ "en-US" }`
-    * English `en-US`
-    * Simplified Chinese `zh-Hans`
+  * *enum*, *optional*, list of recognition languages, default `{ "en-US" }`
+    * English `"en-US"`
+    * Simplified Chinese `"zh-Hans"`
 * candidate_words
-  * *Text List*, *optional*, used to improve recognition accuracy. Default `{ }`
+  * *list of texts*, *optional*, used to improve recognition accuracy. Default `{ }`
 * min_confidence
   * *integer*, *optional*, minimum confidence of the recognition result, results with confidence lower than this value will be excluded. Range 0.0 ~ 1.0, default `0.0`
 * recognition_level *enum*, *optional*
@@ -698,11 +698,11 @@ text_list, details = screen.ocr_text(left, top, right, bottom[, recognition_leve
 * timeout
   * *integer*, *optional*, timeout, in milliseconds. Default `3000`
 * text_list
-  * *Text List*, list of recognized text from top to bottom, returns an empty list if no text is recognized in the specified area
+  * *list of texts*, list of recognized text from top to bottom, returns an empty list if no text is recognized in the specified area
 * details
-  * *List*, each element is an *associative table*, corresponding to the text in **text_list**, containing the following fields:
-    * `center` *List*, coordinates of the center of the recognition result `{ x, y }`
-    * `bounding_box` *List*, bounding box of the recognition result `{ x1, y1, x2, y2 }`
+  * *list*, each element is an *associative table*, corresponding to the text in **text_list**, containing the following fields:
+    * `center` *list*, coordinates of the center of the recognition result `{ x, y }`
+    * `bounding_box` *list*, bounding box of the recognition result `{ x1, y1, x2, y2 }`
     * `confidence` *float*, confidence of the recognition result, range 0.0 ~ 1.0
     * `recognized_text` *text*, recognized text
 
@@ -741,8 +741,6 @@ Uses Apple’s [Vision](https://developer.apple.com/documentation/vision) framew
 :::note
 In fast recognition mode, the recognition speed is about 10 times faster than accurate recognition, but the results are less accurate and often contain errors.
 :::
-
-#### [Screen Text Extraction Tutorial](../tutorial-extras/vision-ocr.mdx)
 
 #### Example `screen.ocr_search`
 
@@ -896,8 +894,8 @@ text, details = screen.qr_decode([ timeout ])
 * text
   * *text*, returns `nil` if no QR code is recognized within the timeout
 * details *associative table*
-  * `center` *List*, coordinates of the center of the recognition result on the screen or image `{ x, y }`
-  * `bounding_box` *List*, bounding box of the recognition result on the screen or image `{ x1, y1, x2, y2 }`
+  * `center` *list*, coordinates of the center of the recognition result on the screen or image `{ x, y }`
+  * `bounding_box` *list*, bounding box of the recognition result on the screen or image `{ x1, y1, x2, y2 }`
   * `confidence` *float*, confidence of the recognition result, range 0.0 ~ 1.0
   * `payload` *text*, **text**
 
@@ -980,13 +978,13 @@ rectangles, details = screen.detect_rectangles(left, top, right, bottom[, max_co
 * timeout
   * *integer*, *optional*, timeout, in milliseconds. Default `3000`
 * rectangles
-  * *table*, returns a table of rectangle positions, each element is a *List* containing eight *float* elements, corresponding to the four vertices of the detected rectangle, in the order of top-left, top-right, bottom-left, bottom-right
+  * *table*, returns a table of rectangle positions, each element is a *list* containing eight *float* elements, corresponding to the four vertices of the detected rectangle, in the order of top-left, top-right, bottom-left, bottom-right
 * details
-  * *List*, each element is an *associative table*, corresponding to the elements in **rectangles**, containing the following fields:
-    * `center` *List*, coordinates of the center of the recognition result on the screen or image `{ x, y }`
-    * `bounding_box` *List*, bounding box of the recognition result on the screen or image `{ x1, y1, x2, y2 }`
+  * *list*, each element is an *associative table*, corresponding to the elements in **rectangles**, containing the following fields:
+    * `center` *list*, coordinates of the center of the recognition result on the screen or image `{ x, y }`
+    * `bounding_box` *list*, bounding box of the recognition result on the screen or image `{ x1, y1, x2, y2 }`
     * `confidence` *float*, confidence of the recognition result, range 0.0 ~ 1.0
-    * `payload` *List*, containing eight *float* elements, corresponding to the four vertices of the detected rectangle, in the order of top-left, top-right, bottom-left, bottom-right
+    * `payload` *list*, containing eight *float* elements, corresponding to the four vertices of the detected rectangle, in the order of top-left, top-right, bottom-left, bottom-right
 
 ```lua title="Details Table Structure"
 {

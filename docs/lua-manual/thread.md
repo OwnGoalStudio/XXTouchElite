@@ -86,7 +86,7 @@ thread.wait(task_id, timeout_seconds)
 #### Parameters and Return Values
 
 - timeout_seconds
-  - *Real number type*, the timeout period to wait, after which it will return. Unit: seconds
+  - *float*, the timeout period to wait, after which it will return. Unit: seconds
 - task_id
   - *integer*, the **task_id** returned when the task was previously dispatched
 
