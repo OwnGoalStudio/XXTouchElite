@@ -5,7 +5,7 @@ tags: [touch, screen, ocr_text, find_color, testcase, lua]
 
 # A Simple Testcase
 
-This is a simple testcase that demonstrates how to use the [`touch`](../docs/lua-manual/touch) and [`screen`](../docs/lua-manual/screen) modules in Lua to automate some tasks on an iOS device.
+This is a simple testcase that demonstrates how to use the [`touch`](/docs/lua-manual/touch) and [`screen`](/docs/lua-manual/screen) modules in Lua to automate some tasks on an iOS device.
 
 <!-- truncate -->
 
