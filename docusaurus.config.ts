@@ -97,13 +97,13 @@ const config: Config = {
           label: 'Appendix',
         },
         {
-          to: '/library',
-          label: 'Library',
+          to: '/blog',
+          label: 'Blog',
           position: 'left',
         },
         {
-          to: '/blog',
-          label: 'Blog',
+          to: '/library',
+          label: 'Library',
           position: 'left',
         },
         {
@@ -167,13 +167,17 @@ const config: Config = {
               to: '/blog',
             },
             {
+              label: 'Library',
+              to: '/library',
+            },
+            {
               label: 'GitHub',
               href: 'https://github.com/OwnGoalStudio/XXTouchElite',
             },
           ],
         },
       ],
-      copyright: `Copyright © 2014-${new Date().getFullYear()} Nihao Software, LLC. Built with Docusaurus.`,
+      copyright: `Copyright © 2014-${new Date().getFullYear()} OwnGoal Studio. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
