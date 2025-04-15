@@ -37,4 +37,4 @@ Keep your XXTouch Elite up to date by checking for updates in Sileo. You can al
 
 ## Problems?
 
-Ask for help on our [GitHub repository](https://github.com/OwnGoalStudio/XXTouchElite/issues) or join our [Discord server](https://discord.gg/owngoalstudio). We are happy to help you with any issues you may encounter while using XXTouch Elite.
+Ask for help on our [GitHub repository](https://github.com/OwnGoalStudio/XXTouchElite/issues) or join our [Discord server](https://discord.gg/RTyMX6c9). We are happy to help you with any issues you may encounter while using XXTouch Elite.
