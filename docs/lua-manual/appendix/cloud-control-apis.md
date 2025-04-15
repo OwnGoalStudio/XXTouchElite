@@ -8,6 +8,8 @@ The XXTouch Elite Cloud Control API is developed using the WebSocket protocol, 
 
 We also provide a cloud control server example [XXTouch-CloudControl](https://github.com/XXTouchNG/XXTouch-CloudControl), which you can customize according to your business needs.
 
+![CloudControl.001](img/CloudControl.001.png)
+
 You need to [configure the cloud control server address](https://elite.82flex.com/api-283425169) for the `elfclient` client.
 Once the client successfully connects to the WebSocket server, the server can communicate with the device following the specifications below.
 
