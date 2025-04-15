@@ -14,6 +14,8 @@ These three methods will wake up XXTouch Elite and trigger corresponding behavi
 
 ## Open QR Scanner
 
+![qr-scan](img/qr-scan.png)
+
 ```txt
 xxt://scan/
 ```
@@ -25,6 +27,8 @@ xxt://scan/
 ```
 
 ## Run Script
+
+![qr-launch](img/qr-launch.png)
 
 ```txt
 xxt://launch/
@@ -42,6 +46,8 @@ xxt://launch/?path=%@
 
 ## Stop Script
 
+![qr-stop](img/qr-stop.png)
+
 ```txt
 xxt://stop/
 ```
@@ -53,6 +59,8 @@ xxt://stop/
 ```
 
 ## Download Related
+
+![qr-download](img/qr-download.png)
 
 ```txt
 xxt://download/?path=%@&url=%@
@@ -67,6 +75,8 @@ If `path` is not specified, the filename will be automatically guessed from the 
 :::
 
 ## Restore Workspace
+
+![qr-workspace](img/qr-workspace.png)
 
 ```txt
 xxt://workspace/
