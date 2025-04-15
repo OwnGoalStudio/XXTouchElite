@@ -30,7 +30,7 @@ original_coordinate_system = screen.init(coordinate_system)
 
 #### Description
 
-Initializes the coordinate system shared by the **Screen Module** and the **Simulated Touch Module**.
+Initializes the [coordinate system](appendix/screen-coordinates.md) shared by the **Screen Module** and the **Simulated Touch Module**.
 
 :::info
 The following aliases can also achieve the same effect:

@@ -163,7 +163,7 @@ function HomepageCompatibility() {
           Compatible with iOS 14+
         </Heading>
         <p className={clsx('text--center', styles.sectionSubtitle)}>
-          XXTouch Elite works with modern jailbreaks including:
+          XXTouch Elite works with modern jailbreaks including:
         </p>
         <div className={styles.compatList}>
           <a href="https://unc0ver.dev" target="_blank" rel="noopener noreferrer" className={styles.jailbreakItem}>
@@ -226,7 +226,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title} - iOS Automation Framework`}
-      description="XXTouch Elite is a full-fledged automation framework for jailbroken iOS devices, offering touch automation, image recognition, and deep system integration.">
+      description="XXTouch Elite is a full-fledged automation framework for jailbroken iOS devices, offering touch automation, image recognition, and deep system integration.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

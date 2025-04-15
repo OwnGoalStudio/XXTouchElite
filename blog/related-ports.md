@@ -3,7 +3,7 @@ authors: lessica
 tags: [webserv, ports, openapi]
 ---
 
-# Ports of XXTouch Elite
+# Ports of XXTouch Elite
 
 - `WEBSERV_PORT`: XXTouch OpenAPI protocol port, IDE service port
 - `WEBSERV_PORT_V1`: TouchSprite, XXTouch legacy IDE service port

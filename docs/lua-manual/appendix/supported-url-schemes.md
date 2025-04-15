@@ -4,13 +4,13 @@ sidebar_position: 21
 
 # Supported URL Schemes
 
-This protocol specifies the actions and parameters supported by XXTouch Elite’s URL Scheme.
+This protocol specifies the actions and parameters supported by XXTouch Elite’s URL Scheme.
 
 - Opening URLs in the form of `xxt://`.
 - Scanning QR codes containing URLs in the form of `xxt://`.
 - Scanning QR codes containing action and parameter dictionaries.
 
-These three methods will wake up XXTouch Elite and trigger corresponding behaviors.
+These three methods will wake up XXTouch Elite and trigger corresponding behaviors.
 
 ## Open QR Scanner
 
@@ -72,7 +72,7 @@ If `path` is not specified, the filename will be automatically guessed from the 
 xxt://workspace/
 ```
 
-Restore XXTouch Elite to the state when the application was just launched, exiting all open interfaces.
+Restore XXTouch Elite to the state when the application was just launched, exiting all open interfaces.
 
 ```json
 {
