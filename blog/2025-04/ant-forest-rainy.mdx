@@ -4,7 +4,6 @@ tags: [touch, screen, find_color, showcase, lua]
 ---
 
 import { QRCodeSVG } from 'qrcode.react';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import VCR from './assets/707aca481a605277b1204639d60b806d.mp4';
 
 # 蚂蚁森林自动能量雨
@@ -25,10 +24,69 @@ import VCR from './assets/707aca481a605277b1204639d60b806d.mp4';
 
 ----
 
-:::note Download
+```lua title="自动能量雨@zqbb.lua" showLineNumbers
+function 点击(x, y)
+	if x > 0 then
+    	touch.on(x, y):msleep(10):off()
+		sys.log("点击" .. x ..",".. y)
+	end
+end
 
-Scan QR code below with “X.X.T.E.” app to get the script.
+function 弹窗并退出脚本(tips)
+    sys.alert(tips)
+    os.exit()
+end
 
-<QRCodeSVG value={"xxt://download/?path=" + encodeURI('自动能量雨@zqbb.lua') + "&url=" + encodeURI('https://xxtou.ch') + encodeURI(useBaseUrl('assets/自动能量雨@zqbb.lua'))} />
+;(function(old_init_orien)  -- record begin
 
-:::
+local play_speed = 1.0  -- Speed
+local play_times = 1    -- Repeat Times
+
+local sys_ = {}
+for k, v in pairs(sys) do
+	if k == 'msleep' or k == 'sleep' then
+		sys_[k] = function(s) v(s / play_speed) end
+	else
+		sys_[k] = v
+	end
+end
+
+local sys = sys_
+local mSleep = sys.msleep
+for l____________i = 1, play_times do
+
+	x, y = screen.find_color({
+		{0, 0, 0x30BE78},
+		{-56, -12, 0xF6FCF8},
+		{-64, -3, 0xFFFFFE},
+		{83, -21, 0xFFFFFF},
+		{103, 27, 0xFFFFFF},
+		{11, 25, 0xFFFFFF}
+	  }, 95)
+	if x < 0 then
+		弹窗并退出脚本("没找到 立即开启")
+	end
+
+	点击(x, y)
+	mSleep(2000)
+
+	-- 循环执行
+	local start_time = os.time()
+	while os.time() - start_time < 17 do
+		x, y = screen.find_color({
+			{0, 0, 0x31A301},
+			{-4, -46, 0xF0FDDD},
+			{-35, 65, 0x189201},
+			{47, 66, 0x33A206},
+			{46, 16, 0x149000},
+			{-60, 21, 0xD1FA82}
+		  }, 90,0,456,1178,654)
+		点击(x, y + 60)
+
+		mSleep(100)
+	end
+end
+
+touch.init(old_init_orien)
+end)(touch.init(0));  -- record end
+```
