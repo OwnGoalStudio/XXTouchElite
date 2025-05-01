@@ -7,7 +7,7 @@ sidebar_position: 9
 XXTouch Elite fully supports the [Lua programming interface](https://cloudwu.github.io/lua53doc/manual.html#4). You can download and install extension libraries from [LuaRocks](https://luarocks.org/) and port them to XXTouch Elite for use.
 
 :::note
-You can also refer to the following template to write your own extension libraries.
+You can also refer to the following template to write your own extension libraries.  
 ⏬ [Extension\_Template\.zip \(1\.9 MB\)](assets/Extension_Template.zip)
 :::
 

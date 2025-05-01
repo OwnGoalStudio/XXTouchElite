@@ -7,18 +7,18 @@ tags: [touch, screen, ocr_text, find_color, testcase, lua]
 
 This is a simple testcase that demonstrates how to use the [`touch`](/docs/lua-manual/touch) and [`screen`](/docs/lua-manual/screen) modules in Lua to automate some tasks on an iOS device.
 
+:::note
+Download the multi-touch gesture recording from the following link:  
+⏬ [rec_20221011184701.lua](assets/rec_20221011184701.lua)
+:::
+
 <!-- truncate -->
 
 The script performs the following actions:
 
 ```lua title="a-simple-testcase.lua"
 local function tapWord(word)
-  local txts, details =
-    screen.ocr_text {
-      languages = {"en-US"},
-      words = {word},
-      confidence = 0.8
-    }
+  local txts, details = screen.ocr_text {}
   local tapped = false
   for i, v in ipairs(txts) do
     if v == word then
@@ -29,9 +29,19 @@ local function tapWord(word)
   return tapped
 end
 
+function string:startswith(start)
+    return self:sub(1, #start) == start
+end
+
+touch.show_pose(true)
+if not sys.language():startswith("en") then
+    nLog("Set language…")
+    sys.set_language("en")
+    sys.sleep(10)
+end
+
 while true do
   nLog("Exit all applications…")
-  touch.show_pose(true)
   app.quit("*")
   sys.sleep(2)
 
@@ -56,6 +66,9 @@ while true do
 
   nLog("Test multi-touch gestures…")
   assert(app.front_bid() == "com.apple.mobileslideshow")
+  sys.sleep(1)
+  touch.tap(375, 1300)
+  sys.sleep(1)
   require("rec_20221011184701")
   sys.sleep(2)
 
@@ -71,17 +84,12 @@ while true do
   x, y =
     screen.find_color(
       {
-        {713, 1497, 0xe3ae09, 90.00}, -- 1
-        {688, 1522, 0xe3ae09, 90.00}, -- 2
-        {698, 1501, 0xe3ae09, 90.00}, -- 3
-        {674, 1518, 0xe3ae09, 90.00}, -- 4
-        {692, 1536, 0xe3ae09, 90.00}, -- 5
-        {709, 1512, 0xe3ae09, 90.00}, -- 6
-        {698, 1506, 0xffffff, 90.00}, -- 7
-        {704, 1513, 0xffffff, 90.00}, -- 8
-        {678, 1506, 0xffffff, 90.00}, -- 9
-        {678, 1532, 0xffffff, 90.00}, -- 10
-        {704, 1532, 0xffffff, 90.00} -- 11
+        {1056,2341,0xe4af0a},
+        {1057,2388,0xe4af0a},
+        {1105,2389,0xe4af0a},
+        {1079,2366,0xe4af0a},
+        {1106,2339,0xe4af0a},
+        {1113,2332,0xe4af0a},
       }
     )
   if x > -1 then
