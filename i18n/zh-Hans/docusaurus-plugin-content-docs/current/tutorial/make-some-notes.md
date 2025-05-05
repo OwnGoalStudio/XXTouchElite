@@ -16,7 +16,7 @@ sidebar_position: 5
 
 ## 打开 “备忘录”
 
-我们需要做的第一件事是打开 “备忘录” 应用。为此，我们将使用 [`app.run`](../lua-manual/app.md#run-the-app-apprun) 函数。[`app.run`](../lua-manual/app.md#run-the-app-apprun) 函数接受一个字符串作为参数，该字符串是我们想要打开的应用的包标识符。在我们的例子中，我们想要打开 “备忘录” 应用，因此我们将使用字符串 `"com.apple.mobilenotes"`。
+我们需要做的第一件事是打开 “备忘录” 应用。为此，我们将使用 [`app.run`](../lua-manual/app.md#运行-app-apprun) 函数。[`app.run`](../lua-manual/app.md#运行-app-apprun) 函数接受一个字符串作为参数，该字符串是我们想要打开的应用的包标识符。在我们的例子中，我们想要打开 “备忘录” 应用，因此我们将使用字符串 `"com.apple.mobilenotes"`。
 
 ```lua
 nLog("Open Notes...")
@@ -35,7 +35,7 @@ app.run("com.apple.mobilenotes")
 
 ## 找到 “新建笔记” 按钮
 
-现在我们已经打开了 “备忘录” 应用，我们需要找到 “新建笔记” 按钮。为此，我们将使用 [`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) 函数。[`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) 函数接受一个颜色表作为参数，这是我们想要找到的颜色样本的集合。
+现在我们已经打开了 “备忘录” 应用，我们需要找到 “新建笔记” 按钮。为此，我们将使用 [`screen.find_color`](../lua-manual/screen.md#-多点相似度模式找色-screenfind_color) 函数。[`screen.find_color`](../lua-manual/screen.md#-多点相似度模式找色-screenfind_color) 函数接受一个颜色表作为参数，这是我们想要找到的颜色样本的集合。
 
 ![Make_Notes](./img/Make_Notes.gif)
 
@@ -66,9 +66,9 @@ touch.tap(x, y)
 sys.sleep(2)
 ```
 
-这里我们向颜色表中添加了 6 个颜色样本。使用 `while ... do` 循环不断搜索按钮，直到找到为止。[`sys.sleep(1)`](../lua-manual/sys.md#-second-level-delay-syssleep) 函数用于在再次搜索之前暂停脚本 1 秒。
+这里我们向颜色表中添加了 6 个颜色样本。使用 `while ... do` 循环不断搜索按钮，直到找到为止。[`sys.sleep(1)`](../lua-manual/sys.md#-秒级延迟-syssleep) 函数用于在再次搜索之前暂停脚本 1 秒。
 
-[`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) 函数返回按钮的坐标（如果找到），或者返回 `nil`（如果未找到）。我们将使用这些坐标与 [`touch.tap`](../lua-manual/touch.md#simulate-a-single-tap-on-the-screen-touchtap) 一起点击按钮。
+[`screen.find_color`](../lua-manual/screen.md#-多点相似度模式找色-screenfind_color) 函数返回按钮的坐标（如果找到），或者返回 `nil`（如果未找到）。我们将使用这些坐标与 [`touch.tap`](../lua-manual/touch.md#模拟手指轻触一次屏幕-touchtap) 一起点击按钮。
 
 :::tip
 制作颜色样本并不容易。以下是一些实用技巧：
@@ -81,7 +81,7 @@ sys.sleep(2)
 
 ## 输入 “Hello, World!”
 
-向 “备忘录” 应用发送文本是最简单的部分。我们可以使用 [`key.send_text`](../lua-manual/key.md#simulate-typing-text-keysend_text) 函数向应用发送文本。[`key.send_text`](../lua-manual/key.md#simulate-typing-text-keysend_text) 函数接受一个字符串作为参数，这是我们想要发送的文本。
+向 “备忘录” 应用发送文本是最简单的部分。我们可以使用 [`key.send_text`](../lua-manual/key.md#模拟键入文本-keysend_text) 函数向应用发送文本。[`key.send_text`](../lua-manual/key.md#模拟键入文本-keysend_text) 函数接受一个字符串作为参数，这是我们想要发送的文本。
 
 ```lua
 nLog("Enter text…")
@@ -94,7 +94,7 @@ key.send_text("Hello, world!")
 
 ## 点击 “完成”
 
-最后，我们需要点击 “完成” 按钮以保存笔记。我们可以使用 [`screen.ocr_text`](../lua-manual/screen.md#-screen-optical-character-recognition-screenocr_text) 函数找到 “完成” 按钮，然后使用 [`touch.tap`](../lua-manual/touch.md#simulate-a-single-tap-on-the-screen-touchtap) 点击它。这部分有点棘手，因为文本容易受到字体和大小的影响，因此我们需要使用 OCR（光学字符识别）来找到它。
+最后，我们需要点击 “完成” 按钮以保存笔记。我们可以使用 [`screen.ocr_text`](../lua-manual/screen.md#-屏幕光学字符识别-screenocr_text) 函数找到 “完成” 按钮，然后使用 [`touch.tap`](../lua-manual/touch.md#模拟手指轻触一次屏幕-touchtap) 点击它。这部分有点棘手，因为文本容易受到字体和大小的影响，因此我们需要使用 OCR（光学字符识别）来找到它。
 
 **以下是我们的最终脚本：**
 

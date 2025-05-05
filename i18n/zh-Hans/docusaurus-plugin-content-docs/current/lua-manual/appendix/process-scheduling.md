@@ -248,7 +248,7 @@ notify_post(通知名称)
 #### 参数及返回值
 
 - 通知名称 *文本型*
-  - `ch.xxtou.notification.remote-access.on`：[打开远程访问](../../tutorial/ready-to-develop.md#enable-remote-access)
+  - `ch.xxtou.notification.remote-access.on`：[打开远程访问](../../tutorial/ready-to-develop.md#启用远程访问)
   - `ch.xxtou.notification.remote-access.off`：关闭远程访问
   - `ch.xxtou.notification.restart`：立即结束脚本，并重启 XXTouch Elite 守护进程
   - `ch.xxtou.notification.boom`：立即结束脚本，并卸载 XXTouch Elite

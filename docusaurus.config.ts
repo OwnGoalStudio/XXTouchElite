@@ -4,17 +4,34 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 function getSiteTagline() {
-  switch(process.env.DOCUSAURUS_CURRENT_LOCALE) {
+  switch (process.env.DOCUSAURUS_CURRENT_LOCALE) {
     case "zh-Hans": return "强大而灵活的 iOS 自动化工具 —— 经典传承，始于 2015 年。";
     default: return "Powerful and flexible automation tool for iOS since 2015.";
   }
 }
 
-function getEditUrl(type: 'docs' | 'blog' | 'pages') {
-  switch(process.env.DOCUSAURUS_CURRENT_LOCALE) {
-    case "zh-Hans": return `https://github.com/OwnGoalStudio/XXTouchElite/tree/main/i18n/zh-Hans/docusaurus-plugin-content-${type}/`;
-    default: return "https://github.com/OwnGoalStudio/XXTouchElite/tree/main/";
+function getEditUrl(params: {versionDocsDirPath: string, docPath: string, permalink: string, locale: string}) {
+  const rootPath = "https://github.com/OwnGoalStudio/XXTouchElite/tree/main";
+  if (params.locale == "en") {
+    return `${rootPath}/${params.versionDocsDirPath}/${params.docPath}`;
   }
+  return `${rootPath}/i18n/${params.locale}/docusaurus-plugin-content-docs/current/${params.docPath}`;
+}
+
+function getBlogEditUrl(params: {blogDirPath: string, blogPath: string, permalink: string, locale: string}) {
+  const rootPath = "https://github.com/OwnGoalStudio/XXTouchElite/tree/main";
+  if (params.locale == "en") {
+    return `${rootPath}/${params.blogDirPath}/${params.blogPath}`;
+  }
+  return `${rootPath}/i18n/${params.locale}/docusaurus-plugin-content-blog/${params.blogPath}`;
+}
+
+function getPagesEditUrl(params: {pagesDirPath: string, pagesPath: string, permalink: string, locale: string}) {
+  const rootPath = "https://github.com/OwnGoalStudio/XXTouchElite/tree/main";
+  if (params.locale == "en") {
+    return `${rootPath}/${params.pagesDirPath}/${params.pagesPath}`;
+  }
+  return `${rootPath}/i18n/${params.locale}/docusaurus-plugin-content-pages/${params.pagesPath}`;
 }
 
 const config: Config = {
@@ -60,7 +77,7 @@ const config: Config = {
           showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: getEditUrl('docs'),
+          editUrl: getEditUrl,
         },
         blog: {
           showReadingTime: true,
@@ -71,11 +88,15 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: getEditUrl('blog'),
+          editUrl: getBlogEditUrl,
           // Useful options to enforce blogging best practices
           onInlineTags: 'ignore',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+        },
+        pages: {
+          showLastUpdateTime: true,
+          editUrl: getPagesEditUrl,
         },
         theme: {
           customCss: './src/css/custom.css',

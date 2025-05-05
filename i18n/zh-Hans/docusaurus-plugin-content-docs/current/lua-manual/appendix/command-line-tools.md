@@ -191,7 +191,7 @@ remote-access.lua [on|off]
 
 #### 说明
 
-效果等同于 [打开远程访问](../../tutorial/ready-to-develop.md#enable-remote-access)。
+效果等同于 [打开远程访问](../../tutorial/ready-to-develop.md#启用远程访问)。
 
 #### 示例
 

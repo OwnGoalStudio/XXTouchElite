@@ -351,7 +351,7 @@ end
 使用相似度模式查找（模式匹配），获取区域中第一个完全匹配的多点颜色结构（模式）的位置。
 
 :::note 不会吧，不会吧
-不会有人[手写这个匹配表](../tutorial/make-some-notes.md#find-new-note-button)吧？
+不会有人[手写这个匹配表](../tutorial/make-some-notes.md#找到-新建笔记-按钮)吧？
 :::
 
 #### 示例
