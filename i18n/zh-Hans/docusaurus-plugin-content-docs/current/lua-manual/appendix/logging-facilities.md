@@ -7,7 +7,7 @@ sidebar_position: 3
 XXTouch Elite 提供了 `print`、`sys.log` 和 `nLog` 三种日志输出方式，其区别如下：
 
 - [`print`](#print)：输出到 **标准输出（控制台）** 和一个额外的缓冲区 [`print.out`](#将打印缓冲区的内容提出来-printout)，仅在命令行下可见。
-- [`sys.log`](../developer-manual/sys.md#输出标准系统日志-syslog)：在 `print` 的基础上，输出到 **日志文件** `/var/mobile/Media/1ferver/log/sys.log` 和 **悬浮日志条**。
+- [`sys.log`](../sys.md#输出标准系统日志-syslog)：在 `print` 的基础上，输出到 **日志文件** `/var/mobile/Media/1ferver/log/sys.log` 和 **悬浮日志条**。
 - [`nLog`](#nlog)：在 `sys.log` 的基础上，输出到当前开发环境的日志框。**仅开发环境下可用**。
 
 本节将介绍 `print` 和 `nLog` 这两种日志输出方式的使用方法。

@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # 命令行工具
 
-除受到全局 [进程调度](./basic-concepts/process-control-flow.md#进程调度) 的脚本进程外，你还可以使用 Lua 命令行解释器来执行另外的脚本。
+除受到全局 [进程调度](process-scheduling.md) 的脚本进程外，你还可以使用 Lua 命令行解释器来执行另外的脚本。
 
 :::caution
 本章中所介绍的命令行工具，都需要 root 权限才能执行。
@@ -88,12 +88,12 @@ script.lua
 
 ### 守护者模式 `daemon.lua`
 
-守护者模式比 [**守护模式**](./basic-concepts/daemon-mode.md#守护模式) 更为底层，是一个由 [`launchd`](https://www.launchd.info/) 启动的系统级服务。  
+守护者模式比 [**守护模式**](daemon-mode.md) 更为底层，是一个由 [`launchd`](https://www.launchd.info/) 启动的系统级服务。  
 当设备处于非局域网环境却需要集中控制，就可以启用一个守护者主动与外界的服务器保持通讯。
 
 * 守护者可使用 [`launchctl`](https://support.apple.com/zh-cn/guide/terminal/apdc6c1077b-5d5d-4d35-9c19-60f2397b2369/mac) 来管理
 * 守护者随系统启动自动运行，发生异常崩溃会在 30 秒后自动重启
-* 开发者可进一步使用 [`lockfile`](./basic-concepts/process-control-flow.md#锁定进程号文件-lockfile) 函数锁定一个文件以确保其单例状态
+* 开发者可进一步使用 [`lockfile`](process-scheduling.md#锁定进程号文件-lockfile) 函数锁定一个文件以确保其单例状态
 
 #### 说明
 
@@ -105,7 +105,7 @@ script.lua
 
 #### 示例
 
-本节示例中的守护者将每 3 秒向[进程队列字典](./developer-manual/proc.md#进程队列字典) `xxtouch.daemon.test` 中压入一个描述当前时间的文本。
+本节示例中的守护者将每 3 秒向[进程队列字典](../proc.md#进程队列字典) `xxtouch.daemon.test` 中压入一个描述当前时间的文本。
 
 ```lua title="daemon.lua" showLineNumbers
 if not G_reload then
@@ -149,7 +149,7 @@ dofile(daemon_file_name)
 
 #### 说明
 
-用于转储 HID 事件流到标准输出，详见 [录制回放脚本](./tutorial-extras/simulate-touches.mdx#录制回放脚本)。
+用于转储 HID 事件流到标准输出，详见 [录制回放脚本](../../tutorial/record-and-replay.md)。
 
 #### 示例
 
@@ -169,7 +169,7 @@ usage: installer.lua install   [ipa-path]
 #### 参数及返回值
 
 * `ipa-path` IPA 安装包文件路径
-* `bundle-id` 已安装的 [App 标识符](developer-manual/app.md#标识符)
+* `bundle-id` 已安装的 [App 标识符](../app.md#标识符)
 
 #### 示例
 
@@ -191,7 +191,7 @@ remote-access.lua [on|off]
 
 #### 说明
 
-效果等同于 [打开远程访问](tutorial-basics/create-a-workspace.md#打开远程访问)。
+效果等同于 [打开远程访问](../../tutorial/ready-to-develop.md#enable-remote-access)。
 
 #### 示例
 
@@ -245,5 +245,5 @@ uninstall-xxtouch.sh
 
 :::danger
 此操作不可逆。  
-将同时移除所有与 XXTouch Elite 有关的 [用户数据](./basic-concepts/paths-and-permissions.md)。
+将同时移除所有与 XXTouch Elite 有关的 [用户数据](paths-and-permissions.md)。
 :::

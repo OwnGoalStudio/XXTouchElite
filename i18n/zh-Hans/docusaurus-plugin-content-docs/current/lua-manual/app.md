@@ -8,7 +8,7 @@ sidebar_position: 3
 
 :::tip
 
-* 此模块支持以 [OpenAPI](https://openapi-ng.82flex.com/api-111064004) 方式独立调用。
+* 此模块支持以 [OpenAPI](https://elite.82flex.com/api-283425316) 方式独立调用。
 
 :::
 
@@ -511,7 +511,7 @@ app.open_url(URL)
 前台打开一个 URL，可以打开 [URL Scheme](https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html)。
 
 :::tip
-参考附录：[“设置” 中常用的 URL Scheme](appendix.md#设置-中常用的-url-scheme)
+参考附录：[“设置” 中常用的 URL Scheme](./appendix/supported-url-schemes.md#设置-url-协议)
 :::
 
 #### 示例

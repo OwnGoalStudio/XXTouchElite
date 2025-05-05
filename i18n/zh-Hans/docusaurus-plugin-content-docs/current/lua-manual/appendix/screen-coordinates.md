@@ -15,7 +15,7 @@ XXTouch Elite 始终以物理像素为单位，使用硬件分辨率坐标系�
 - [The Ultimate Guide To iPhone Resolutions](https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions)
 
 :::tip
-在脚本当中，你可以使用 [`screen.init`](../screen.md#initialize-rotated-coordinate-system-screeninit) 改变屏幕坐标系。
+在脚本当中，你可以使用 [`screen.init`](../screen.md#初始化旋转坐标系-screeninit) 改变屏幕坐标系。
 
 ![Screen_Coordinates.002](img/Screen_Coordinates.002.png)
 :::

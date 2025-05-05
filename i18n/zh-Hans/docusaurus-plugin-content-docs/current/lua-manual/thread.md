@@ -18,7 +18,7 @@ end)
 :::note 已实现 **让出** 的函数或模块
 
 - [`sys.sleep`](sys.md#-秒级延迟-syssleep) 和 [`sys.msleep`](sys.md#-毫秒级延迟-sysmsleep)
-- [`touch:msleep`](touch.md#-毫秒级延迟-touchmsleep)
+- [`touch:msleep`](touch.md#-毫秒级延迟-touch)
 - [HTTP 模块](http.md)
 - [FTP 模块](ftp.md)
 :::
@@ -304,7 +304,7 @@ end)
 
 :::info
 此事件中的坐标以 **竖屏 HOME 在下** 为初始坐标系。  
-可以使用 [`screen.rotate_xy`](screen.mdx#坐标旋转转换-screenrotate_xy) 进行转换。
+可以使用 [`screen.rotate_xy`](screen.md#坐标旋转转换-screenrotate_xy) 进行转换。
 :::
 
 #### 示例

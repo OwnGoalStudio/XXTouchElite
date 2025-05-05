@@ -54,7 +54,7 @@ _g = table.deep_copy(_G)
 :::note
 
 - 打印出来的结构 **不保证格式兼容**，不同版本打印出来可能不一样。
-- `table.deep_print` 函数调用会将内容输出到 [`print`](../basic-concepts/logging.md#打印内容到缓冲区-print) 缓冲区，而 `stringify` 不会。
+- `table.deep_print` 函数调用会将内容输出到 [`print`](./appendix/logging-facilities.md#打印内容到缓冲区-print) 缓冲区，而 `stringify` 不会。
 - 非表型引用类型（用户数据、函数）不可通过 [`table.load_string`](#从字符串加载一个表-tableload_string) 反序列，只保证人类可读性。
 
 :::

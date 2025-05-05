@@ -7,13 +7,13 @@ sidebar_position: 5
 XXTouch Elite 的每个脚本都是独立运行的进程，即 **脚本进程**。为避免多个脚本进程同时运行造成的冲突和管理不便，通过以下方式派发的脚本进程，同一时间 **只能有一个实例**：
 
 - 通过音量键启动的脚本
-- 通过 [OpenAPI](https://openapi-ng.82flex.com/api-111064056) 调用启动的脚本
+- 通过 [OpenAPI](https://elite.82flex.com/api-283425278) 调用启动的脚本
 - 通过 [Activator](https://cydia.saurik.com/package/libactivator/) 事件触发启动的脚本
 - 通过 X.X.T. 应用程序界面启动的脚本
-- 通过 VSCode 插件、XXTStudio 等 IDE 直接[调试](../tutorial-basics/debug-your-script.md)或运行的脚本
+- 通过 VSCode 插件、XXTStudio 等 IDE 直接调试或运行的脚本
 - 通过群控软件、云控软件等 “远程运行” 的脚本
 - 因脚本异常终止，触发 “[守护模式](daemon-mode.md)” 重新启动的脚本
-- 由 “[开机启动](https://openapi-ng.82flex.com/api-111064042)”、“计划任务” 等功能启动的脚本
+- 由 “[开机启动](https://elite.82flex.com/api-283425313)”、“计划任务” 等功能启动的脚本
 
 :::info
 
@@ -29,7 +29,7 @@ XXTouch Elite 的每个脚本都是独立运行的进程，即 **脚本进程**
 - [`os.exit`](https://cloudwu.github.io/lua53doc/manual.html#pdf-os.exit)
 - 脚本运行结束
 - 通过音量键停止脚本
-- 通过 [OpenAPI](https://openapi-ng.82flex.com/api-111064052) 调用停止脚本
+- 通过 [OpenAPI](https://elite.82flex.com/api-283425274) 调用停止脚本
 - 通过 [Activator](https://cydia.saurik.com/package/libactivator/) 事件触发停止脚本
 - 通过 VSCode 插件、XXTStudio 等 IDE 停止脚本
 - 通过群控软件、云控软件等 “远程停止” 脚本
@@ -118,7 +118,7 @@ os.restart("main.lua")  -- 重启到 “/var/mobile/Media/1ferver/lua/scripts/ma
   4. 直接将流内已取出的数据返回
 
 :::tip
-参考 [命令行工具](../command-line-tools.md)，可以执行另一个 Lua 解释器，并设置超时时间。
+参考 [命令行工具](command-line-tools.md)，可以执行另一个 Lua 解释器，并设置超时时间。
 :::
 
 :::caution
@@ -248,7 +248,7 @@ notify_post(通知名称)
 #### 参数及返回值
 
 - 通知名称 *文本型*
-  - `ch.xxtou.notification.remote-access.on`：[打开远程访问](../tutorial-basics/create-a-workspace.md#打开远程访问)
+  - `ch.xxtou.notification.remote-access.on`：[打开远程访问](../../tutorial/ready-to-develop.md#enable-remote-access)
   - `ch.xxtou.notification.remote-access.off`：关闭远程访问
   - `ch.xxtou.notification.restart`：立即结束脚本，并重启 XXTouch Elite 守护进程
   - `ch.xxtou.notification.boom`：立即结束脚本，并卸载 XXTouch Elite

@@ -22,7 +22,7 @@ sidebar_position: 6
 
 ### 通过 OpenAPI 启动
 
-经由 OpenAPI 接口 [**设置用户偏好配置**](https://openapi-ng.82flex.com/api-111064044) 中的 `script_on_daemon` 字段以启动或停用守护模式。
+经由 OpenAPI 接口 [**设置用户偏好配置**](https://elite.82flex.com/api-283425315) 中的 `script_on_daemon` 字段以启动或停用守护模式。
 
 ## 注意事项
 

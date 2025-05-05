@@ -21,7 +21,7 @@ sys.toast(文字内容[, 旋转方向])
 - 文字内容
   - *文本型*，代表需要显示的文字
 - 旋转方向
-  - *整数型*，*可选*，屏幕旋转方向，默认为最后一次调用 [`screen.init`](screen.mdx#初始化旋转坐标系-screeninit) 所设置的方向
+  - *整数型*，*可选*，屏幕旋转方向，默认为最后一次调用 [`screen.init`](screen.md#初始化旋转坐标系-screeninit) 所设置的方向
     - `0` 表示竖屏 home 在下
     - `1` 表示横屏 home 在右
     - `2` 表示横屏 home 在左
@@ -534,7 +534,7 @@ sys.respring()
 
 :::caution
 春板重启完成前，许多依赖春板的函数调用将会失败。  
-调用此函数后，建议使用 [`app.front_bid`](app.md#获取前台-app-的标识符-appfrontbid) 轮询检测春板启动状态，春板启动完成后再进行其他操作。
+调用此函数后，建议使用 [`app.front_bid`](app.md#获取前台-app-的标识符-appfront_bid) 轮询检测春板启动状态，春板启动完成后再进行其他操作。
 :::
 
 #### 示例
@@ -722,12 +722,12 @@ sys.zoom_off()              -- 关闭放大模式
 
 #### 说明
 
-设置放大模式后，[`screen.size`](screen.mdx#获取屏幕尺寸-screensize) 获取到的屏幕尺寸将会发生变化，屏幕和模拟触摸坐标系也会随之变化。
+设置放大模式后，[`screen.size`](screen.md#获取屏幕尺寸-screensize) 获取到的屏幕尺寸将会发生变化，屏幕和模拟触摸坐标系也会随之变化。
 
 :::caution
 
 - 设置放大模式后会自动 [回春](#重启春板妙手回春-sysrespring)。
-- 此函数调用会造成后续脚本运行异常。如果后续脚本中，需要用到 **屏幕模块** 或 **模拟触摸模块**，请务必先通过 [`os.restart`](../basic-concepts/process-control-flow.md#重启脚本-osrestart) 重新启动脚本进程。
+- 此函数调用会造成后续脚本运行异常。如果后续脚本中，需要用到 **屏幕模块** 或 **模拟触摸模块**，请务必先通过 [`os.restart`](./appendix/process-scheduling.md#重启脚本-osrestart) 重新启动脚本进程。
 
 :::
 

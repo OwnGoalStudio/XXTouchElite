@@ -52,7 +52,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/OwnGoalStudio/XXTouchElite"
   },
   "copyright": {
-    "message": "Copyright © 2014-2025 乌龙工作室 · 使用 Docusaurus 构建",
+    "message": "版权所有 © 2014-2025 乌龙工作室 · 使用 Docusaurus 构建",
     "description": "The footer copyright"
   }
 }

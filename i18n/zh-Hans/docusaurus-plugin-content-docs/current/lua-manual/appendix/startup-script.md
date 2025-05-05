@@ -16,10 +16,10 @@ sidebar_position: 7
 
 经由以下 OpenAPI 接口获取、修改开机启动设置：
 
-* [启用开机启动](https://openapi-ng.82flex.com/api-111064040)
-* [停用开机启动](https://openapi-ng.82flex.com/api-111064041)
-* [选择开机启动脚本](https://openapi-ng.82flex.com/api-111064042)
-* [获取开机启动设置](https://openapi-ng.82flex.com/api-111064039)
+* [启用开机启动](https://elite.82flex.com/api-283425310)
+* [停用开机启动](https://elite.82flex.com/api-283425311)
+* [选择开机启动脚本](https://elite.82flex.com/api-283425313)
+* [获取开机启动设置](https://elite.82flex.com/api-283425312)
 
 ## 开机启动的时机说明
 

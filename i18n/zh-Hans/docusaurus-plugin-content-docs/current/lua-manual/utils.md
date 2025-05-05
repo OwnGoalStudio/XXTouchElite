@@ -131,7 +131,7 @@ utils.add_contacts({
     - 未知方式 `unknown`
     - OpenAPI `openapi`
     - X.X.T. 应用程序 `application`
-    - 计划任务 [`os.restart`](../basic-concepts/process-control-flow.md#重启脚本-osrestart) `scheduler`
+    - 计划任务 [`os.restart`](./appendix/process-scheduling.md#重启脚本-osrestart) `scheduler`
     - 终端 `terminal`
     - 音量键 `volume`
     - 开机启动 `startup`

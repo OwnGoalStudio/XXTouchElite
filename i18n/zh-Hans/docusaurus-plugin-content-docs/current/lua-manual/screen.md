@@ -155,7 +155,7 @@ end
 #### 参数及返回值
 
 * 获取屏幕内容计数
-  * *整数型*，返回当前[脚本进程](../basic-concepts/process-control-flow.md)获取屏幕内容的次数
+  * *整数型*，返回当前[脚本进程](./appendix/process-scheduling.md)获取屏幕内容的次数
 
 #### 说明
 
@@ -201,7 +201,7 @@ screen.unkeep()  -- 退出屏幕保持状态
 #### 参数及返回值
 
 * 获取屏幕内容计数
-  * *整数型*，返回当前[脚本进程](../basic-concepts/process-control-flow.md)获取屏幕内容的次数
+  * *整数型*，返回当前[脚本进程](./appendix/process-scheduling.md)获取屏幕内容的次数
 
 #### 说明
 
@@ -351,7 +351,7 @@ end
 使用相似度模式查找（模式匹配），获取区域中第一个完全匹配的多点颜色结构（模式）的位置。
 
 :::note 不会吧，不会吧
-不会有人[手写这个匹配表](../tutorial-extras/grab-screen-colors.mdx)吧？
+不会有人[手写这个匹配表](../tutorial/make-some-notes.md#find-new-note-button)吧？
 :::
 
 #### 示例
@@ -562,7 +562,7 @@ results = screen.find_color({  -- 范围匹配全输出演示
 
 :::caution 性能
 产生一个新的 *图片对象*。  
-不再使用该对象时请务必调用 [`image:destroy`](img.md#销毁一个图片对象-imagedestroy) 方法，及时释放其占用的内存。
+不再使用该对象时请务必调用 [`image:destroy`](img.md#销毁一个图片对象-image) 方法，及时释放其占用的内存。
 :::
 
 #### 示例
@@ -740,8 +740,6 @@ end
 :::note
 快速识别等级下，识别速度约为精确识别的 10 倍，但识别结果较为模糊，经常会出现识别错误的情况。
 :::
-
-#### [屏幕文字提取教程](../tutorial-extras/vision-ocr.mdx)
 
 #### 示例 `screen.ocr_search`
 

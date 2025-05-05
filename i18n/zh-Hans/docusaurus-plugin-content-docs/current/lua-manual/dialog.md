@@ -1245,7 +1245,7 @@ dialog.show(配置界面)
 
 #### 说明
 
-此函数与 [`dialog:show`](#-将对话框弹出来并返回用户的选择-dialogshow) 不同，调用不会阻塞，没有返回值。
+此函数与 [`dialog:show`](#-将对话框弹出来并返回用户的选择-dialog) 不同，调用不会阻塞，没有返回值。
 
 :::caution
 调用此函数前，必须先调用 [`dialog.setup`](#校验一个配置界面-dialogsetup) 函数校验传入的 **配置界面**。
