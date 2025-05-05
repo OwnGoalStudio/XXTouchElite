@@ -69,8 +69,7 @@ xxt://download/?path=%@&url=%@
 Download a file from the specified URL. `path` is the filename to save as, and `url` is the specified URL.
 
 :::note
-If `path` is not specified, the filename will be automatically guessed from the target URL, or the last part of the URL will be used as the filename.
-
+If `path` is not specified, the filename will be automatically guessed from the target URL, or the last part of the URL will be used as the filename.  
 `path` can be specified as an absolute path or a relative path. If specified as a relative path, it is relative to the directory currently open in the App’s file browser.
 :::
 

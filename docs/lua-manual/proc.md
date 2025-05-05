@@ -8,15 +8,14 @@ sidebar_position: 14
 
 ### Process Dictionary
 
-The *Process Dictionary* is a global *dictionary* that can be [accessed across processes](https://elite.82flex.com/api-283425324) from anywhere.
-
+The *Process Dictionary* is a global *dictionary* that can be [accessed across processes](https://elite.82flex.com/api-283425324) from anywhere.  
 The lifecycle of the *Process Dictionary* is the same as the operating system: when the operating system shuts down or restarts, the *Process Dictionary* is also cleared.
 
 * In the *Process Dictionary*, the value corresponding to each key is a *string*.
 * The value set cannot be an empty string `""`.
 
 :::caution Limitations
-When XXTouch Elite is restarted, uninstalled, or reinstalled, the *Process Dictionary* will also be cleared.
+When XXTouch Elite is restarted, uninstalled, or reinstalled, the *Process Dictionary* will also be cleared.  
 Keys starting with `ch.xxtou.` or `xxtouch.` are reserved internally and cannot be used.
 :::
 
@@ -76,8 +75,7 @@ end
 
 ### Process Queue Dictionary
 
-The *Process Queue Dictionary* is a global *dictionary* that can be [accessed across processes](https://elite.82flex.com/api-283425324) from anywhere.
-
+The *Process Queue Dictionary* is a global *dictionary* that can be [accessed across processes](https://elite.82flex.com/api-283425324) from anywhere.  
 The lifecycle of the *Process Queue Dictionary* is the same as the operating system: when the operating system shuts down or restarts, the *Process Queue Dictionary* is also cleared.
 
 * In the *Process Queue Dictionary*, the value corresponding to each key is a *queue*, which is a *string-ordered list*.
@@ -85,7 +83,7 @@ The lifecycle of the *Process Queue Dictionary* is the same as the operating sys
 * The pushed value cannot be an empty string `""`.
 
 :::caution Limitations
-When XXTouch Elite is restarted, uninstalled, or reinstalled, the *Process Queue Dictionary* will also be cleared.
+When XXTouch Elite is restarted, uninstalled, or reinstalled, the *Process Queue Dictionary* will also be cleared.  
 Keys starting with `ch.xxtou.` or `xxtouch.` are reserved internally and cannot be used.
 :::
 

@@ -88,7 +88,8 @@ script.lua
 
 ### Daemon Mode `daemon.lua`
 
-Daemon mode is a lower-level mode compared to [**Daemon Mode**](daemon-mode.md). It is a system-level service launched by [`launchd`](https://www.launchd.info/). When the device is in a non-LAN environment but requires centralized control, a daemon can be enabled to actively communicate with external servers.
+Daemon mode is a lower-level mode compared to [**Daemon Mode**](daemon-mode.md). It is a system-level service launched by [`launchd`](https://www.launchd.info/).  
+When the device is in a non-LAN environment but requires centralized control, a daemon can be enabled to actively communicate with external servers.
 
 * The daemon can be managed using [`launchctl`](https://support.apple.com/zh-cn/guide/terminal/apdc6c1077b-5d5d-4d35-9c19-60f2397b2369/mac).
 * The daemon starts automatically with the system and will restart automatically 30 seconds after an unexpected crash.
@@ -243,6 +244,6 @@ uninstall-xxtouch.sh
 ```
 
 :::danger
-This operation is irreversible.
+This operation is irreversible.  
 It will also remove all [user data](paths-and-permissions.md) related to XXTouch Elite.
 :::

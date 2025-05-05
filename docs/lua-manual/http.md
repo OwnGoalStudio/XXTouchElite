@@ -254,7 +254,7 @@ http_status_code, response_header_json_text = http.head(url[, timeout_seconds, r
 
 #### Description
 
-Uses the HTTP/1.1 protocol’s HEAD method to request and retrieve the headers of a network resource.
+Uses the HTTP/1.1 protocol’s HEAD method to request and retrieve the headers of a network resource.  
 The HEAD method usually returns the same headers as the GET method, but the HEAD request does not return the body content of the resource.
 
 #### Example

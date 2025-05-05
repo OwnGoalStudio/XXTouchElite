@@ -70,11 +70,11 @@ success, failure_reason = ethconf.set_config(interface_name, config_table)
 
 #### Description
 
-The structure of each protocol configuration table in the output is determined by the iOS/macOS system.
+The structure of each protocol configuration table in the output is determined by the iOS/macOS system.  
 This section provides example configurations for common scenarios for reference only.
 
 :::caution
-Please refer to the example configurations and ensure no fields are missing to avoid issues such as network unavailability or inability to open “Settings.”
+Please refer to the example configurations and ensure no fields are missing to avoid issues such as network unavailability or inability to open “Settings”.  
 If network issues occur, try restoring network settings using [`sys.reset`](sys.md#reset-sysreset).
 :::
 

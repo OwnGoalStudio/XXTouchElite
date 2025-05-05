@@ -313,7 +313,7 @@ image:destroy()
 Immediately releases the memory occupied by the image object. The destroyed image object cannot be used again.
 
 :::caution Performance
-In scenarios where new image objects are frequently created, make sure to call this method to destroy unused image objects to prevent high memory usage, which can lead to crashes or freezes.
+In scenarios where new image objects are frequently created, make sure to call this method to destroy unused image objects to prevent high memory usage, which can lead to crashes or freezes.  
 Lua’s built-in garbage collection mechanism will also periodically collect and destroy unused image objects.
 :::
 

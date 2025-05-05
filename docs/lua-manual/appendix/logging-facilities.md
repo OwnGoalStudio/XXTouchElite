@@ -73,7 +73,7 @@ nLog([ argument1, argument2, ... ])
 
 #### Description
 
-This function is a protocol function (empty function). By default, it does not produce any effect. The implementation details depend on the accompanying development environment.
+This function is a protocol function (empty function). By default, it does not produce any effect. The implementation details depend on the accompanying development environment.  
 When debugging with the accompanying development environment, this function sends logs to the log window of the development environment.
 
 #### Example

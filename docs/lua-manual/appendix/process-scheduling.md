@@ -122,7 +122,8 @@ Refer to [Command Line Tools](command-line-tools.md) to execute another Lua inte
 :::
 
 :::caution
-Avoid passing multi-line or overly complex **commands**; troubleshooting issues can be very difficult. Write complex Bash/Lua script content to a file first, then execute the file.
+Avoid passing multi-line or overly complex **commands**; troubleshooting issues can be very difficult.  
+Write complex Bash/Lua script content to a file first, then execute the file.
 :::
 
 #### Example 1: Command Execution

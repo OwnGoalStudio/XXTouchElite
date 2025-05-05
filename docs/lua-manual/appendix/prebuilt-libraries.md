@@ -13,7 +13,7 @@ You can also refer to the following template to write your own extension librari
 
 ## Open-Source Credits
 
-`/usr/local/xxtouch/lib/` contains many precompiled third-party open-source Lua extension libraries.
+`/usr/local/xxtouch/lib/` contains many precompiled third-party open-source Lua extension libraries.  
 You can find related copyright information and more details on their official websites or open-source repository pages.
 
 ### lua-zip

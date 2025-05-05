@@ -8,7 +8,7 @@ sidebar_position: 16
 
 This module will automatically process the URL using [`string.encode_uri`](exstring.md#-url-encoding-stringencode_uristringencode_uri_component) by default.
 
-The conventional URL format for the FTP protocol is `ftp://[username[:password]@]server_address[:server_port][/path]`.
+The conventional URL format for the FTP protocol is `ftp://[username[:password]@]server_address[:server_port][/path]`.  
 If the username or password contains the characters `@`, `:`, or `/`, they can be replaced with `%40`, `%3A`, and `%2F`, respectively. For other characters that are not allowed in URLs, you can use [`string.encode_uri_component`](exstring.md#-url-encoding-stringencode_uristringencode_uri_component) for encoding.
 
 Functions marked with 🚥 will **yield** in the [**Thread Module**](thread.md). Before these function calls return, other **threads** may get a chance to run.

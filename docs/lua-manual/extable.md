@@ -23,7 +23,7 @@ copied_table = table.deep_copy(input_table)
 
 #### Description
 
-Recursively copies the **input_table** to create its duplicate. All values in the table, except for `function` and `userdata`, will be copied.
+Recursively copies the **input_table** to create its duplicate. All values in the table, except for `function` and `userdata`, will be copied.  
 If the input table contains circular references, the reference relationships will also be copied.
 
 #### Example

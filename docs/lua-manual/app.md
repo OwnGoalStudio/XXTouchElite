@@ -296,7 +296,7 @@ Passing `"*"` as the **identifier** means exiting all running Apps.
 
 #### Description
 
-Unlike [`app.close`](#close-the-app-appclose), the App will receive a notification before exiting.
+Unlike [`app.close`](#close-the-app-appclose), the App will receive a notification before exiting.  
 The App has up to 3 seconds to save its state before it is completely closed, and it will clear the label in the multitasking switcher.
 
 :::caution Limitation

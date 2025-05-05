@@ -444,8 +444,8 @@ processed_text = string.strip_utf8_bom(original_text)
 - processed_text *text*
 
 :::note
-The UTF-8-BOM appears as three invisible characters `"\xEF\xBB\xBF"` at the beginning of the document.
-**BOM (Byte Order Mark)** is prepared for UTF-16 and UTF-32 to mark the byte order. Microsoft uses BOM in UTF-8 to clearly distinguish UTF-8 from ASCII and other encodings, but such files can cause problems on non-Windows operating systems.
+The UTF-8-BOM appears as three invisible characters `"\xEF\xBB\xBF"` at the beginning of the document.  
+**BOM (Byte Order Mark)** is prepared for UTF-16 and UTF-32 to mark the byte order. Microsoft uses BOM in UTF-8 to clearly distinguish UTF-8 from ASCII and other encodings, but such files can cause problems on non-Windows operating systems.  
 UTF-8 **does not need** BOM, although the Unicode standard allows BOM in UTF-8. Placing BOM in UTF-8 files is a Microsoft habit (calling little-endian UTF-16 with BOM "Unicode" without further explanation is also a Microsoft habit).
 :::
 
@@ -737,7 +737,7 @@ pinyin_text = string.to_pinyin(text, [remove_tone])
 
 #### Description
 
-Converts text to pinyin text. For example, `你好` becomes `"nǐ hǎo"`.
+Converts text to pinyin text. For example, `你好` becomes `"nǐ hǎo"`.  
 If `remove_tone` is `true`, the tone is removed. For example, `你好` becomes `"ni hao"`.
 
 #### Example
@@ -826,7 +826,7 @@ result = string.is_email(text)
 
 #### Description
 
-Determines whether the text is an email address using the regular expression `"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"`.
+Determines whether the text is an email address using the regular expression `"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"`.  
 Empty text returns `false`.
 
 #### Example
@@ -855,7 +855,7 @@ result = string.is_link(text)
 
 #### Description
 
-Determines whether the text is a link address using the regular expression `"https?://[%w%.%-/:]+"`.
+Determines whether the text is a link address using the regular expression `"https?://[%w%.%-/:]+"`.  
 Empty text returns `false`.
 
 #### Example
@@ -889,7 +889,7 @@ result = string.is_alphanumeric(text)  -- Is it all letters or digits
 
 #### Description
 
-Determines whether the text contains only uppercase and lowercase letters `[A-Za-z]` or digits `[0-9]`, or a combination of both.
+Determines whether the text contains only uppercase and lowercase letters `[A-Za-z]` or digits `[0-9]`, or a combination of both.  
 Empty text returns `false`.
 
 #### Example
@@ -940,7 +940,7 @@ result = string.is_chinese(text)
 
 #### Description
 
-Determines whether the first character of the UTF-8 text is Chinese.
+Determines whether the first character of the UTF-8 text is Chinese.  
 Empty text returns `false`.
 
 #### Example

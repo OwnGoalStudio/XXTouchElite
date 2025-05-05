@@ -6,7 +6,7 @@ sidebar_position: 20
 
 ## Thread Module - thread
 
-The thread module uses Lua’s built-in coroutine [`coroutine`](https://cloudwu.github.io/lua53doc/manual.html#2.6) for implementation, which is not the same as traditional multithreading.
+The thread module uses Lua’s built-in coroutine [`coroutine`](https://cloudwu.github.io/lua53doc/manual.html#2.6) for implementation, which is not the same as traditional multithreading.  
 In XXTouch Elite, the thread module is **disabled by default**. To enable this module, wrap the code block as follows:
 
 ```lua
@@ -304,7 +304,7 @@ end)
 ```
 
 :::info
-The coordinates in this event use the **portrait mode with HOME at the bottom** as the initial coordinate system.
+The coordinates in this event use the **portrait mode with HOME at the bottom** as the initial coordinate system.  
 You can use [`screen.rotate_xy`](screen.md#coordinate-rotation-conversion-screenrotate_xy) for conversion.
 :::
 

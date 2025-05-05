@@ -26,7 +26,8 @@ dialog = dialog([ config_section ])
 
 #### Description
 
-Specify or randomly generate a **config section**, and return a dialog object. The dialog is displayed, and after the user presses **Submit**, the configuration options are saved. When displayed again, the previously saved configuration is selected by default.
+Specify or randomly generate a **config section**, and return a dialog object.  
+The dialog is displayed, and after the user presses **Submit**, the configuration options are saved. When displayed again, the previously saved configuration is selected by default.
 
 :::note
 The configuration options table will be saved as a file in `/var/mobile/Media/1ferver/uicfg/<config_section>.plist`.
@@ -257,7 +258,8 @@ This component supports displaying the input box in a popup form. In this mode, 
 
 #### Description
 
-This component displays an input box in the interface for string input. If **prompt_text** or **message_text** is not empty, tapping the input box area will display a popup, requiring input in the popup.
+This component displays an input box in the interface for string input.  
+If **prompt_text** or **message_text** is not empty, tapping the input box area will display a popup, requiring input in the popup.
 
 :::info
 When modifying or adding string entries, if the string does not pass **validation_regex**, the current entry cannot be saved.
@@ -602,7 +604,8 @@ dialog = dialog:add_radio {
 
 #### Description
 
-This component displays several radio buttons in the interface. Clicking a radio button selects the current radio button and deselects other radio buttons in the same group.
+This component displays several radio buttons in the interface.  
+Clicking a radio button selects the current radio button and deselects other radio buttons in the same group.
 
 #### Example
 
@@ -653,7 +656,8 @@ dialog = dialog:add_checkbox {
 
 #### Description
 
-This component displays several checkboxes in the interface. Clicking a checkbox toggles its selected or unselected state.
+This component displays several checkboxes in the interface.  
+Clicking a checkbox toggles its selected or unselected state.
 
 #### Example
 
@@ -1378,7 +1382,8 @@ value = dialog.get(config_section, key)
 
 #### Description
 
-Does not ensure that the **value** type matches the control type. If you need to ensure the value type is valid, you can first use [`dialog.setup`](#validate-a-config-interface-dialogsetup) to correct it before reading.
+Does not ensure that the **value** type matches the control type.  
+If you need to ensure the value type is valid, you can first use [`dialog.setup`](#validate-a-config-interface-dialogsetup) to correct it before reading.
 
 #### Example
 
@@ -1408,10 +1413,12 @@ dialog.set(config_section, key, value)
 
 #### Description
 
-Does not ensure that the **value** type matches the control type. If you need to ensure the value type is valid, you can use [`dialog.setup`](#validate-a-config-interface-dialogsetup) to correct it after setting.
+Does not ensure that the **value** type matches the control type.  
+If you need to ensure the value type is valid, you can use [`dialog.setup`](#validate-a-config-interface-dialogsetup) to correct it after setting.
 
 :::info
-If the config interface is currently displayed, it **will not** immediately update the displayed value. If you need to immediately update the displayed value in the config interface, you can use [`dialog.reload`](#reload-the-currently-displayed-config-interface-dialogreload).
+If the config interface is currently displayed, it **will not** immediately update the displayed value.  
+If you need to immediately update the displayed value in the config interface, you can use [`dialog.reload`](#reload-the-currently-displayed-config-interface-dialogreload).
 :::
 
 #### Example
@@ -1447,7 +1454,8 @@ config_table = dialog.read(config_section)
 
 #### Description
 
-Optimizes reading multiple configs. Does not ensure that the values in the config table match the control types. If you need to ensure the value types are valid, you can first use [`dialog.setup`](#validate-a-config-interface-dialogsetup) to correct them before reading.
+Optimizes reading multiple configs. Does not ensure that the values in the config table match the control types.  
+If you need to ensure the value types are valid, you can first use [`dialog.setup`](#validate-a-config-interface-dialogsetup) to correct them before reading.
 
 #### Example
 
@@ -1470,10 +1478,12 @@ success = dialog.write(config_section, config_table)
 
 #### Description
 
-Optimizes writing multiple configs. Does not ensure that the values in the config table match the control types. If you need to ensure the value types are valid, you can use [`dialog.setup`](#validate-a-config-interface-dialogsetup) to correct them after setting.
+Optimizes writing multiple configs. Does not ensure that the values in the config table match the control types.  
+If you need to ensure the value types are valid, you can use [`dialog.setup`](#validate-a-config-interface-dialogsetup) to correct them after setting.
 
 :::info
-If the config interface is currently displayed, it **will not** immediately update the displayed value. If you need to immediately update the displayed value in the config interface, you can use [`dialog.reload`](#reload-the-currently-displayed-config-interface-dialogreload).
+If the config interface is currently displayed, it **will not** immediately update the displayed value.  
+If you need to immediately update the displayed value in the config interface, you can use [`dialog.reload`](#reload-the-currently-displayed-config-interface-dialogreload).
 :::
 
 #### Example
@@ -1508,7 +1518,8 @@ success = dialog.clear(config_section)
 After clearing, use [`dialog.setup`](#validate-a-config-interface-dialogsetup) to regenerate the default config of the config interface.
 
 :::info
-If the config interface is currently displayed, it **will not** immediately update the displayed value. If you need to immediately update the displayed value in the config interface, you can use [`dialog.reload`](#reload-the-currently-displayed-config-interface-dialogreload).
+If the config interface is currently displayed, it **will not** immediately update the displayed value.  
+If you need to immediately update the displayed value in the config interface, you can use [`dialog.reload`](#reload-the-currently-displayed-config-interface-dialogreload).
 :::
 
 #### Example

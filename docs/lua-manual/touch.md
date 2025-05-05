@@ -181,7 +181,8 @@ touch_event = touch_event:move(x, y[, pressure, angle, option_flags])
 Simulates a finger moving from the current position to another position.
 
 :::info
-This method can also be called in the following way (where **finger ID** must be any number in the range 1 ~ 29). The `touch.move` method differs from the `touch:move` method in that it moves to the target position immediately and does not allow setting steps.
+This method can also be called in the following way (where **finger ID** must be any number in the range 1 ~ 29).  
+The `touch.move` method differs from the `touch:move` method in that it moves to the target position immediately and does not allow setting steps.
 
 ```lua
 touch.move(finger_id, x, y)  -- Move immediately to the target position
@@ -192,7 +193,7 @@ touch.move(finger_id, x, y[, pressure, angle, option_flags])  -- Move immediatel
 :::
 
 :::caution Deprecated
-The parameters **pressure** and **angle** are not recommended for use.
+The parameters **pressure** and **angle** are not recommended for use.  
 Since Apple removed the 3D Touch hardware from devices starting with iPhone XR and iPhone 11, these parameters have become ineffective.
 :::
 

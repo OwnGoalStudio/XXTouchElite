@@ -23,7 +23,7 @@ success, error_message = profile.import(profile_path[, install])
 
 #### Description
 
-Imports a specified profile into **"Settings"** → **"Downloaded Profiles"**.
+Imports a specified profile into **"Settings"** → **"Downloaded Profiles"**.  
 If **install** is set to `true`, the specified profile will also be installed into **"Settings"** → **"General"** → **"Profiles & Device Management"**.
 
 :::info
@@ -78,7 +78,7 @@ profile = profile.fetch(profile_id)
 
 #### Profile Structure
 
-Some fields are truncated as `...` for brevity.
+Some fields are truncated as `...` for brevity.  
 The `PayloadIdentifier` is the **profile_id**.
 
 ```lua

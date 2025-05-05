@@ -207,7 +207,7 @@ When the **new_idfa** is `"READ"`, it only reads without clearing or modifying.
 :::
 
 :::note
-You do not need to worry about the specific format of the **IDFA/V table**. Simply pass the return value **old_idfav_table** from the previous call as the parameter **new_idfav_table** to restore the system IDFA and IDFV identifiers to their original state.
+You do not need to worry about the specific format of the **IDFA/V table**. Simply pass the return value **old_idfav_table** from the previous call as the parameter **new_idfav_table** to restore the system IDFA and IDFV identifiers to their original state.  
 The **IDFA/V table** can be safely serialized by the [`plist`](plist.md) module.
 :::
 

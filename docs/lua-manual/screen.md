@@ -205,7 +205,7 @@ screen_capture_count = screen.unkeep()
 
 #### Description
 
-Cancels the effect of the [`screen.keep`](#-screen-keep-screenkeep) function and exits **Screen Keep State**.
+Cancels the effect of the [`screen.keep`](#-screen-keep-screenkeep) function and exits **Screen Keep State**.  
 After exiting **Screen Keep State**, each call to color picking, color finding, screenshot, or image finding functions marked with 📲 will capture new screen content, incrementing the **screen capture count**.
 
 #### Example
@@ -465,8 +465,8 @@ x, y = screen.find_color({
 Uses color deviation mode to find (pattern matching) the position of the first fully matching multi-point color structure (pattern) in the area.
 
 :::note
-**Color Deviation** is used to indicate the range of color deviation. A color with a color deviation means all colors within the red, green, and blue deviation range of that color.
-When `0x456789` has a color deviation of `0x123456`, it means the red range is `0x45 ± 0x12`, the green range is `0x67 ± 0x34`, and the blue range is `0x89 ± 0x56`.
+**Color Deviation** is used to indicate the range of color deviation. A color with a color deviation means all colors within the red, green, and blue deviation range of that color.  
+When `0x456789` has a color deviation of `0x123456`, it means the red range is `0x45 ± 0x12`, the green range is `0x67 ± 0x34`, and the blue range is `0x89 ± 0x56`.  
 As shown in the table below, `{0x456789, 0x123456}` represents all colors from `0x333333` to `0x579BDF`.
 
 | Negative Deviation | Positive Deviation |
@@ -561,7 +561,7 @@ screen_content = screen.image([ left, top, right, bottom ])
 Captures the content of a part of the screen or the entire screen.
 
 :::caution Performance
-Generates a new *image object*.
+Generates a new *image object*.  
 Be sure to call the [`image:destroy`](img.md#destroy-an-image-object-imagedestroy) method when the object is no longer needed to release its memory.
 :::
 
@@ -604,7 +604,7 @@ x, y, similarity = screen.find_image(sub_image[, similarity, left, top, right, b
 
 #### Description
 
-Finds the position of a **sub-image** on the screen.
+Finds the position of a **sub-image** on the screen.  
 Adjusts the sub-image with multiple scaling ratios, from 100% to 20%, to improve the success rate of the search.
 
 :::caution Limitation
@@ -900,7 +900,7 @@ text, details = screen.qr_decode([ timeout ])
 
 #### Description
 
-Uses Apple’s [Vision](https://developer.apple.com/documentation/vision) framework to perform QR code recognition on the screen or image.
+Uses Apple’s [Vision](https://developer.apple.com/documentation/vision) framework to perform QR code recognition on the screen or image.  
 Detects the first complete QR code on the screen or image and decodes it. **text** is the `UTF-8` text content obtained from decoding the QR code.
 
 #### Example: Decode a local QR code image file
