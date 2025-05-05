@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # 进程调度
 
-XXTouchNG 的每个脚本都是独立运行的进程，即 **脚本进程**。为避免多个脚本进程同时运行造成的冲突和管理不便，通过以下方式派发的脚本进程，同一时间 **只能有一个实例**：
+XXTouch Elite 的每个脚本都是独立运行的进程，即 **脚本进程**。为避免多个脚本进程同时运行造成的冲突和管理不便，通过以下方式派发的脚本进程，同一时间 **只能有一个实例**：
 
 - 通过音量键启动的脚本
 - 通过 [OpenAPI](https://openapi-ng.82flex.com/api-111064056) 调用启动的脚本
@@ -250,8 +250,8 @@ notify_post(通知名称)
 - 通知名称 *文本型*
   - `ch.xxtou.notification.remote-access.on`：[打开远程访问](../tutorial-basics/create-a-workspace.md#打开远程访问)
   - `ch.xxtou.notification.remote-access.off`：关闭远程访问
-  - `ch.xxtou.notification.restart`：立即结束脚本，并重启 XXTouchNG 守护进程
-  - `ch.xxtou.notification.boom`：立即结束脚本，并卸载 XXTouchNG
+  - `ch.xxtou.notification.restart`：立即结束脚本，并重启 XXTouch Elite 守护进程
+  - `ch.xxtou.notification.boom`：立即结束脚本，并卸载 XXTouch Elite
 
 #### 说明
 

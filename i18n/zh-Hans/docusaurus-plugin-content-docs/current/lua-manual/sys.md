@@ -501,7 +501,7 @@ sys.alert("设备的序列号是："..sys.mgcopyanswer("SerialNumber"))
 sys.alert('当前系统版本：'..sys.version())
 ```
 
-### 获取 XXTouchNG 版本 \(**sys\.xtversion**\)
+### 获取 XXTouch Elite 版本 \(**sys\.xtversion**\)
 
 #### 声明
 
@@ -512,12 +512,12 @@ sys.alert('当前系统版本：'..sys.version())
 #### 参数及返回值
 
 - 版本号
-  - *文本型*，XXTouchNG 版本号
+  - *文本型*，XXTouch Elite 版本号
 
 #### 示例
 
 ```lua title="sys.xtversion"
-sys.alert('当前 XXTouchNG 版本：'..sys.xtversion())
+sys.alert('当前 XXTouch Elite 版本：'..sys.xtversion())
 ```
 
 ### 重启春板（妙手回春） \(**sys\.respring**\)

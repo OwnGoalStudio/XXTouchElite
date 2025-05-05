@@ -12,7 +12,7 @@ sidebar_position: 6
 
 ## 激活环境
 
-通过 OpenSSH 登录到设备后，你需要执行以下命令来激活 XXTouchNG 命令行环境。否则后续章节中的命令将无法执行。
+通过 OpenSSH 登录到设备后，你需要执行以下命令来激活 XXTouch Elite 命令行环境。否则后续章节中的命令将无法执行。
 
 ```bash
 . xxtouch
@@ -100,7 +100,7 @@ script.lua
 你可以编写以 `daemon.lua` 命名的守护者，上传到 `/usr/local/xxtouch/bin/daemon.lua`。
 
 :::caution 限制
-守护者模式将在重启、软重启或重启 XXTouchNG 后生效。
+守护者模式将在重启、软重启或重启 XXTouch Elite 后生效。
 :::
 
 #### 示例
@@ -235,7 +235,7 @@ remote-lock.lua lock         # 锁定设备
 remote-lock.lua status       # 显示设备锁屏状态，返回 `true` 或 `false`
 ```
 
-### 卸载 XXTouchNG \(**uninstall\-xxtouch\.sh**\)
+### 卸载 XXTouch Elite \(**uninstall\-xxtouch\.sh**\)
 
 #### 示例
 
@@ -245,5 +245,5 @@ uninstall-xxtouch.sh
 
 :::danger
 此操作不可逆。  
-将同时移除所有与 XXTouchNG 有关的 [用户数据](./basic-concepts/paths-and-permissions.md)。
+将同时移除所有与 XXTouch Elite 有关的 [用户数据](./basic-concepts/paths-and-permissions.md)。
 :::

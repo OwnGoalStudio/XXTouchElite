@@ -15,7 +15,7 @@ sidebar_position: 14
 * 设置的值不能是空文本 `""`
 
 :::caution 限制
-重启、卸载或重装 XXTouchNG 时，*进程字典* 也会被清空。  
+重启、卸载或重装 XXTouch Elite 时，*进程字典* 也会被清空。  
 以 `ch.xxtou.` 或 `xxtouch.` 开头的键被内部保留，不可使用。
 :::
 
@@ -83,7 +83,7 @@ end
 * 压入的值不能是空文本 `""`
 
 :::caution 限制
-重启、卸载或重装 XXTouchNG 时，*进程队列字典* 也会被清空。  
+重启、卸载或重装 XXTouch Elite 时，*进程队列字典* 也会被清空。  
 以 `ch.xxtou.` 或 `xxtouch.` 开头的键被内部保留，不可使用。
 :::
 

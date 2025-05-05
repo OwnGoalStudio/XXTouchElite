@@ -4,7 +4,7 @@ sidebar_position: 98
 
 # 云控 API
 
-XXTouchNG 云控 API 以 WebSocket 协议开发，内建的云控客户端为 `elfclient`。
+XXTouch Elite 云控 API 以 WebSocket 协议开发，内建的云控客户端为 `elfclient`。
 
 我们还提供了云控服务端例程 [XXTouch-CloudControl](https://github.com/XXTouchNG/XXTouch-CloudControl)，你可以根据自己的业务需要进行二次开发。
 

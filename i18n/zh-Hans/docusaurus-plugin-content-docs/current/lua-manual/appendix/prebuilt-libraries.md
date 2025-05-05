@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # 编程接口与扩展库
 
-XXTouchNG 完整支持 [Lua 编程接口](https://cloudwu.github.io/lua53doc/manual.html#4)。你可以从 [LuaRocks](https://luarocks.org/) 下载并安装扩展库，然后移植到 XXTouchNG 中使用。
+XXTouch Elite 完整支持 [Lua 编程接口](https://cloudwu.github.io/lua53doc/manual.html#4)。你可以从 [LuaRocks](https://luarocks.org/) 下载并安装扩展库，然后移植到 XXTouch Elite 中使用。
 
 :::note
 你也可以参照以下模板，编写自己的扩展库使用。  

@@ -4,9 +4,9 @@ sidebar_position: 2
 
 # 环境与全局环境
 
-XXTouchNG 的**运行时根目录**为 `/usr/local/xxtouch`，其中包含了所有的配置文件、守护进程日志、内置及第三方的 Lua 扩展等。
+XXTouch Elite 的**运行时根目录**为 `/usr/local/xxtouch`，其中包含了所有的配置文件、守护进程日志、内置及第三方的 Lua 扩展等。
 
-XXTouchNG 的**用户根目录**为 `/var/mobile/Media/1ferver`，你开发的脚本、输出的日志和数据、所依赖的资源和配置文件，都应该放置在此目录下。你可以在 `utils.paths` 表中获取这些路径：
+XXTouch Elite 的**用户根目录**为 `/var/mobile/Media/1ferver`，你开发的脚本、输出的日志和数据、所依赖的资源和配置文件，都应该放置在此目录下。你可以在 `utils.paths` 表中获取这些路径：
 
 ```lua title="utils.paths"
 {
@@ -41,9 +41,9 @@ XXTouchNG 的**用户根目录**为 `/var/mobile/Media/1ferver`，你开发的�
 
 ## 权限及所有者
 
-XXTouchNG 脚本进程由 `root` 用户启动。所以，你在脚本中创建的文件，其默认所有者为 `root`。
+XXTouch Elite 脚本进程由 `root` 用户启动。所以，你在脚本中创建的文件，其默认所有者为 `root`。
 
-所有写入应用容器或**用户根目录**的文件，都应当设置为 `rw-r--r--` 的权限，即 `0644`；所有创建在应用容器或**用户根目录**当中的子目录，都应当设置为 `rwxr-xr-x`，即 `0755`。并且应当设置为 `mobile` 所有者和 `mobile` 所属组，即 `501`。为保证效率，XXTouchNG 不会帮你做这些事。你应当使用 `luaposix` 库来设置文件的权限及所有者：
+所有写入应用容器或**用户根目录**的文件，都应当设置为 `rw-r--r--` 的权限，即 `0644`；所有创建在应用容器或**用户根目录**当中的子目录，都应当设置为 `rwxr-xr-x`，即 `0755`。并且应当设置为 `mobile` 所有者和 `mobile` 所属组，即 `501`。为保证效率，XXTouch Elite 不会帮你做这些事。你应当使用 `luaposix` 库来设置文件的权限及所有者：
 
 ```lua
 local posix = require("posix")

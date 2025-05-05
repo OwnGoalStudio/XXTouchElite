@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # 日志输出设施
 
-XXTouchNG 提供了 `print`、`sys.log` 和 `nLog` 三种日志输出方式，其区别如下：
+XXTouch Elite 提供了 `print`、`sys.log` 和 `nLog` 三种日志输出方式，其区别如下：
 
 - [`print`](#print)：输出到 **标准输出（控制台）** 和一个额外的缓冲区 [`print.out`](#将打印缓冲区的内容提出来-printout)，仅在命令行下可见。
 - [`sys.log`](../developer-manual/sys.md#输出标准系统日志-syslog)：在 `print` 的基础上，输出到 **日志文件** `/var/mobile/Media/1ferver/log/sys.log` 和 **悬浮日志条**。
@@ -28,7 +28,7 @@ print([ 参数1, 参数2, ... ])
   - *任意类型*，*可选*，*可变参数*，将会转换成文本输出到缓冲区，参数之间用 `"\t"` 隔开
 
 :::note
-[`print`](http://cloudwu.github.io/lua53doc/manual.html#pdf-print) 是 lua 自带的打印输入函数，在 XXTouchNG 是将内容打印到缓冲区。
+[`print`](http://cloudwu.github.io/lua53doc/manual.html#pdf-print) 是 lua 自带的打印输入函数，在 XXTouch Elite 是将内容打印到缓冲区。
 :::
 
 #### 示例

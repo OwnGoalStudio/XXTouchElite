@@ -7,7 +7,7 @@ sidebar_position: 20
 ## 线程模块 - thread
 
 线程模块使用 Lua 自带协程 [`coroutine`](https://cloudwu.github.io/lua53doc/manual.html#2.6) 实现，非通常意义上的多线程。  
-在 XXTouchNG 中，线程模块 **默认关闭**。如要启用此模块，需要将代码块以如下形式包裹：
+在 XXTouch Elite 中，线程模块 **默认关闭**。如要启用此模块，需要将代码块以如下形式包裹：
 
 ```lua
 require("thread")(function ()

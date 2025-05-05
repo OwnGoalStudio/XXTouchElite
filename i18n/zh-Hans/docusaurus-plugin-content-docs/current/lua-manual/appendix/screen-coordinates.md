@@ -8,7 +8,7 @@ sidebar_position: 10
 
 ![Screen_Coordinates.001](img/Screen_Coordinates.001.png)
 
-XXTouchNG 始终以物理像素为单位，使用硬件分辨率坐标系，即 `Hardware Coordinates`，而不是逻辑分辨率坐标系 `Logical Coordinates` 或者视图坐标系 `View Coordinates`。有关不同设备的坐标系，请参阅：
+XXTouch Elite 始终以物理像素为单位，使用硬件分辨率坐标系，即 `Hardware Coordinates`，而不是逻辑分辨率坐标系 `Logical Coordinates` 或者视图坐标系 `View Coordinates`。有关不同设备的坐标系，请参阅：
 
 - [iOS Resolution](https://www.ios-resolution.com/)
 - [iOS Design Cheat Sheet](https://kapeli.com/cheat_sheets/iOS_Design.docset/Contents/Resources/Documents/index)

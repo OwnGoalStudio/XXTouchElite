@@ -195,7 +195,7 @@
     "description": "The ARIA label for the main navigation"
   },
   "theme.NotFound.p1": {
-    "message": "我们找不到您要找的页面。",
+    "message": "我们找不到你要找的页面。",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
@@ -411,7 +411,7 @@
     "message": "强大的自动化工具"
   },
   "Everything you need to automate your iOS device": {
-    "message": "自动化您的 iOS 设备所需的一切"
+    "message": "自动化你的 iOS 设备所需的一切"
   },
   "Compatible with iOS 14+": {
     "message": "兼容 iOS 14+"
@@ -420,7 +420,7 @@
     "message": "XXTouch Elite 支持以下现代越狱工具："
   },
   "Ready to automate your iOS device?": {
-    "message": "准备好解放您的双手了吗？"
+    "message": "准备好解放你的双手了吗？"
   },
   "Join thousands of users who have transformed how they interact with their devices.": {
     "message": "加入数千名用户的行列，改变与设备交互的方式。"
