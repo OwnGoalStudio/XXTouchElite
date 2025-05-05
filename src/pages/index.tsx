@@ -7,65 +7,66 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
+import Translate, {translate} from '@docusaurus/Translate';
 
 const features = [
   {
-    title: 'Touch Automation',
+    title: translate({ message: 'Touch Automation' }),
     description: (
-      <>
+      <Translate>
         Record and playback taps, swipes, and gestures with high precision.
         Support for multi-touch simulation and 3D Touch pressure sensitivity.
-      </>
+      </Translate>
     ),
     icon: '🖱️',
   },
   {
-    title: 'Image Recognition',
+    title: translate({ message: 'Image Recognition' }),
     description: (
-      <>
+      <Translate>
         Ultra-fast screenshot capture with OpenCV-powered detection.
         Find images and text with pixel-perfect accuracy in milliseconds.
-      </>
+      </Translate>
     ),
     icon: '🔍',
   },
   {
-    title: 'System Integration',
+    title: translate({ message: 'System Integration' }),
     description: (
-      <>
+      <Translate>
         Direct access to SpringBoard UI elements, app sandboxes,
         and system configuration. Control display, network, and more.
-      </>
+      </Translate>
     ),
     icon: '⚙️',
   },
   {
-    title: 'Lua Scripting',
+    title: translate({ message: 'Lua Scripting' }),
     description: (
-      <>
+      <Translate>
         Full Lua 5.3 support with debugging tools. Create complex
         automation workflows with an easy-to-learn language.
-      </>
+      </Translate>
     ),
     icon: '📝',
   },
   {
-    title: 'File Management',
+    title: translate({ message: 'File Management' }),
     description: (
-      <>
+      <Translate>
         Browse local files, edit permissions, import via WebDAV,
         and handle ZIP compression/decompression with ease.
-      </>
+      </Translate>
     ),
     icon: '📁',
   },
   {
-    title: 'Developer Tools',
+    title: translate({ message: 'Developer Tools' }),
     description: (
-      <>
+      <Translate>
         Built-in editor with syntax highlighting, breakpoints,
         variable inspection, and error stack tracing.
-      </>
+      </Translate>
     ),
     icon: '🛠️',
   },
@@ -90,12 +91,12 @@ function HomepageHeader() {
               <Link
                 className={clsx('button', styles.button, styles.buttonPrimary)}
                 to="/docs/tutorial/intro">
-                Get Started <span className={styles.buttonIcon}>→</span>
+                <Translate>Get Started</Translate> <span className={styles.buttonIcon}>→</span>
               </Link>
               <Link
                 className={clsx('button', styles.button, styles.buttonOutline)}
                 to="https://havoc.app/package/xxtouchelite">
-                Get on Havoc <span className={styles.downloadIcon}>↓</span>
+                <Translate>Get on Havoc</Translate> <span className={styles.downloadIcon}>↓</span>
               </Link>
             </div>
           </div>
@@ -140,10 +141,10 @@ function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container">
         <Heading as="h2" className={clsx('text--center', styles.sectionTitle)}>
-          Powerful Automation Tools
+          <Translate>Powerful Automation Tools</Translate>
         </Heading>
         <p className={clsx('text--center', styles.sectionSubtitle)}>
-          Everything you need to automate your iOS device
+          <Translate>Everything you need to automate your iOS device</Translate>
         </p>
         <div className="row">
           {features.map((props, idx) => (
@@ -160,10 +161,10 @@ function HomepageCompatibility() {
     <section className={styles.compatibility}>
       <div className="container">
         <Heading as="h2" className={clsx('text--center', styles.sectionTitle)}>
-          Compatible with iOS 14+
+          <Translate>Compatible with iOS 14+</Translate>
         </Heading>
         <p className={clsx('text--center', styles.sectionSubtitle)}>
-          XXTouch Elite works with modern jailbreaks including:
+          <Translate>XXTouch Elite works with modern jailbreaks including:</Translate>
         </p>
         <div className={styles.compatList}>
           <a href="https://unc0ver.dev" target="_blank" rel="noopener noreferrer" className={styles.jailbreakItem}>
@@ -203,16 +204,16 @@ function HomepageCTA() {
       <div className="container">
         <div className={styles.ctaContent}>
           <Heading as="h2" className={clsx('text--center', styles.ctaTitle)}>
-            Ready to automate your iOS device?
+            <Translate>Ready to automate your iOS device?</Translate>
           </Heading>
           <p className={clsx('text--center', styles.ctaSubtitle)}>
-            Join thousands of users who have transformed how they interact with their devices.
+            <Translate>Join thousands of users who have transformed how they interact with their devices.</Translate>
           </p>
           <div className={styles.ctaAction}>
             <Link
               className={clsx('button', styles.button, styles.buttonCTA)}
               to="/docs/tutorial/intro">
-              Get Started Now <span className={styles.buttonIcon}>→</span>
+              <Translate>Get Started Now</Translate> <span className={styles.buttonIcon}>→</span>
             </Link>
           </div>
         </div>

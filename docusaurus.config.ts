@@ -3,10 +3,16 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+function getSiteTagline() {
+  switch(process.env.DOCUSAURUS_CURRENT_LOCALE) {
+    case "zh-Hans": return "强大而灵活的 iOS 自动化工具，始于 2015 年。";
+    default: return "Powerful and flexible automation tool for iOS since 2015.";
+  }
+}
 
 const config: Config = {
   title: 'XXTouch Elite',
-  tagline: 'Powerful and flexible automation tool for iOS since 2015.',
+  tagline: getSiteTagline(),
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -29,7 +35,13 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'zh-Hans'],
+    localeConfigs: {
+      'zh-Hans': {
+        label: '简体中文',
+        path: 'zh-Hans',
+      },
+    },
   },
 
   presets: [
@@ -102,6 +114,10 @@ const config: Config = {
         {
           href: 'https://elite.82flex.com',
           label: 'Open API',
+          position: 'right',
+        },
+        {
+          type: 'localeDropdown',
           position: 'right',
         },
       ],

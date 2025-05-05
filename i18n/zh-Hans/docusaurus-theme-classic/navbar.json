@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "XXTouch Elite",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "XXTouch Elite Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Tutorial": {
+    "message": "教程",
+    "description": "Navbar item with label Tutorial"
+  },
+  "item.label.Manual": {
+    "message": "手册",
+    "description": "Navbar item with label Manual"
+  },
+  "item.label.Blog": {
+    "message": "博客",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Library": {
+    "message": "资源库",
+    "description": "Navbar item with label Library"
+  },
+  "item.label.Open API": {
+    "message": "Open API",
+    "description": "Navbar item with label Open API"
+  }
+}

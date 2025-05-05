@@ -2,7 +2,6 @@
 sidebar_position: 4
 ---
 
-
 # Screen Module
 
 ## Screen Module - screen

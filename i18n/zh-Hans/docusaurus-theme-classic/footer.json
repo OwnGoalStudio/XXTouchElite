@@ -1,0 +1,58 @@
+{
+  "link.title.Docs": {
+    "message": "文档",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Community": {
+    "message": "社区",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "更多",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Tutorial": {
+    "message": "教程",
+    "description": "The label of footer link with label=Tutorial linking to /docs/tutorial/intro"
+  },
+  "link.item.label.Manual": {
+    "message": "手册",
+    "description": "The label of footer link with label=Manual linking to /docs/lua-manual/intro"
+  },
+  "link.item.label.Open API": {
+    "message": "Open API",
+    "description": "The label of footer link with label=Open API linking to https://elite.82flex.com"
+  },
+  "link.item.label.Stack Overflow": {
+    "message": "Stack Overflow",
+    "description": "The label of footer link with label=Stack Overflow linking to https://stackoverflow.com/questions/tagged/xxtouch"
+  },
+  "link.item.label.Telegram": {
+    "message": "Telegram",
+    "description": "The label of footer link with label=Telegram linking to https://t.me/xxtouch_chat"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://discord.gg/RTyMX6c9"
+  },
+  "link.item.label.X": {
+    "message": "X",
+    "description": "The label of footer link with label=X linking to https://x.com/82Flex"
+  },
+  "link.item.label.Blog": {
+    "message": "博客",
+    "description": "The label of footer link with label=Blog linking to /blog"
+  },
+  "link.item.label.Library": {
+    "message": "资源库",
+    "description": "The label of footer link with label=Library linking to /library"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/OwnGoalStudio/XXTouchElite"
+  },
+  "copyright": {
+    "message": "Copyright © 2014-2025 乌龙工作室 · 使用 Docusaurus 构建",
+    "description": "The footer copyright"
+  }
+}

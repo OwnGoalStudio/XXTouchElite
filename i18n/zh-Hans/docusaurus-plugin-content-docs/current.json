@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.luaManualSidebar.category.Appendix": {
+    "message": "附录",
+    "description": "The label for category Appendix in sidebar luaManualSidebar"
+  },
+  "sidebar.luaManualSidebar.category.Appendix.link.generated-index.title": {
+    "message": "附录",
+    "description": "The generated-index page title for category Appendix in sidebar luaManualSidebar"
+  }
+}
