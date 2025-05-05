@@ -45,4 +45,4 @@ You can follow the steps below to run the script above:
 2. Copy the code below and paste it into the file, and save it.
 3. Slide the script to the right and click the “Launch” button.
 
-![Create_A_Script.002](img/Create_A_Script.002.png)
+![Create_A_Script.002](./img/Create_A_Script.002.png)

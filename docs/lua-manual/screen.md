@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## Screen Module - screen
 
-* Functions marked with 🌟 will generate a new [*image object*](img.md#image-object).
+* Functions marked with 🌟 will generate a new [*image object*](./img.md#image-object).
 * Functions marked with 📲 will implicitly capture the current screen content when not in **Screen Keep State**, see [Screen Keep](#-screen-keep-screenkeep) for details.
 
 ### Initialize Rotated Coordinate System \(**screen\.init**\)
@@ -554,7 +554,7 @@ screen_content = screen.image([ left, top, right, bottom ])
 
 * left, top, right, bottom
   * *integer*, *optional*, represents the screen area to capture, default **full screen**
-* screen_content [*image object*](img.md#image-object)
+* screen_content [*image object*](./img.md#image-object)
 
 #### Description
 
@@ -562,7 +562,7 @@ Captures the content of a part of the screen or the entire screen.
 
 :::caution Performance
 Generates a new *image object*.  
-Be sure to call the [`image:destroy`](img.md#destroy-an-image-object-imagedestroy) method when the object is no longer needed to release its memory.
+Be sure to call the [`image:destroy`](./img.md#destroy-an-image-object-imagedestroy) method when the object is no longer needed to release its memory.
 :::
 
 #### Example
@@ -588,7 +588,7 @@ x, y, similarity = screen.find_image(sub_image[, similarity, left, top, right, b
 #### Parameters and Return Values
 
 * sub_image
-  * [*image object*](img.md#image-object)
+  * [*image object*](./img.md#image-object)
   * *path-like string*
     * Path to the image file to find, if not a valid path, it will be parsed as *string* data
   * *string*
@@ -1024,3 +1024,5 @@ if #rects > 0 then
   screen.image(box[1], box[2], box[3], box[4]):save_to_album()
 end
 ```
+
+![AppleCash.001](./img/AppleCash.001.jpg)

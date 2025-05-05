@@ -8,7 +8,7 @@ XXTouch Elite 完整支持 [Lua 编程接口](https://cloudwu.github.io/lua53do
 
 :::note
 你也可以参照以下模板，编写自己的扩展库使用。  
-⏬ [Extension\_Template\.zip \(1\.9 MB\)](assets/Extension_Template.zip)
+⏬ [Extension\_Template\.zip \(1\.9 MB\)](./assets/Extension_Template.zip)
 :::
 
 ## Open-Source Credits

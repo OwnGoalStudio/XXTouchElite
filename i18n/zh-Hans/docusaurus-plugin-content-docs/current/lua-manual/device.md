@@ -422,7 +422,7 @@ device.turn_off_vpn()        -- 断开当前已连接的 VPN
 - 当 VPN 正在连接（还没有连接成功）的时候，**开关状态** 为 `true`。
 
 :::tip
-推荐使用 [`vpnconf`](vpnconf.md) 模块。
+推荐使用 [`vpnconf`](./vpnconf.md) 模块。
 :::
 
 #### 示例

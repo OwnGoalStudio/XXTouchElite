@@ -3,18 +3,18 @@ authors: lessica
 tags: [touch, screen, ocr_text, find_color, testcase, lua]
 ---
 
-# A Simple Testcase
+# 一个简单的测试用例
 
-This is a simple testcase that demonstrates how to use the [`touch`](/docs/lua-manual/touch) and [`screen`](/docs/lua-manual/screen) modules in Lua to automate some tasks on an iOS device.
-
-:::note
-Download the multi-touch gesture recording from the following link:  
-⏬ [rec_20221011184701.lua](./assets/rec_20221011184701.lua)
-:::
+这是一个简单的测试用例，演示了如何使用 [`touch`](/docs/lua-manual/touch) 和 [`screen`](/docs/lua-manual/screen) 模块在 iOS 设备上自动化一些任务。
 
 <!-- truncate -->
 
-The script performs the following actions:
+:::note
+下载多点触控手势录制文件：  
+⏬ [rec_20221011184701.lua](./assets/rec_20221011184701.lua)
+:::
+
+脚本内容如下：
 
 ```lua title="a-simple-testcase.lua"
 local function tapWord(word)

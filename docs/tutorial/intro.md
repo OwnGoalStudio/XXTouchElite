@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Intro
 
-![Intro.001](img/Intro.001.png)
+![Intro.001](./img/Intro.001.png)
 
 XXTouch Elite is a powerful and flexible tool that allows you to create custom automation scripts for your devices. With XXTouch Elite, you can automate repetitive tasks, control smart home devices, and much more.
 
@@ -21,7 +21,7 @@ This documentation will guide you through the process of getting started with XX
   - [Palera1n](https://palera.in/) (Rootless)
   - [Dopamine](https://ellekit.space/dopamine/) (Rootless and RootHide)
 
-![Requirements.002](img/Requirements.002.png)
+![Requirements.002](./img/Requirements.002.png)
 
 ## Installation
 
@@ -29,7 +29,7 @@ This documentation will guide you through the process of getting started with XX
 2. Install “XXTouch Elite” from Sileo package manager.
 3. You may need to restart your device after installation.
 
-![Requirements.003](img/Requirements.003.png)
+![Requirements.003](./img/Requirements.003.png)
 
 ## Updating your XXTouch Elite version
 

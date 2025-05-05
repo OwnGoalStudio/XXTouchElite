@@ -10,7 +10,7 @@ To get started with script development, you need to have a laptop or desktop com
 
 To protect your device from unauthorized access, you need to enable remote access in the “X.X.T.E.” app.
 
-![Remote_Access.001](img/Remote_Access.001.png)
+![Remote_Access.001](./img/Remote_Access.001.png)
 
 ## Access from Web Browser
 
@@ -22,4 +22,4 @@ http://<ip_address>:46952
 
 Where `<ip_address>` is the IP address of your device and `46952` is the default port number of XXTouch Elite.
 
-![Web_Access.001](img/Web_Access.001.png)
+![Web_Access.001](./img/Web_Access.001.png)

@@ -12,7 +12,7 @@ In this tutorial, we will create a simple script that opens “Notes” on your 
 
 Let’s start by creating a new script. Click on the “New Script” button on the top-right corner of the page. Enter a name for your script, e.g. `my-awesome-script.lua`.
 
-![Web_Access.003](img/Web_Access.003.png)
+![Web_Access.003](./img/Web_Access.003.png)
 
 ## Open “Notes”
 
@@ -27,7 +27,7 @@ Note that the [`nLog`](../lua-manual/appendix/logging-facilities.md#nlog) functi
 
 Click “Play” button at the bottom-right corner of the page to run the script. You should see the “Notes” app open on your device.
 
-![Web_Access.004](img/Web_Access.004.png)
+![Web_Access.004](./img/Web_Access.004.png)
 
 :::info
 Find the bundle identifier of an app from “More” → “Application List” in “X.X.T.E.” app.
@@ -37,11 +37,11 @@ Find the bundle identifier of an app from “More” → “Application List” 
 
 Now that we have opened the “Notes” app, we need to find the “New Note” button. To do this, we will use the [`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) function. The [`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) function takes a color table as an argument, which is the collection of the color samples we want to find.
 
-![Make_Notes](img/Make_Notes.gif)
+![Make_Notes](./img/Make_Notes.gif)
 
 Open “Color Picker” in the sidebar, locate the “New Note” button, and click on it. This will add the color sample to the color table. You have to add more color samples to increase the possibility of finding the button.
 
-![Web_Access.005](img/Web_Access.005.png)
+![Web_Access.005](./img/Web_Access.005.png)
 
 Copy generated code from `find_color` function and paste it into your script:
 
@@ -90,7 +90,7 @@ key.send_text("Hello, world!")
 
 Click “Play” button at the bottom-right corner of the page to run the script.
 
-![Make_Notes_Final](img/Make_Notes_Final.gif)
+![Make_Notes_Final](./img/Make_Notes_Final.gif)
 
 ## Tap “Done”
 

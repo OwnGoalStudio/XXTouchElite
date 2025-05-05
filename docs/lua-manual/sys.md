@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## System Module - sys
 
-Functions marked with 🚥 will **yield** in the [**Thread Module**](thread.md). Before these function calls return, other **threads** may get a chance to run.
+Functions marked with 🚥 will **yield** in the [**Thread Module**](./thread.md). Before these function calls return, other **threads** may get a chance to run.
 
 ### Display Toast Message \(**sys\.toast**\)
 
@@ -21,7 +21,7 @@ sys.toast(content[, orientation])
 - content
   - *string*, the text to be displayed
 - orientation
-  - *integer*, *optional*, screen orientation, defaults to the orientation set by the last call to [`screen.init`](screen.md#initialize-rotated-coordinate-system-screeninit)
+  - *integer*, *optional*, screen orientation, defaults to the orientation set by the last call to [`screen.init`](./screen.md#initialize-rotated-coordinate-system-screeninit)
     - `0` indicates portrait mode with home button at the bottom
     - `1` indicates landscape mode with home button on the right
     - `2` indicates landscape mode with home button on the left
@@ -534,7 +534,7 @@ Resprings SpringBoard and backboardd, equivalent to the command line `killall -9
 
 :::caution
 Many functions that depend on SpringBoard will fail until the respring is complete.  
-After calling this function, it is recommended to use [`app.front_bid`](app.md#get-the-identifier-of-the-foreground-app-appfront_bid) to poll and check the status of SpringBoard. Once SpringBoard has restarted, proceed with other operations.
+After calling this function, it is recommended to use [`app.front_bid`](./app.md#get-the-identifier-of-the-foreground-app-appfront_bid) to poll and check the status of SpringBoard. Once SpringBoard has restarted, proceed with other operations.
 :::
 
 #### Example
@@ -722,7 +722,7 @@ sys.zoom_off()              -- Disable zoom mode
 
 #### Description
 
-Enabling zoom mode will change the screen size obtained by [`screen.size`](screen.md#get-screen-size-screensize), and the screen and simulated touch coordinate systems will also change accordingly.
+Enabling zoom mode will change the screen size obtained by [`screen.size`](./screen.md#get-screen-size-screensize), and the screen and simulated touch coordinate systems will also change accordingly.
 
 :::caution
 
@@ -773,7 +773,7 @@ You can arrange the icon layout on a development device, then use `sys.icon_stat
 
 :::note
 You do not need to worry about the specific format of the **icon layout table**. Just pass the return value of `sys.icon_state` to `sys.set_icon_state`.  
-The **icon layout table** can be safely serialized using the [`plist`](plist.md) module.
+The **icon layout table** can be safely serialized using the [`plist`](./plist.md) module.
 :::
 
 ### Get and Set Assistive Touch \(**sys\.is_assistive_touch_on/sys\.assistive_touch_on,off**\)

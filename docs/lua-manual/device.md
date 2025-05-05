@@ -422,7 +422,7 @@ is_on = device.is_vpn_on()   -- Get VPN status
 - When the VPN is connecting (not yet connected), **is_on** is `true`.
 
 :::tip
-It is recommended to use the [`vpnconf`](vpnconf.md) module.
+It is recommended to use the [`vpnconf`](./vpnconf.md) module.
 :::
 
 #### Example

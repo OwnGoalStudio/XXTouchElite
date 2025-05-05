@@ -6,7 +6,7 @@ sidebar_position: 7
 
 ## Simulated Touch Module - touch
 
-Functions marked with 🚥 may **yield** in the [**Thread Module**](thread.md). Before these function calls return, other **threads** may get a chance to run.
+Functions marked with 🚥 may **yield** in the [**Thread Module**](./thread.md). Before these function calls return, other **threads** may get a chance to run.
 
 ### Enable Visualization of Touch Events \(**touch\.show\_pose**\)
 
@@ -46,7 +46,7 @@ touch.tap(x, y[, delay_ms, post_action_wait_ms ])
 #### Parameters and Return Values
 
 - x, y
-  - *integer*, the coordinates of the point to tap in the current [rotated coordinate system](screen.md#initialize-rotated-coordinate-system-screeninit)
+  - *integer*, the coordinates of the point to tap in the current [rotated coordinate system](./screen.md#initialize-rotated-coordinate-system-screeninit)
 - delay_ms
   - *integer*, *optional*, the interval between touching and releasing the screen, in milliseconds, default is `30`
 - post_action_wait_ms
@@ -77,7 +77,7 @@ touch_event = touch.on(x, y)
 #### Parameters and Return Values
 
 - x, y
-  - *integer*, the coordinates of the point to touch in the current [rotated coordinate system](screen.md#initialize-rotated-coordinate-system-screeninit)
+  - *integer*, the coordinates of the point to touch in the current [rotated coordinate system](./screen.md#initialize-rotated-coordinate-system-screeninit)
 - touch_event *touch event object*
 
 #### Description
@@ -118,7 +118,7 @@ touch_event:off([ x, y ])
 #### Parameters and Return Values
 
 - x, y
-  - *integer*, *optional*, the coordinates of the point where the finger leaves the screen in the current [rotated coordinate system](screen.md#initialize-rotated-coordinate-system-screeninit), default is the coordinates recorded by the current *touch event object*
+  - *integer*, *optional*, the coordinates of the point where the finger leaves the screen in the current [rotated coordinate system](./screen.md#initialize-rotated-coordinate-system-screeninit), default is the coordinates recorded by the current *touch event object*
 - touch_event
   - *touch event object*, obtained by calling the [`touch.on`](#simulate-finger-touch-on-the-screen-touchon) function to manipulate the current touch event
 
@@ -166,7 +166,7 @@ touch_event = touch_event:move(x, y[, pressure, angle, option_flags])
 #### Parameters and Return Values
 
 - x, y
-  - *integer*, the coordinates of the point to move to in the current [rotated coordinate system](screen.md#initialize-rotated-coordinate-system-screeninit)
+  - *integer*, the coordinates of the point to move to in the current [rotated coordinate system](./screen.md#initialize-rotated-coordinate-system-screeninit)
 - pressure
   - *integer*, *optional*, the pressure applied by the finger on the screen. Range is 0 ~ 1e4, default is `0`
 - angle

@@ -14,14 +14,14 @@ You can customize the behaviors of the volume buttons in “More” → “Short
 2. Do whatever you want…
 3. Press volume button again and select “Stop”.
 
-![Record_And_Replay.003](img/Record_And_Replay.003.png)
+![Record_And_Replay.003](./img/Record_And_Replay.003.png)
 
 ## How to Replay
 
 1. Select any script.
 2. Press volume button and select “Launch”.
 
-![Record_And_Replay.005](img/Record_And_Replay.005.png)
+![Record_And_Replay.005](./img/Record_And_Replay.005.png)
 
 ## Playback Options
 
@@ -32,4 +32,4 @@ You can customize the playback speed and the number of loops for recorded script
 3. Set the playback speed and the number of loops (or infinite).
 4. Press volume button and select “Launch”.
 
-![Record_And_Replay.006](img/Record_And_Replay.006.png)
+![Record_And_Replay.006](./img/Record_And_Replay.006.png)

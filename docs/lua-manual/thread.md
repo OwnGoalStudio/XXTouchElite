@@ -17,10 +17,10 @@ end)
 
 :::note Functions or modules that support **yielding**
 
-- [`sys.sleep`](sys.md#-second-level-delay-syssleep) and [`sys.msleep`](sys.md#-millisecond-level-delay-sysmsleep)
-- [`touch:msleep`](touch.md#-millisecond-level-delay-touchmsleep)
-- [HTTP Module](http.md)
-- [FTP Module](ftp.md)
+- [`sys.sleep`](./sys.md#-second-level-delay-syssleep) and [`sys.msleep`](./sys.md#-millisecond-level-delay-sysmsleep)
+- [`touch:msleep`](./touch.md#-millisecond-level-delay-touchmsleep)
+- [HTTP Module](./http.md)
+- [FTP Module](./ftp.md)
 
 :::
 
@@ -305,7 +305,7 @@ end)
 
 :::info
 The coordinates in this event use the **portrait mode with HOME at the bottom** as the initial coordinate system.  
-You can use [`screen.rotate_xy`](screen.md#coordinate-rotation-conversion-screenrotate_xy) for conversion.
+You can use [`screen.rotate_xy`](./screen.md#coordinate-rotation-conversion-screenrotate_xy) for conversion.
 :::
 
 #### Example

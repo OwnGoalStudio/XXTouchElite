@@ -75,7 +75,7 @@ ethconf = require("ethconf")
 
 :::caution
 请务必参考示例配置，不要缺失字段，避免配置错误导致网络无法使用、“设置” 无法打开等故障。  
-如果网络出现异常，请尝试通过 [`sys.reset`](sys.md#还原-sysreset) 还原网络设置。
+如果网络出现异常，请尝试通过 [`sys.reset`](./sys.md#还原-sysreset) 还原网络设置。
 :::
 
 #### 示例配置 1

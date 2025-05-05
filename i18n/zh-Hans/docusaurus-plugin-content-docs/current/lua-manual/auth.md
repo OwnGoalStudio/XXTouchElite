@@ -26,7 +26,7 @@ auth = require("xxtouch.auth")
 #### 参数及返回值
 
 - UNIX时间戳
-  - *整数型*，可以通过 [`os.time`](https://cloudwu.github.io/lua53doc/manual.html#pdf-os.time) 或 [`sys.net_time`](sys.md#获取网络时间-sysnet_time) 函数获取
+  - *整数型*，可以通过 [`os.time`](https://cloudwu.github.io/lua53doc/manual.html#pdf-os.time) 或 [`sys.net_time`](./sys.md#获取网络时间-sysnet_time) 函数获取
 - 二维码URL
   - *文本型*，以 `otpauth://totp/` 开头的 URL
 - 密钥
@@ -38,7 +38,7 @@ auth = require("xxtouch.auth")
 [RFC 6238](https://www.rfc-editor.org/rfc/rfc6238) 中定义的基于时间的一次性密码算法，用于生成基于时间的一次性密码。通常用于 Google Authenticator 等 App 的双因素认证场合。
 
 :::tip
-使用 [`screen.qr_decode`](screen.md#-屏幕二维码识别-screenqr_decode) 或 [`image:qr_decode`](img.md#图片二维码识别-image_decode) 函数可以识别屏幕或图片上的二维码，从而获取 **二维码URL**。
+使用 [`screen.qr_decode`](./screen.md#-屏幕二维码识别-screenqr_decode) 或 [`image:qr_decode`](./img.md#图片二维码识别-image_decode) 函数可以识别屏幕或图片上的二维码，从而获取 **二维码URL**。
 :::
 
 #### 示例

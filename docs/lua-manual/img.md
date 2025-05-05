@@ -783,7 +783,7 @@ is_exact_match = image:is_colors(...)
 
 - image *image object*
 
-#### [Refer to `screen.is_colors` description](screen.md#-screen-multi-point-color-matching-screenis_colors)
+#### [Refer to `screen.is_colors` description](./screen.md#-screen-multi-point-color-matching-screenis_colors)
 
 ### Find Color in an Image \(**image\:find\_color**\)
 
@@ -797,7 +797,7 @@ x, y = image:find_color(...)
 
 - image *image object*
 
-#### [Refer to `screen.find_color` description](screen.md#-multi-point-similarity-mode-color-finding-screenfind_color)
+#### [Refer to `screen.find_color` description](./screen.md#-multi-point-similarity-mode-color-finding-screenfind_color)
 
 ### OpenCV Find Image in an Image \(**image\:cv_find\_image**\)
 
@@ -820,7 +820,7 @@ x, y, similarity = large_image:find_image(small_image)
 
 #### Description
 
-This function is similar to the [`screen.find_image`](screen.md#-screen-image-finding-screenfind_image) function, but this function finds an image within another image, while the former finds an image on the screen. Other differences are as follows:
+This function is similar to the [`screen.find_image`](./screen.md#-screen-image-finding-screenfind_image) function, but this function finds an image within another image, while the former finds an image on the screen. Other differences are as follows:
 
 - The **small_image** parameter only supports passing in *image object*, not *string* or *string*.
 - Does not support passing in **similarity** and search area.
@@ -838,7 +838,7 @@ result_text_list, result_details = image:ocr_text([ recognition_level, timeout ]
 
 - image *image object*
 
-#### [Refer to `screen.ocr_text` description](screen.md#-screen-optical-character-recognition-screenocr_text)
+#### [Refer to `screen.ocr_text` description](./screen.md#-screen-optical-character-recognition-screenocr_text)
 
 ### Tesseract Optical Character Recognition (OCR) in an Image \(**image\:tess\_ocr**\)
 
@@ -870,7 +870,7 @@ recognition_result, result_details = image:tess_ocr([ language_library_name ])
 
 - image *image object*
 
-#### [Refer to `screen.tess_ocr` description](screen.md#-tesseract-screen-optical-character-recognition-screentess_ocr)
+#### [Refer to `screen.tess_ocr` description](./screen.md#-tesseract-screen-optical-character-recognition-screentess_ocr)
 
 ### QR Code Recognition in an Image \(**image\:qr\_decode**\)
 
@@ -884,7 +884,7 @@ recognition_result_text, result_details_table = image:qr_decode([ timeout ])
 
 - image *image object*
 
-#### [Refer to `screen.qr_decode` description](screen.md#-screen-qr-code-recognition-screenqr_decode)
+#### [Refer to `screen.qr_decode` description](./screen.md#-screen-qr-code-recognition-screenqr_decode)
 
 ### Rectangle Detection in an Image \(**image\:detect\_rectangles**\)
 
@@ -898,4 +898,4 @@ rectangle_positions_table, result_details_table = image:detect_rectangles([ max_
 
 - image *image object*
 
-#### [Refer to `screen.detect_rectangles` description](screen.md#-screen-rectangle-detection-screendetect_rectangles)
+#### [Refer to `screen.detect_rectangles` description](./screen.md#-screen-rectangle-detection-screendetect_rectangles)

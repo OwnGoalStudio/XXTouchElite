@@ -6,7 +6,7 @@ sidebar_position: 22
 
 ## Dialog Module - dialog
 
-Functions marked with 🚥 may **yield** in the [**Thread Module**](thread.md). Before these function calls return, other **threads** may get a chance to run.
+Functions marked with 🚥 may **yield** in the [**Thread Module**](./thread.md). Before these function calls return, other **threads** may get a chance to run.
 
 The **icons** used in this section are *text-based* and are defined in Apple’s [SF Symbols](https://developer.apple.com/sf-symbols/).
 
@@ -944,7 +944,7 @@ dialog = dialog:add_image {
 #### Parameters and Return Values
 
 - dialog *dialog object*
-- image [*image object*](img.md#image-object)
+- image [*image object*](./img.md#image-object)
 - image_path
   - *string*, supports formats like `png`, `jpeg`, or `heic`
 - height *integer*, *optional*, default is **image height**
@@ -1026,7 +1026,7 @@ dialog = dialog:add_button {
 This component displays a button in the interface. Clicking the button triggers the **callback function** or opens the **url** in the default browser.
 
 :::caution Limitation
-Using **callback functions** through [Declaration 1](#declaration-1) requires support from the [Thread Module](thread.md). If the thread module is not enabled, only **url** can be used through [Declaration 2](#declaration-2).
+Using **callback functions** through [Declaration 1](#declaration-1) requires support from the [Thread Module](./thread.md). If the thread module is not enabled, only **url** can be used through [Declaration 2](#declaration-2).
 :::
 
 #### Example

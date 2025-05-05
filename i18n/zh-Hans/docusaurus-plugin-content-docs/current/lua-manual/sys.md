@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## 系统模块 - sys
 
-标有 🚥 的函数在 [**线程模块**](thread.md) 中会发生 **让出**。在这些函数调用返回之前，其他的 **线程** 可能会得到运行机会。
+标有 🚥 的函数在 [**线程模块**](./thread.md) 中会发生 **让出**。在这些函数调用返回之前，其他的 **线程** 可能会得到运行机会。
 
 ### 显示提示文字 \(**sys\.toast**\)
 
@@ -21,7 +21,7 @@ sys.toast(文字内容[, 旋转方向])
 - 文字内容
   - *文本型*，代表需要显示的文字
 - 旋转方向
-  - *整数型*，*可选*，屏幕旋转方向，默认为最后一次调用 [`screen.init`](screen.md#初始化旋转坐标系-screeninit) 所设置的方向
+  - *整数型*，*可选*，屏幕旋转方向，默认为最后一次调用 [`screen.init`](./screen.md#初始化旋转坐标系-screeninit) 所设置的方向
     - `0` 表示竖屏 home 在下
     - `1` 表示横屏 home 在右
     - `2` 表示横屏 home 在左
@@ -534,7 +534,7 @@ sys.respring()
 
 :::caution
 春板重启完成前，许多依赖春板的函数调用将会失败。  
-调用此函数后，建议使用 [`app.front_bid`](app.md#获取前台-app-的标识符-appfront_bid) 轮询检测春板启动状态，春板启动完成后再进行其他操作。
+调用此函数后，建议使用 [`app.front_bid`](./app.md#获取前台-app-的标识符-appfront_bid) 轮询检测春板启动状态，春板启动完成后再进行其他操作。
 :::
 
 #### 示例
@@ -722,7 +722,7 @@ sys.zoom_off()              -- 关闭放大模式
 
 #### 说明
 
-设置放大模式后，[`screen.size`](screen.md#获取屏幕尺寸-screensize) 获取到的屏幕尺寸将会发生变化，屏幕和模拟触摸坐标系也会随之变化。
+设置放大模式后，[`screen.size`](./screen.md#获取屏幕尺寸-screensize) 获取到的屏幕尺寸将会发生变化，屏幕和模拟触摸坐标系也会随之变化。
 
 :::caution
 
@@ -773,7 +773,7 @@ sys.set_icon_state(图标布局表)  -- 设置图标布局
 
 :::note
 你不必关心 **图标布局表** 的具体格式，只需要将 `sys.icon_state` 的返回值传入 `sys.set_icon_state` 即可。  
-**图标布局表** 可以被 [`plist`](plist.md) 模块安全序列化。
+**图标布局表** 可以被 [`plist`](./plist.md) 模块安全序列化。
 :::
 
 ### 获取、设置 Assistive Touch \(**sys\.is_assistive_touch_on/sys\.assistive_touch_on,off**\)

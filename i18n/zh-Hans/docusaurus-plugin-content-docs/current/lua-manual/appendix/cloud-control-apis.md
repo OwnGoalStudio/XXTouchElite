@@ -8,7 +8,7 @@ XXTouch Elite 云控 API 以 WebSocket 协议开发，内建的云控客户端�
 
 我们还提供了云控服务端例程 [XXTouch-CloudControl](https://github.com/XXTouchNG/XXTouch-CloudControl)，你可以根据自己的业务需要进行二次开发。
 
-![CloudControl.001](img/CloudControl.001.png)
+![CloudControl.001](./img/CloudControl.001.png)
 
 你需要为 `elfclient` 客户端 [配置云控服务端的地址](https://elite.82flex.com/api-283425169)。
 

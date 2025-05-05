@@ -61,7 +61,7 @@ clear.keychain("com.cardify")  -- 清理掉与 com.cardify 相关的钥匙串信
 #### 参数及返回值
 
 - 标识符
-  - *文本型*，[App 标识符](app.md#标识符)
+  - *文本型*，[App 标识符](./app.md#标识符)
 - 操作成败 *布尔型*
 
 #### 说明
@@ -163,7 +163,7 @@ clear.all_photos()
 #### 参数及返回值
 
 - 标识符
-  - *文本型*，[App 标识符](app.md#标识符)
+  - *文本型*，[App 标识符](./app.md#标识符)
 - 操作成败 *布尔型*
 
 #### 说明
@@ -208,7 +208,7 @@ clear.app_data("com.cardify.tinder")
 
 :::note
 你不必关心 **IDFA/V表** 的具体格式。只需要将原先调用的返回值 **旧IDFAV表** 传入此次调用的参数 **新IDFAV表** 即可恢复系统的 IDFA 和 IDFV 等标识信息到原先的状态。  
-**IDFA/V表** 可以被 [`plist`](plist.md) 模块安全序列化。
+**IDFA/V表** 可以被 [`plist`](./plist.md) 模块安全序列化。
 :::
 
 #### 示例 1
@@ -268,7 +268,7 @@ end
 #### 参数及返回值
 
 - 标识符
-  - *文本型*，[App 标识符](app.md#标识符)
+  - *文本型*，[App 标识符](./app.md#标识符)
 - 操作成败 *布尔型*
 
 :::info

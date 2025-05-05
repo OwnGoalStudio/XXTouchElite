@@ -26,7 +26,7 @@ otp = auth.totp_next(UNIX_timestamp, QR_code_URL[, secret_key])
 #### Parameters and Return Values
 
 - UNIX_timestamp
-  - *integer*, can be obtained using the [`os.time`](https://cloudwu.github.io/lua53doc/manual.html#pdf-os.time) or [`sys.net_time`](sys.md#get-network-time-sysnet_time) functions.
+  - *integer*, can be obtained using the [`os.time`](https://cloudwu.github.io/lua53doc/manual.html#pdf-os.time) or [`sys.net_time`](./sys.md#get-network-time-sysnet_time) functions.
 - QR_code_URL
   - *string*, a URL starting with `otpauth://totp/`.
 - secret_key
@@ -38,7 +38,7 @@ otp = auth.totp_next(UNIX_timestamp, QR_code_URL[, secret_key])
 The time-based one-time password algorithm defined in [RFC 6238](https://www.rfc-editor.org/rfc/rfc6238) is used to generate time-based one-time passwords. It is commonly used in two-factor authentication scenarios such as Google Authenticator.
 
 :::tip
-Use the [`screen.qr_decode`](screen.md#-screen-qr-code-recognition-screenqr_decode) or [`image:qr_decode`](img.md#qr-code-recognition-in-an-image-imageqr_decode) functions to recognize QR codes on the screen or in images to obtain the **QR_code_URL**.
+Use the [`screen.qr_decode`](./screen.md#-screen-qr-code-recognition-screenqr_decode) or [`image:qr_decode`](./img.md#qr-code-recognition-in-an-image-imageqr_decode) functions to recognize QR codes on the screen or in images to obtain the **QR_code_URL**.
 :::
 
 #### Example

@@ -14,7 +14,7 @@ sidebar_position: 21
 
 ## 打开扫一扫
 
-![qr-scan](img/qr-scan.png)
+![qr-scan](./img/qr-scan.png)
 
 ```txt
 xxt://scan/
@@ -28,7 +28,7 @@ xxt://scan/
 
 ## 运行脚本
 
-![qr-launch](img/qr-launch.png)
+![qr-launch](./img/qr-launch.png)
 
 ```txt
 xxt://launch/
@@ -46,7 +46,7 @@ xxt://launch/?path=%@
 
 ## 停止脚本
 
-![qr-stop](img/qr-stop.png)
+![qr-stop](./img/qr-stop.png)
 
 ```txt
 xxt://stop/
@@ -60,7 +60,7 @@ xxt://stop/
 
 ## 下载相关
 
-![qr-download](img/qr-download.png)
+![qr-download](./img/qr-download.png)
 
 ```txt
 xxt://download/?path=%@&url=%@
@@ -75,7 +75,7 @@ xxt://download/?path=%@&url=%@
 
 ## 恢复工作区
 
-![qr-workspace](img/qr-workspace.png)
+![qr-workspace](./img/qr-workspace.png)
 
 ```txt
 xxt://workspace/

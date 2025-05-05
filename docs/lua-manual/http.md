@@ -6,9 +6,9 @@ sidebar_position: 15
 
 ## HTTP Module - http
 
-This module will automatically process the URL using [`string.encode_uri`](exstring.md#-url-encoding-stringencode_uristringencode_uri_component) by default.
+This module will automatically process the URL using [`string.encode_uri`](./exstring.md#-url-encoding-stringencode_uristringencode_uri_component) by default.
 
-Functions marked with 🚥 may **yield** in the [**Thread Module**](thread.md). Before these functions return, other **threads** may get a chance to run.
+Functions marked with 🚥 may **yield** in the [**Thread Module**](./thread.md). Before these functions return, other **threads** may get a chance to run.
 
 ### 🚥 Initiate a GET Request \(**http\.get**\)
 

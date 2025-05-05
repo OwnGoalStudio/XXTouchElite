@@ -783,7 +783,7 @@ pic = pic:binaryzation("9D5D39-0F1F26,D3D3D2-2C2C2D")
 
 - 图像 *图片对象*
 
-#### [参考 `screen.is_colors` 说明](screen.md#-屏幕多点颜色匹配-screenis_colors)
+#### [参考 `screen.is_colors` 说明](./screen.md#-屏幕多点颜色匹配-screenis_colors)
 
 ### 图中找色 \(**image:find\_color**\)
 
@@ -797,7 +797,7 @@ pic = pic:binaryzation("9D5D39-0F1F26,D3D3D2-2C2C2D")
 
 - 图像 *图片对象*
 
-#### [参考 `screen.find_color` 说明](screen.md#-多点相似度模式找色-screenfind_color)
+#### [参考 `screen.find_color` 说明](./screen.md#-多点相似度模式找色-screenfind_color)
 
 ### OpenCV 图中找图 \(**image:cv_find\_image**\)
 
@@ -820,7 +820,7 @@ pic = pic:binaryzation("9D5D39-0F1F26,D3D3D2-2C2C2D")
 
 #### 说明
 
-此函数与 [`screen.find_image`](screen.md#-屏幕找图-screenfind_image) 函数类似，但是此函数是在图片中找图，而前者是在屏幕中找图。其他区别如下：
+此函数与 [`screen.find_image`](./screen.md#-屏幕找图-screenfind_image) 函数类似，但是此函数是在图片中找图，而前者是在屏幕中找图。其他区别如下：
 
 - **小图像** 参数仅支持传入 *图片对象*，不支持传入 *文本型* 或 *字符串型*。
 - 不支持传入 **相似度** 及搜索区域。
@@ -838,7 +838,7 @@ pic = pic:binaryzation("9D5D39-0F1F26,D3D3D2-2C2C2D")
 
 - 图像 *图片对象*
 
-#### [参考 `screen.ocr_text` 说明](screen.md#-屏幕光学字符识别-screenocr_text)
+#### [参考 `screen.ocr_text` 说明](./screen.md#-屏幕光学字符识别-screenocr_text)
 
 ### Tesseract 图片光学字符识别 \(**image:tess\_ocr**\)
 
@@ -870,7 +870,7 @@ require("image.tesseract")  -- 需要提前加载
 
 - 图像 *图片对象*
 
-#### [参考 `screen.tess_ocr` 说明](screen.md#-tesseract-屏幕光学字符识别-screentess_ocr)
+#### [参考 `screen.tess_ocr` 说明](./screen.md#-tesseract-屏幕光学字符识别-screentess_ocr)
 
 ### 图片二维码识别 \(**image:qr\_decode**\)
 
@@ -884,7 +884,7 @@ require("image.tesseract")  -- 需要提前加载
 
 - 图像 *图片对象*
 
-#### [参考 `screen.qr_decode` 说明](screen.md#-屏幕二维码识别-screenqr_decode)
+#### [参考 `screen.qr_decode` 说明](./screen.md#-屏幕二维码识别-screenqr_decode)
 
 ### 图片矩形检测 \(**image:detect\_rectangles**\)
 
@@ -898,4 +898,4 @@ require("image.tesseract")  -- 需要提前加载
 
 - 图像 *图片对象*
 
-#### [参考 `screen.detect_rectangles` 说明](screen.md#-屏幕矩形检测-screendetect_rectangles)
+#### [参考 `screen.detect_rectangles` 说明](./screen.md#-屏幕矩形检测-screendetect_rectangles)
