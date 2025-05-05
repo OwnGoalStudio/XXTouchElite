@@ -2,19 +2,19 @@
 sidebar_position: 7
 ---
 
-# Congratulations!
+# 恭喜！
 
-You have just learned the basics of XXTouch Elite and made your first script to the GitHub Gist.
+你刚刚学习了 XXTouch Elite 的基础知识，并将你的第一个脚本上传到了 GitHub Gist。
 
-XXTouch Elite has **much more to offer**!
+XXTouch Elite 还有**更多功能**等你探索！
 
-Anything unclear or buggy in this tutorial? [Please report it!](https://github.com/OwnGoalStudio/XXTouchElite/issues/new)
+本教程中有任何不清楚或存在问题的地方？[请报告！](https://github.com/OwnGoalStudio/XXTouchElite/issues/new)
 
-## What’s next?
+## 接下来呢？
 
-- Learn more about [Lua scripting](https://www.tutorialspoint.com/lua).
-- Have a look at the [Lua 5.3 Reference Manual](https://cloudwu.github.io/lua53doc/manual.html).
-- Read the [API reference](../lua-manual/intro.md).
-- Haven’t installed XXTouch Elite yet? [Get it here](https://havoc.app/package/xxtouchelite).
-- Find inspirations in our [Blog](/blog).
-- Get involved in the [XXTouch Elite Community](https://github.com/OwnGoalStudio/XXTouchElite/issues).
+- 了解更多 [Lua 脚本编写](https://www.tutorialspoint.com/lua)。
+- 查看 [Lua 5.3 参考手册](https://cloudwu.github.io/lua53doc/manual.html)。
+- 阅读 [API 参考](../lua-manual/intro.md)。
+- 还没安装 XXTouch Elite？[点击这里获取](https://havoc.app/package/xxtouchelite)。
+- 在我们的 [博客](/blog) 中寻找灵感。
+- 加入 [XXTouch Elite 社区](https://github.com/OwnGoalStudio/XXTouchElite/issues)。

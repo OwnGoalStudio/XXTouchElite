@@ -2,34 +2,34 @@
 sidebar_position: 2
 ---
 
-# Record and Replay
+# 录制和回放
 
-Press physical volume buttons to record and replay your actions.
+按下物理音量按钮即可录制和回放你的操作。
 
-You can customize the behaviors of the volume buttons in “More” → “Shortcut Config”.
+你可以在 “更多” → “快捷键配置” 中自定义音量按钮的行为。
 
-## How to Record
+## 如何录制
 
-1. Press volume button and select “Record”.
-2. Do whatever you want…
-3. Press volume button again and select “Stop”.
+1. 按下音量按钮并选择 “录制”。
+2. 执行你想要的操作…
+3. 再次按下音量按钮并选择 “停止”。
 
 ![Record_And_Replay.003](./img/Record_And_Replay.003.png)
 
-## How to Replay
+## 如何回放
 
-1. Select any script.
-2. Press volume button and select “Launch”.
+1. 选择任意脚本。
+2. 按下音量按钮并选择 “启动”。
 
 ![Record_And_Replay.005](./img/Record_And_Replay.005.png)
 
-## Playback Options
+## 回放选项
 
-You can customize the playback speed and the number of loops for recorded scripts.
+你可以自定义录制脚本的回放速度和循环次数。
 
-1. Slide the script to the right and click the “Property” button.
-2. Tap “Speed and Repeat Settings”.
-3. Set the playback speed and the number of loops (or infinite).
-4. Press volume button and select “Launch”.
+1. 向右滑动脚本并点击 “属性” 按钮。
+2. 点击 “速度和重复设置”。
+3. 设置回放速度和循环次数（或无限循环）。
+4. 按下音量按钮并选择 “启动”。
 
 ![Record_And_Replay.006](./img/Record_And_Replay.006.png)

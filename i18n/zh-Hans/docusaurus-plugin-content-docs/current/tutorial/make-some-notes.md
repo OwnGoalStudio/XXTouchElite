@@ -2,48 +2,48 @@
 sidebar_position: 5
 ---
 
-# Make Some Notes
+# 做一些笔记
 
-Now we are ready to start developing scripts. You can use the web interface to create and edit scripts, as well as test them in real-time.
+现在我们已经准备好开始开发脚本了。你可以使用网页界面来创建和编辑脚本，并实时测试它们。
 
-In this tutorial, we will create a simple script that opens “Notes” on your device, creates a new note, and writes the most famous sentence in the developer community: `Hello, World!`.
+在本教程中，我们将创建一个简单的脚本，该脚本将在你的设备上打开 “备忘录” 应用，创建一个新笔记，并写下开发者社区中最著名的一句话：`Hello, World!`。
 
-## Create a New Script
+## 创建新脚本
 
-Let’s start by creating a new script. Click on the “New Script” button on the top-right corner of the page. Enter a name for your script, e.g. `my-awesome-script.lua`.
+让我们从创建一个新脚本开始。点击页面右上角的 “新建脚本” 按钮。为你的脚本输入一个名称，例如 `my-awesome-script.lua`。
 
 ![Web_Access.003](./img/Web_Access.003.png)
 
-## Open “Notes”
+## 打开 “备忘录”
 
-The first thing we need to do is to open the “Notes” app. To do this, we will use the [`app.run`](../lua-manual/app.md#run-the-app-apprun) function. The [`app.run`](../lua-manual/app.md#run-the-app-apprun) function takes a string as an argument, which is the bundle identifier of the app we want to open. In our case, we want to open the “Notes” app, so we will use the string `"com.apple.mobilenotes"`.
+我们需要做的第一件事是打开 “备忘录” 应用。为此，我们将使用 [`app.run`](../lua-manual/app.md#run-the-app-apprun) 函数。[`app.run`](../lua-manual/app.md#run-the-app-apprun) 函数接受一个字符串作为参数，该字符串是我们想要打开的应用的包标识符。在我们的例子中，我们想要打开 “备忘录” 应用，因此我们将使用字符串 `"com.apple.mobilenotes"`。
 
 ```lua
 nLog("Open Notes...")
 app.run("com.apple.mobilenotes")
 ```
 
-Note that the [`nLog`](../lua-manual/appendix/logging-facilities.md#nlog) function is used to log messages to the console. This is useful for debugging and testing your scripts.
+请注意，[`nLog`](../lua-manual/appendix/logging-facilities.md#nlog) 函数用于将消息记录到控制台。这对于调试和测试你的脚本非常有用。
 
-Click “Play” button at the bottom-right corner of the page to run the script. You should see the “Notes” app open on your device.
+点击页面右下角的 “播放” 按钮运行脚本。你应该会看到 “备忘录” 应用在你的设备上打开。
 
 ![Web_Access.004](./img/Web_Access.004.png)
 
 :::info
-Find the bundle identifier of an app from “More” → “Application List” in “X.X.T.E.” app.
+在 “X.X.T.E.” 应用中，从 “更多” → “应用列表” 中找到应用的包标识符。
 :::
 
-## Find “New Note” Button
+## 找到 “新建笔记” 按钮
 
-Now that we have opened the “Notes” app, we need to find the “New Note” button. To do this, we will use the [`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) function. The [`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) function takes a color table as an argument, which is the collection of the color samples we want to find.
+现在我们已经打开了 “备忘录” 应用，我们需要找到 “新建笔记” 按钮。为此，我们将使用 [`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) 函数。[`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) 函数接受一个颜色表作为参数，这是我们想要找到的颜色样本的集合。
 
 ![Make_Notes](./img/Make_Notes.gif)
 
-Open “Color Picker” in the sidebar, locate the “New Note” button, and click on it. This will add the color sample to the color table. You have to add more color samples to increase the possibility of finding the button.
+在侧边栏中打开 “颜色选择器”，找到 “新建笔记” 按钮并点击它。这将把颜色样本添加到颜色表中。你需要添加更多颜色样本以增加找到按钮的可能性。
 
 ![Web_Access.005](./img/Web_Access.005.png)
 
-Copy generated code from `find_color` function and paste it into your script:
+从 `find_color` 函数中复制生成的代码并粘贴到你的脚本中：
 
 ```lua
 local x, y
@@ -66,37 +66,37 @@ touch.tap(x, y)
 sys.sleep(2)
 ```
 
-Here we’ve added 6 color samples to the color table. Use `while ... do` loop to keep searching for the button until it is found. The [`sys.sleep(1)`](../lua-manual/sys.md#-second-level-delay-syssleep) function is used to pause the script for 1 second before searching again.
+这里我们向颜色表中添加了 6 个颜色样本。使用 `while ... do` 循环不断搜索按钮，直到找到为止。[`sys.sleep(1)`](../lua-manual/sys.md#-second-level-delay-syssleep) 函数用于在再次搜索之前暂停脚本 1 秒。
 
-The [`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) function returns the coordinates of the button if it is found, or `nil` if it is not found. We will use these coordinates with [`touch.tap`](../lua-manual/touch.md#simulate-a-single-tap-on-the-screen-touchtap) to click on the button.
+[`screen.find_color`](../lua-manual/screen.md#-multi-point-similarity-mode-color-finding-screenfind_color) 函数返回按钮的坐标（如果找到），或者返回 `nil`（如果未找到）。我们将使用这些坐标与 [`touch.tap`](../lua-manual/touch.md#simulate-a-single-tap-on-the-screen-touchtap) 一起点击按钮。
 
 :::tip
-Making color samples is not an easy task. Here are some practical tips:
+制作颜色样本并不容易。以下是一些实用技巧：
 
-1. **Select different colors**. Different colors make the search more unique.
-2. **Avoid graph edges**. Due to the anti-aliasing effect, the colors on the edges vary a lot.
-3. **Stay spread out**. The sampled points should be spread out to cover more space in the area that you want to locate.
+1. **选择不同的颜色**。不同的颜色使搜索更具唯一性。
+2. **避免图形边缘**。由于抗锯齿效果，边缘上的颜色变化很大。
+3. **保持分散**。采样点应分散开来，以覆盖你想要定位的区域中的更多空间。
 
 :::
 
-## Enter “Hello, World!”
+## 输入 “Hello, World!”
 
-Sending text to the “Notes” app is the most straightforward part. We can use the [`key.send_text`](../lua-manual/key.md#simulate-typing-text-keysend_text) function to send text to the app. The [`key.send_text`](../lua-manual/key.md#simulate-typing-text-keysend_text) function takes a string as an argument, which is the text we want to send.
+向 “备忘录” 应用发送文本是最简单的部分。我们可以使用 [`key.send_text`](../lua-manual/key.md#simulate-typing-text-keysend_text) 函数向应用发送文本。[`key.send_text`](../lua-manual/key.md#simulate-typing-text-keysend_text) 函数接受一个字符串作为参数，这是我们想要发送的文本。
 
 ```lua
 nLog("Enter text…")
 key.send_text("Hello, world!")
 ```
 
-Click “Play” button at the bottom-right corner of the page to run the script.
+点击页面右下角的 “播放” 按钮运行脚本。
 
 ![Make_Notes_Final](./img/Make_Notes_Final.gif)
 
-## Tap “Done”
+## 点击 “完成”
 
-Finally, we need to tap the “Done” button to save the note. We can use the [`screen.ocr_text`](../lua-manual/screen.md#-screen-optical-character-recognition-screenocr_text) function to find the “Done” button and then use [`touch.tap`](../lua-manual/touch.md#simulate-a-single-tap-on-the-screen-touchtap) to click on it. This part is a bit tricky because texts are easily affected by the font and size, so we need to use OCR (Optical Character Recognition) to find it.
+最后，我们需要点击 “完成” 按钮以保存笔记。我们可以使用 [`screen.ocr_text`](../lua-manual/screen.md#-screen-optical-character-recognition-screenocr_text) 函数找到 “完成” 按钮，然后使用 [`touch.tap`](../lua-manual/touch.md#simulate-a-single-tap-on-the-screen-touchtap) 点击它。这部分有点棘手，因为文本容易受到字体和大小的影响，因此我们需要使用 OCR（光学字符识别）来找到它。
 
-**Here is our final script:**
+**以下是我们的最终脚本：**
 
 ```lua
 nLog("Open “Notes”…")

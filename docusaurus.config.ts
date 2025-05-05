@@ -5,8 +5,15 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 function getSiteTagline() {
   switch(process.env.DOCUSAURUS_CURRENT_LOCALE) {
-    case "zh-Hans": return "强大而灵活的 iOS 自动化工具，始于 2015 年。";
+    case "zh-Hans": return "强大而灵活的 iOS 自动化工具 —— 经典传承，始于 2015 年。";
     default: return "Powerful and flexible automation tool for iOS since 2015.";
+  }
+}
+
+function getEditUrl(type: 'docs' | 'blog' | 'pages') {
+  switch(process.env.DOCUSAURUS_CURRENT_LOCALE) {
+    case "zh-Hans": return `https://github.com/OwnGoalStudio/XXTouchElite/tree/main/i18n/zh-Hans/docusaurus-plugin-content-${type}/`;
+    default: return "https://github.com/OwnGoalStudio/XXTouchElite/tree/main/";
   }
 }
 
@@ -53,8 +60,7 @@ const config: Config = {
           showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/OwnGoalStudio/XXTouchElite/tree/main/',
+          editUrl: getEditUrl('docs'),
         },
         blog: {
           showReadingTime: true,
@@ -65,8 +71,7 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/OwnGoalStudio/XXTouchElite/tree/main/',
+          editUrl: getEditUrl('blog'),
           // Useful options to enforce blogging best practices
           onInlineTags: 'ignore',
           onInlineAuthors: 'warn',

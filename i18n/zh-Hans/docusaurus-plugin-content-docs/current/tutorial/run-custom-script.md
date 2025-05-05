@@ -2,11 +2,11 @@
 sidebar_position: 3
 ---
 
-# Run Custom Script
+# 运行自定义脚本
 
-Playing recorded scripts is great, but it is unlikely to respond to all the possible situations that can occur in a real-world scenario. For this reason, it is important to create a script that can handle different situations.
+运行录制的脚本很棒，但它可能无法应对现实场景中可能发生的所有情况。因此，创建一个可以处理不同情况的脚本非常重要。
 
-Now we’ve written a script for you that will help you get started. This script will open the “Settings”, scroll down to find “App Store” option, and click on it.
+现在我们为你编写了一个脚本，帮助你入门。这个脚本将打开 “设置”，向下滚动找到 “App Store” 选项并点击它。
 
 ```lua
 local function tapWord(word)
@@ -37,12 +37,12 @@ while not tapWord("App Store") do
 end
 ```
 
-## Find App Store
+## 找到 App Store
 
-You can follow the steps below to run the script above:
+你可以按照以下步骤运行上述脚本：
 
-1. Create a new lua script file named `my-first-script.lua`.
-2. Copy the code below and paste it into the file, and save it.
-3. Slide the script to the right and click the “Launch” button.
+1. 创建一个名为 `my-first-script.lua` 的新 Lua 脚本文件。
+2. 将上述代码复制并粘贴到文件中，然后保存。
+3. 向右滑动脚本并点击“启动”按钮。
 
 ![Create_A_Script.002](./img/Create_A_Script.002.png)
