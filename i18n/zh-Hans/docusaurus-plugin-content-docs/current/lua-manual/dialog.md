@@ -57,7 +57,7 @@ dialog("MyWorld")
 - 对话框 *对话框对象*
 - 配置分区 *文本型*
 
-### 配置对话框自动消失时间 \(**dialog:set\_timeout**\)
+### 配置对话框自动消失时间 \(**dialog\:set\_timeout**\)
 
 #### 声明
 
@@ -81,7 +81,7 @@ dialog():set_timeout(3):show()  -- 3 秒超时取消提交
 dialog():set_timeout(3, true):show()  -- 3 秒超时并提交
 ```
 
-### 配置对话框的标题 \(**dialog:set\_title**\)
+### 配置对话框的标题 \(**dialog\:set\_title**\)
 
 #### 声明
 
@@ -100,7 +100,7 @@ dialog():set_timeout(3, true):show()  -- 3 秒超时并提交
 dialog():set_title('标题'):show()
 ```
 
-### 给对话框加上一个分组 \(**dialog:add\_group**\)
+### 给对话框加上一个分组 \(**dialog\:add\_group**\)
 
 #### 声明
 
@@ -140,7 +140,7 @@ dialog()
   :show()
 ```
 
-### 给对话框加上一个标签 \(**dialog:add\_label**\)
+### 给对话框加上一个标签 \(**dialog\:add\_label**\)
 
 #### 声明
 
@@ -188,7 +188,7 @@ dialog()
   :show()
 ```
 
-### 给对话框加上一个文本框 \(**dialog:add\_input**\)
+### 给对话框加上一个文本框 \(**dialog\:add\_input**\)
 
 #### 声明
 
@@ -295,7 +295,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 给对话框加上一个开关 \(**dialog:add\_switch**\)
+### 给对话框加上一个开关 \(**dialog\:add\_switch**\)
 
 #### 声明
 
@@ -352,7 +352,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 给对话框加上一个滑块 \(**dialog:add\_range**\)
+### 给对话框加上一个滑块 \(**dialog\:add\_range**\)
 
 #### 声明
 
@@ -414,7 +414,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 给对话框加上一个单项选择器 \(**dialog:add\_picker**\)
+### 给对话框加上一个单项选择器 \(**dialog\:add\_picker**\)
 
 #### 声明
 
@@ -464,7 +464,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 给对话框加上一个多项选择器 \(**dialog:add\_multiple\_picker**\)
+### 给对话框加上一个多项选择器 \(**dialog\:add\_multiple\_picker**\)
 
 #### 声明
 
@@ -517,7 +517,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 给对话框加上一个有序选择器 \(**dialog:add\_ordered\_picker**\)
+### 给对话框加上一个有序选择器 \(**dialog\:add\_ordered\_picker**\)
 
 #### 声明
 
@@ -573,7 +573,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 给对话框加上一个单选组 \(**dialog:add\_radio**\)
+### 给对话框加上一个单选组 \(**dialog\:add\_radio**\)
 
 #### 声明
 
@@ -621,7 +621,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 给对话框加上一个多选组 \(**dialog:add\_checkbox**\)
+### 给对话框加上一个多选组 \(**dialog\:add\_checkbox**\)
 
 #### 声明
 
@@ -675,7 +675,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 给对话框加上一个数值调节器 \(**dialog:add\_stepper**\)
+### 给对话框加上一个数值调节器 \(**dialog\:add\_stepper**\)
 
 #### 声明
 
@@ -732,7 +732,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 给对话框加上一个日期时间选择器 \(**dialog:add\_datetime**\)
+### 给对话框加上一个日期时间选择器 \(**dialog\:add\_datetime**\)
 
 #### 声明
 
@@ -811,7 +811,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 给对话框加上一个多行文本域 \(**dialog:add\_textarea**\)
+### 给对话框加上一个多行文本域 \(**dialog\:add\_textarea**\)
 
 #### 声明
 
@@ -872,7 +872,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 给对话框加上一个键值对显示 \(**dialog:add\_value**\)
+### 给对话框加上一个键值对显示 \(**dialog\:add\_value**\)
 
 #### 声明
 
@@ -926,7 +926,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 给对话框加上一张图片 \(**dialog:add\_image**\)
+### 给对话框加上一张图片 \(**dialog\:add\_image**\)
 
 #### 声明
 
@@ -971,7 +971,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 给对话框加上一个按钮 \(**dialog:add\_button**\)
+### 给对话框加上一个按钮 \(**dialog\:add\_button**\)
 
 #### 声明 1
 
@@ -1058,7 +1058,7 @@ require("thread")(function ()  -- 启用线程模块
 end)
 ```
 
-### 链接到子对话框 \(**dialog:add\_link**\)
+### 链接到子对话框 \(**dialog\:add\_link**\)
 
 #### 声明
 
@@ -1087,7 +1087,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 🚥 将对话框弹出来并返回用户的选择 \(**dialog:show**\)
+### 🚥 将对话框弹出来并返回用户的选择 \(**dialog\:show**\)
 
 #### 声明
 
@@ -1102,6 +1102,10 @@ dialog("MyWorld")
   - *布尔型*，是否按下了提交按钮
 - 选项关联表
   - *关联表*，返回一个以 **标题** 映射的键值表
+
+#### 说明
+
+此对话框的界面显示方向默认为最后一次调用 [`screen.init`](./screen.md#initialize-rotated-coordinate-system-screeninit) 时设置的方向。
 
 #### 简单示例
 
@@ -1161,7 +1165,7 @@ nLog("你最喜欢游戏："..selects["最喜欢的游戏"])
 sys.alert(print.out())
 ```
 
-### 在不弹出对话框的情况下获得对话框配置 \(**dialog:load**\)
+### 在不弹出对话框的情况下获得对话框配置 \(**dialog\:load**\)
 
 #### 声明
 

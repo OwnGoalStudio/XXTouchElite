@@ -86,6 +86,8 @@ choice = sys.alert(content[, auto_dismiss_seconds, title, button0_title, button1
 
 Displays a system alert dialog with up to 3 buttons, blocking all threads until a response is received.
 
+The orientation of the alert defaults to the orientation set by the last call to [`screen.init`](./screen.md#initialize-rotated-coordinate-system-screeninit).
+
 #### Example
 
 ```lua title="sys.alert"
@@ -103,12 +105,14 @@ else
 end
 ```
 
-### Display Input Prompt \(**sys\.input_box**\)
+### Display Input Prompt \(**sys\.input\_box**\)
 
 #### Description
 
 Displays a system input dialog with up to 3 buttons and 2 text boxes, blocking all threads until a response is received.  
 The default title is `"Script Alert"`.
+
+The orientation of the dialog defaults to the orientation set by the last call to [`screen.init`](./screen.md#initialize-rotated-coordinate-system-screeninit).
 
 #### Example
 
@@ -136,7 +140,7 @@ input_content1, input_content2 = sys.input_box("Title", "Description", {"TextBox
 input_content1, input_content2, choice = sys.input_box("Title", "Description", {"TextBox1 Placeholder", "TextBox2 Placeholder"}, {"TextBox1 Content", "TextBox2 Content"}, "Default Button Title", "Button1 Title", "Button2 Title", 0)
 ```
 
-### Input Text \(**sys\.input_text**\)
+### Input Text \(**sys\.input\_text**\)
 
 #### Declaration
 
@@ -238,7 +242,7 @@ screen.keep()
 sys.alert('Time taken for one screen.keep: '..sys.mtime()-ms..' milliseconds')
 ```
 
-### Get Network Time \(**sys\.net_time**\)
+### Get Network Time \(**sys\.net\_time**\)
 
 #### Declaration
 
@@ -297,7 +301,7 @@ math.randomseed(sys.rnd())  -- Initialize the random seed with a true random num
 local r = math.random(1, 100)  -- Generate a random number in the range 1 ~ 100
 ```
 
-### Get Device’s Current Available Memory \(**sys\.available_memory**\)
+### Get Device’s Current Available Memory \(**sys\.available\_memory**\)
 
 #### Declaration
 
@@ -316,7 +320,7 @@ available_memory = sys.available_memory()
 sys.alert('Current available memory: '..sys.available_memory()..'MB')
 ```
 
-### Get Device’s Current Total Memory \(**sys\.total_memory**\)
+### Get Device’s Current Total Memory \(**sys\.total\_memory**\)
 
 #### Declaration
 
@@ -375,7 +379,7 @@ end
 }
 ```
 
-### Get Device’s Current Free Disk Space \(**sys\.free_disk_space**\)
+### Get Device’s Current Free Disk Space \(**sys\.free\_disk\_space**\)
 
 #### Declaration
 
@@ -399,7 +403,7 @@ sys.alert(
 )
 ```
 
-### Get Device’s Current Total Disk Space \(**sys\.total_disk_space**\)
+### Get Device’s Current Total Disk Space \(**sys\.total\_disk\_space**\)
 
 #### Declaration
 
@@ -599,7 +603,7 @@ A user-space reboot will force close all running applications and immediately en
 **Does not require re-jailbreaking**, but may fail and result in a hard reboot.
 :::
 
-### Get and Set Language \(**sys\.language/sys\.set_language**\)
+### Get and Set Language \(**sys\.language/sys\.set\_language**\)
 
 #### Declaration
 
@@ -621,7 +625,7 @@ Supports [ISO 639-1](https://www.iso.org/iso-639-language-codes.html) standard l
 Setting the language will automatically [respring](#respring-sysrespring).
 :::
 
-### Get and Set Locale \(**sys\.locale/sys\.set_locale**\)
+### Get and Set Locale \(**sys\.locale/sys\.set\_locale**\)
 
 #### Declaration
 
@@ -645,7 +649,7 @@ language + "_" + country + "_" + (variant + "_#" | "#") + script + "-" + extensi
 Setting the locale will automatically [respring](#respring-sysrespring).
 :::
 
-### Get and Set Timezone \(**sys\.timezone/sys\.set_timezone**\)
+### Get and Set Timezone \(**sys\.timezone/sys\.set\_timezone**\)
 
 #### Declaration
 
@@ -663,7 +667,7 @@ sys.set_timezone(timezone_code)  -- Set timezone
 
 Supports [IANA Time Zone Database](https://www.iana.org/time-zones) timezone codes.
 
-### Get and Set Appearance \(**sys\.appearance/sys\.set_appearance**\)
+### Get and Set Appearance \(**sys\.appearance/sys\.set\_appearance**\)
 
 #### Declaration
 
@@ -678,7 +682,7 @@ sys.set_appearance(appearance_style)  -- Set appearance style
   - `1` for light mode
   - `2` for dark mode
 
-### Get and Set Text Size \(**sys\.textsize/sys\.set_textsize**\)
+### Get and Set Text Size \(**sys\.textsize/sys\.set\_textsize**\)
 
 #### Declaration
 
@@ -692,7 +696,7 @@ sys.set_textsize(text_size)  -- Set text size
 - text_size
   - *enum*, range 0 ~ 11, default is `3`
 
-### Get and Set Bold Text \(**sys\.is_boldtext_on/sys\.boldtext_on,off**\)
+### Get and Set Bold Text \(**sys\.is\_boldtext\_on/sys\.boldtext\_on,off**\)
 
 #### Declaration
 
@@ -706,7 +710,7 @@ sys.boldtext_off()              -- Disable bold text
 
 - is_bold_text_on *boolean*
 
-### Get and Set Zoom Mode \(**sys\.is_zoom_on/sys\.zoom_on,off**\)
+### Get and Set Zoom Mode \(**sys\.is\_zoom\_on/sys\.zoom\_on,off**\)
 
 #### Declaration
 
@@ -731,7 +735,7 @@ Enabling zoom mode will change the screen size obtained by [`screen.size`](./scr
 
 :::
 
-### Set Wallpaper \(**sys\.set_wallpaper**\)
+### Set Wallpaper \(**sys\.set\_wallpaper**\)
 
 #### Declaration
 
@@ -754,7 +758,7 @@ sys.set_wallpaper(light_image_path[, dark_image_path, effect_location, is_perspe
 
 Supports `jpg`, `jpeg`, `png`, and `heic` formats.
 
-### Get and Set Icon Layout \(**sys\.icon_state/sys\.set_icon_state**\)
+### Get and Set Icon Layout \(**sys\.icon\_state/sys\.set\_icon\_state**\)
 
 #### Declaration
 
@@ -776,7 +780,7 @@ You do not need to worry about the specific format of the **icon layout table**.
 The **icon layout table** can be safely serialized using the [`plist`](./plist.md) module.
 :::
 
-### Get and Set Assistive Touch \(**sys\.is_assistive_touch_on/sys\.assistive_touch_on,off**\)
+### Get and Set Assistive Touch \(**sys\.is\_assistive\_touch\_on/sys\.assistive\_touch\_on,off**\)
 
 #### Declaration
 
@@ -790,7 +794,7 @@ sys.assistive_touch_off()              -- Disable Assistive Touch
 
 - is_assistive_touch_on *boolean*
 
-### Get and Set Reduce Motion \(**sys\.is_reduce_motion_on/sys\.reduce_motion_on,off**\)
+### Get and Set Reduce Motion \(**sys\.is\_reduce\_motion\_on/sys\.reduce\_motion\_on,off**\)
 
 #### Declaration
 
@@ -804,7 +808,7 @@ sys.reduce_motion_off()              -- Disable reduce motion
 
 - is_reduce_motion_on *boolean*
 
-### Get and Set Location Services \(**sys\.is_location_services_on/sys\.location_services_on,off**\)
+### Get and Set Location Services \(**sys\.is\_location\_services\_on/sys\.location\_services\_on,off**\)
 
 #### Declaration
 
@@ -818,7 +822,7 @@ sys.location_services_off()              -- Disable location services
 
 - is_location_services_on *boolean*
 
-### Get and Set Allow App Tracking \(**sys\.is_tracking_on/sys\.tracking_on,off**\)
+### Get and Set Allow App Tracking \(**sys\.is\_tracking\_on/sys\.tracking\_on,off**\)
 
 #### Declaration
 
@@ -832,7 +836,7 @@ sys.tracking_off()              -- Disallow app tracking
 
 - is_tracking_on *boolean*
 
-### Get and Set Background App Refresh \(**sys\.background_app_refresh_state/sys\.set_background_app_refresh_state**\)
+### Get and Set Background App Refresh \(**sys\.background\_app\_refresh\_state/sys\.set\_background\_app\_refresh\_state**\)
 
 #### Declaration
 

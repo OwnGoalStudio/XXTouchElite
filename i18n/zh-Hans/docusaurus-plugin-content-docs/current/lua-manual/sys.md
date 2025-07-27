@@ -86,6 +86,8 @@ end
 
 弹出一个系统提示对话框，最多可以有 3 个按钮，阻塞所有线程等待返回。
 
+此对话框的界面显示方向默认为最后一次调用 [`screen.init`](./screen.md#initialize-rotated-coordinate-system-screeninit) 时设置的方向。
+
 #### 示例
 
 ```lua title="sys.alert"
@@ -109,6 +111,8 @@ end
 
 弹出一个系统输入对话框，最多可以有 3 个按钮，2 个文本框，阻塞所有线程等待返回。  
 默认标题为 `"脚本提示"`。
+
+此对话框的界面显示方向默认为最后一次调用 [`screen.init`](./screen.md#initialize-rotated-coordinate-system-screeninit) 时设置的方向。
 
 #### 示例
 

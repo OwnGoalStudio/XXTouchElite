@@ -57,7 +57,7 @@ dialog = dialog:set_config(config_section) -- Set dialog config section
 - dialog *dialog object*
 - config_section *string*
 
-### Configure Dialog Auto-Dismiss Time (**dialog:set_timeout**)
+### Configure Dialog Auto-Dismiss Time (**dialog\:set\_timeout**)
 
 #### Declaration
 
@@ -81,7 +81,7 @@ dialog():set_timeout(3):show()  -- 3 seconds timeout without submission
 dialog():set_timeout(3, true):show()  -- 3 seconds timeout with submission
 ```
 
-### Configure Dialog Title (**dialog:set_title**)
+### Configure Dialog Title (**dialog\:set\_title**)
 
 #### Declaration
 
@@ -100,7 +100,7 @@ dialog = dialog:set_title(title_text)
 dialog():set_title('Title'):show()
 ```
 
-### Add a Group to the Dialog (**dialog:add_group**)
+### Add a Group to the Dialog (**dialog\:add\_group**)
 
 #### Declaration
 
@@ -140,7 +140,7 @@ dialog()
   :show()
 ```
 
-### Add a Label to the Dialog (**dialog:add_label**)
+### Add a Label to the Dialog (**dialog\:add\_label**)
 
 #### Declaration
 
@@ -188,7 +188,7 @@ dialog()
   :show()
 ```
 
-### Add an Input Box to the Dialog (**dialog:add_input**)
+### Add an Input Box to the Dialog (**dialog\:add\_input**)
 
 #### Declaration
 
@@ -295,7 +295,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### Add a Switch to the Dialog (**dialog:add_switch**)
+### Add a Switch to the Dialog (**dialog\:add\_switch**)
 
 #### Declaration
 
@@ -352,7 +352,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### Add a Slider to the Dialog (**dialog:add_range**)
+### Add a Slider to the Dialog (**dialog\:add\_range**)
 
 #### Declaration
 
@@ -414,7 +414,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### Add a Single Picker to the Dialog (**dialog:add_picker**)
+### Add a Single Picker to the Dialog (**dialog\:add\_picker**)
 
 #### Declaration
 
@@ -464,7 +464,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### Add a Multiple Picker to the Dialog (**dialog:add_multiple_picker**)
+### Add a Multiple Picker to the Dialog (**dialog\:add\_multiple\_picker**)
 
 #### Declaration
 
@@ -517,7 +517,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### Add an Ordered Picker to the Dialog (**dialog:add_ordered_picker**)
+### Add an Ordered Picker to the Dialog (**dialog\:add\_ordered\_picker**)
 
 #### Declaration
 
@@ -573,7 +573,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### Add a Radio Group to the Dialog (**dialog:add_radio**)
+### Add a Radio Group to the Dialog (**dialog\:add\_radio**)
 
 #### Declaration
 
@@ -621,7 +621,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### Add a Checkbox Group to the Dialog (**dialog:add_checkbox**)
+### Add a Checkbox Group to the Dialog (**dialog\:add\_checkbox**)
 
 #### Declaration
 
@@ -675,7 +675,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### Add a Stepper to the Dialog (**dialog:add_stepper**)
+### Add a Stepper to the Dialog (**dialog\:add\_stepper**)
 
 #### Declaration
 
@@ -732,7 +732,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### Add a DateTime Picker to the Dialog (**dialog:add_datetime**)
+### Add a DateTime Picker to the Dialog (**dialog\:add\_datetime**)
 
 #### Declaration
 
@@ -811,7 +811,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### Add a Text Area to the Dialog (**dialog:add_textarea**)
+### Add a Text Area to the Dialog (**dialog\:add\_textarea**)
 
 #### Declaration
 
@@ -872,7 +872,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### Add a Key-Value Display to the Dialog (**dialog:add_value**)
+### Add a Key-Value Display to the Dialog (**dialog\:add\_value**)
 
 #### Declaration
 
@@ -926,7 +926,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### Add an Image to the Dialog (**dialog:add_image**)
+### Add an Image to the Dialog (**dialog\:add\_image**)
 
 #### Declaration
 
@@ -971,7 +971,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### Add a Button to the Dialog (**dialog:add_button**)
+### Add a Button to the Dialog (**dialog\:add\_button**)
 
 #### Declaration 1
 
@@ -1058,7 +1058,7 @@ require("thread")(function ()  -- Enable thread module
 end)
 ```
 
-### Link to a Sub-Dialog (**dialog:add_link**)
+### Link to a Sub-Dialog (**dialog\:add\_link**)
 
 #### Declaration
 
@@ -1087,7 +1087,7 @@ dialog("MyWorld")
   :show()
 ```
 
-### 🚥 Show the Dialog and Return User’s Selection (**dialog:show**)
+### 🚥 Show the Dialog and Return User’s Selection (**dialog\:show**)
 
 #### Declaration
 
@@ -1102,6 +1102,10 @@ submitted, options_table = dialog:show()
   - *boolean*, whether the submit button was pressed
 - options_table
   - *table*, returns a key-value table mapped by **title**
+
+#### Description
+
+The orientation of the dialog defaults to the orientation set by the last call to [`screen.init`](./screen.md#initialize-rotated-coordinate-system-screeninit).
 
 #### Simple Example
 
@@ -1161,7 +1165,7 @@ nLog("Your favorite game: " .. selects["Favorite Game"])
 sys.alert(print.out())
 ```
 
-### Get Dialog Config Without Displaying the Dialog (**dialog:load**)
+### Get Dialog Config Without Displaying the Dialog (**dialog\:load**)
 
 #### Declaration
 
