@@ -737,6 +737,10 @@ sys.zoom_off()              -- 关闭放大模式
 
 ### 设置壁纸 \(**sys\.set_wallpaper**\)
 
+:::caution 弃用
+此函数已弃用，可能在未来版本中移除。
+:::
+
 #### 声明
 
 ```lua
@@ -759,6 +763,10 @@ sys.set_wallpaper(浅色图片路径[, 深色图片路径, 生效位置, 是否�
 支持 `jpg`、`jpeg`、`png` 和 `heic` 等格式的图片。
 
 ### 获取、设置图标布局 \(**sys\.icon_state/sys\.set_icon_state**\)
+
+:::caution 弃用
+这些函数已弃用，可能在未来版本中移除。
+:::
 
 #### 声明
 
@@ -853,6 +861,10 @@ sys.set_background_app_refresh_state(状态) -- 设置后台 App 刷新状态
   - `2`：Wi-Fi 和蜂窝网络
 
 ### 还原 \(**sys\.reset**\)
+
+:::caution 弃用
+此函数已弃用，可能在未来版本中移除。
+:::
 
 #### 声明
 

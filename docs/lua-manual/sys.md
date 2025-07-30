@@ -737,6 +737,10 @@ Enabling zoom mode will change the screen size obtained by [`screen.size`](./scr
 
 ### Set Wallpaper \(**sys\.set\_wallpaper**\)
 
+:::caution Deprecated
+This function is deprecated and may be removed in future versions.
+:::
+
 #### Declaration
 
 ```lua
@@ -759,6 +763,10 @@ sys.set_wallpaper(light_image_path[, dark_image_path, effect_location, is_perspe
 Supports `jpg`, `jpeg`, `png`, and `heic` formats.
 
 ### Get and Set Icon Layout \(**sys\.icon\_state/sys\.set\_icon\_state**\)
+
+:::caution Deprecated
+These functions are deprecated and may be removed in future versions.
+:::
 
 #### Declaration
 
@@ -853,6 +861,10 @@ sys.set_background_app_refresh_state(state) -- Set background app refresh state
   - `2`: Wi-Fi and cellular
 
 ### Reset \(**sys\.reset**\)
+
+:::caution Deprecated
+This function is deprecated and may be removed in future versions.
+:::
 
 #### Declaration
 
