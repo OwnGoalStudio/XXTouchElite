@@ -49,6 +49,12 @@ is_locked = device.is_screen_locked()  -- Get screen lock status
   - *string*, *optional*, leave empty if no lock password is set
 - is_locked *boolean*
 
+#### Description
+
+:::caution Constraints
+Due to environmental constraints, the TS version does not support unlocking the screen with a password, and will open the “Settings” app after unlocking.
+:::
+
 #### Example
 
 ```lua title="device.is_screen_locked"
