@@ -300,7 +300,10 @@ Unlike [`app.close`](#close-the-app-appclose), the App will receive a notificati
 The App has up to 3 seconds to save its state before it is completely closed, and it will clear the label in the multitasking switcher.
 
 :::caution Limitation
-Do not use this in a locked state.
+
+- Do not use this in a locked state.
+- Due to environmental limitations, this function is an alias of `app.close` in the TS version and has identical effects.
+
 :::
 
 #### Example
