@@ -631,3 +631,49 @@ Cannot directly forget the currently connected wireless access point using `devi
 ```lua title="device.leave_wifi"
 device.leave_wifi(true)  -- Leave and forget the currently connected wireless access point
 ```
+
+### Get and Set Device AirDrop Mode \(**device\.airdrop\_mode/device\.set\_airdrop\_mode**\)
+
+#### Declaration
+
+```lua
+mode = device.airdrop_mode()             -- Get AirDrop mode
+success = device.set_airdrop_mode(mode)  -- Set AirDrop mode
+```
+
+#### Parameters and Return Values
+
+- mode *integer*
+  - `0` for AirDrop turned off
+  - `1` for AirDrop set to “Contacts Only”
+  - `2` for AirDrop set to “Everyone”
+- success *boolean*
+
+#### Description
+
+Gets or sets the AirDrop sharing mode setting of the device. Changes take effect immediately.
+
+:::caution Restrictions
+Due to regional restrictions, when setting **mode** to `2`, some devices will have their AirDrop mode set to “Everyone (10 minutes)” instead of “Everyone”.
+:::
+
+#### Example
+
+```lua title="device.airdrop_mode"
+-- Get current AirDrop mode
+local mode = device.airdrop_mode()
+if mode == 0 then
+  sys.toast("AirDrop is turned off")
+elseif mode == 1 then
+  sys.toast("AirDrop is set to Contacts Only")
+elseif mode == 2 then
+  sys.toast("AirDrop is set to Everyone")
+end
+
+-- Set AirDrop to “Contacts Only”
+if device.set_airdrop_mode(1) then
+  sys.toast("AirDrop mode set to Contacts Only")
+else
+  sys.toast("Failed to set AirDrop mode")
+end
+```

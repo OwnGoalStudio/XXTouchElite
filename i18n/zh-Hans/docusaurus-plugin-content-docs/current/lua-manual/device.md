@@ -631,3 +631,49 @@ device.forget_wifi(SSID)        -- 遗忘无线接入点
 ```lua title="device.leave_wifi"
 device.leave_wifi(true)  -- 退出并遗忘当前连接的无线接入点
 ```
+
+### 获取、设置设备隔空投送模式 \(**device\.airdrop\_mode/device\.set\_airdrop\_mode**\)
+
+#### 声明
+
+```lua
+模式 = device.airdrop_mode()            -- 获取隔空投送模式
+操作成败 = device.set_airdrop_mode(模式)  -- 设置隔空投送模式
+```
+
+#### 参数及返回值
+
+- 模式 *整数型*
+  - `0` 表示隔空投送已关闭
+  - `1` 表示隔空投送设置为 “仅限联系人”
+  - `2` 表示隔空投送设置为 “所有人”
+- 操作成败 *布尔型*
+
+#### 说明
+
+获取或设置设备的隔空投送共享模式设置。更改会立即生效。
+
+:::caution 限制
+由于地区限制，当将 **模式** 设置为 `2` 时，部分设备的隔空投送模式将被设置为 “所有人（10 分钟）” 而不是 “所有人”。
+:::
+
+#### 示例
+
+```lua title="device.airdrop_mode"
+-- 获取当前隔空投送模式
+local mode = device.airdrop_mode()
+if mode == 0 then
+  sys.toast("隔空投送已关闭")
+elseif mode == 1 then
+  sys.toast("隔空投送设置为仅限联系人")
+elseif mode == 2 then
+  sys.toast("隔空投送设置为所有人")
+end
+
+-- 设置隔空投送为 “仅限联系人”
+if device.set_airdrop_mode(1) then
+  sys.toast("隔空投送模式已设置为仅限联系人")
+else
+  sys.toast("设置隔空投送模式失败")
+end
+```
