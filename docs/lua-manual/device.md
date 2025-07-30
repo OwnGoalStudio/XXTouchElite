@@ -96,6 +96,12 @@ is_locked = device.is_orien_locked()  -- Get screen rotation lock status
 
 - is_locked *boolean*
 
+#### Description
+
+:::caution Constraints
+Due to environmental constraints, calling this function in the TS version will restart SpringBoard.
+:::
+
 #### Example
 
 ```lua title="device.is_orien_locked"

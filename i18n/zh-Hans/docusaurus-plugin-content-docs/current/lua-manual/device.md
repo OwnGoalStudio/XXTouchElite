@@ -96,6 +96,12 @@ device.unlock_orien()              -- 解锁屏幕旋转
 
 - 是否锁定 *布尔型*
 
+#### 说明
+
+:::caution 限制
+受环境因素限制，TS 版本中调用此函数会重新启动 SpringBoard。
+:::
+
 #### 示例
 
 ```lua title="device.is_orien_locked"
