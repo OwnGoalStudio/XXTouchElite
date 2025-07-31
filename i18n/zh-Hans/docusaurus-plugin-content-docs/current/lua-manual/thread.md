@@ -21,6 +21,8 @@ end)
 - [`touch:msleep`](./touch.md#-毫秒级延迟-touch)
 - [HTTP 模块](./http.md)
 - [FTP 模块](./ftp.md)
+- [SMB 模块](./samba.md)
+
 :::
 
 ### 派发一个任务 \(**thread\.dispatch**\)

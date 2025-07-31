@@ -21,6 +21,7 @@ end)
 - [`touch:msleep`](./touch.md#-millisecond-level-delay-touchmsleep)
 - [HTTP Module](./http.md)
 - [FTP Module](./ftp.md)
+- [SMB Module](./samba.md)
 
 :::
 
