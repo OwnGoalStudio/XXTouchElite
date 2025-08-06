@@ -35,7 +35,7 @@ touch.show_pose(true)
 touch.tap(100, 100)
 ```
 
-### Simulate a Single Tap on the Screen \(**touch\.tap**\)
+### 🚥 Simulate a Single Tap on the Screen \(**touch\.tap**\)
 
 #### Declaration
 
@@ -155,7 +155,7 @@ end
 touch.off(1)           -- Release the finger with ID 1
 ```
 
-### Simulate Finger Movement on the Screen \(**touch\:move**\)
+### 🚥 Simulate Finger Movement on the Screen \(**touch\:move**\)
 
 #### Declaration
 

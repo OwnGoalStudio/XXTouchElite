@@ -6,7 +6,9 @@ sidebar_position: 6
 
 ## Simulated Key Module - key
 
-### Simulate Pressing a Physical Key \(**key\.press**\)
+Functions marked with 🚥 may **yield** in the [**Thread Module**](./thread.md). Before these function calls return, other **threads** may get a chance to run.
+
+### 🚥 Simulate Pressing a Physical Key \(**key\.press**\)
 
 #### Declaration
 
@@ -61,7 +63,7 @@ key.up(key_code)
 
 Simulates releasing a pressed physical key.
 
-### Simulate Typing Text \(**key\.send\_text**\)
+### 🚥 Simulate Typing Text \(**key\.send\_text**\)
 
 #### Declaration
 
