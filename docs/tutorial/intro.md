@@ -29,7 +29,7 @@ This documentation will guide you through the process of getting started with XX
 2. Install “XXTouch Elite” from Sileo package manager.
 3. You may need to restart your device after installation.
 
-If you use TrollStore, on supported devices share the `.tipa` installer to your device via AirDrop or other methods, then choose "TrollStore" to install.
+If you use TrollStore, on supported devices share the `.tipa` installer to your device via AirDrop or other methods, then choose “TrollStore” to install.
 
 ![Requirements.003](./img/Requirements.003.png)
 
