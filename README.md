@@ -6,7 +6,7 @@ XXTouch Elite is the successor to XXTouch, which was originally hosted on BigBo
 
 It is now available on Havoc Repo and supports iOS 14+ with modern jailbreaks and [TrollStore](https://ios.cfw.guide/installing-trollstore/).
 
-[now-on-havoc]: https://havoc.app/package/xxtouchelite
+[now-on-havoc]: https://havoc.app/search/XXTouch
 
 [<img width="150" src="https://docs.havoc.app/img/badges/get_square.svg" alt="Havoc Repo" />][now-on-havoc]
 
@@ -25,7 +25,7 @@ It is now available on Havoc Repo and supports iOS 14+ with modern jailbreaks an
 “XXTouch Elite TS” is compatible with:
 
 - Any iPhone, or iPad from iOS 14 to 17.0
-- TrollStore 2.x
+- [TrollStore](https://ios.cfw.guide/installing-trollstore/) 2.x
 
 Use at your own risk if your device or jailbreak environment is not listed above.
 No refund will be given if you don’t read it carefully.
