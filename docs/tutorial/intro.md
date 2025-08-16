@@ -15,7 +15,7 @@ This documentation will guide you through the process of getting started with XX
 ## Requirements
 
 - XXTouch Elite is designed to work on iPhone/iPad with iOS 14 and later.
-- You need to [jailbreak your device](https://ios.cfw.guide/types-of-jailbreak/) to use XXTouch Elite. Following jailbreak methods are supported and tested:
+- XXTouch Elite supports two installation options: [Jailbreak](https://ios.cfw.guide/types-of-jailbreak/) or [TrollStore](https://ios.cfw.guide/installing-trollstore) (where supported). The following jailbreak methods are supported and tested:
   - [unc0ver](https://unc0ver.dev/)
   - [Taurine](https://taurine.app/)
   - [Palera1n](https://palera.in/) (Rootless)
@@ -28,6 +28,8 @@ This documentation will guide you through the process of getting started with XX
 1. Buy “[XXTouch Elite](https://havoc.app/package/xxtouchelite)” from Havoc Repo.
 2. Install “XXTouch Elite” from Sileo package manager.
 3. You may need to restart your device after installation.
+
+If you use TrollStore, on supported devices share the `.tipa` installer to your device via AirDrop or other methods, then choose "TrollStore" to install.
 
 ![Requirements.003](./img/Requirements.003.png)
 

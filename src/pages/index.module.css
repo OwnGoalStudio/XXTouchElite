@@ -55,6 +55,7 @@
   font-size: 3rem;
   margin-bottom: 1rem;
   background: linear-gradient(90deg, #ffffff 0%, #e0e7ff 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: fadeInUp 0.8s ease-out;
@@ -64,6 +65,7 @@
   position: relative;
   display: inline-block;
   background: linear-gradient(90deg, #63c2ff 0%, #e0e7ff 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-style: italic;
@@ -167,7 +169,8 @@
   letter-spacing: 0.3px !important;
 }
 
-.buttonIcon, .downloadIcon {
+.buttonIcon,
+.downloadIcon {
   transition: transform 0.3s ease;
   font-size: 1.1rem;
 }
@@ -237,6 +240,7 @@
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
   background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -261,6 +265,7 @@
 .feature {
   display: flex;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .featureCard {
@@ -273,6 +278,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 }
 
 .featureCard:hover {
@@ -309,12 +315,29 @@
 }
 
 .compatList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 160px);
   gap: 2rem;
   margin: 2rem auto;
   max-width: 1000px;
+  justify-content: center;
+  /* center the grid within container */
+  justify-items: center;
+  /* center items in each cell */
+}
+
+/* Medium screens: 3 columns => rows become 3+2 for 5 items */
+@media (min-width: 640px) {
+  .compatList {
+    grid-template-columns: repeat(3, 160px);
+  }
+}
+
+/* Large screens: 5 columns => 5 items on one row */
+@media (min-width: 960px) {
+  .compatList {
+    grid-template-columns: repeat(5, 160px);
+  }
 }
 
 .compatList span {
@@ -392,7 +415,7 @@
   right: 0;
   bottom: 0;
   background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
-                    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 20%);
   opacity: 0.6;
 }
 
@@ -532,13 +555,19 @@ html[data-theme='dark'] .buttonPrimary {
 
 html[data-theme='dark'] .sectionTitle {
   background: linear-gradient(90deg, #63b3ed 0%, #4299e1 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideIn {
@@ -549,8 +578,13 @@ html[data-theme='dark'] .sectionTitle {
 }
 
 @keyframes slideInUnderline {
-  0% { transform: scaleX(0); }
-  100% { transform: scaleX(1); }
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 @keyframes fadeInUp {
@@ -558,6 +592,7 @@ html[data-theme='dark'] .sectionTitle {
     transform: translateY(20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -565,15 +600,25 @@ html[data-theme='dark'] .sectionTitle {
 }
 
 @keyframes phoneFloat {
-  0%, 100% { transform: rotate(-5deg) translateY(0); }
-  50% { transform: rotate(-5deg) translateY(-10px); }
+
+  0%,
+  100% {
+    transform: rotate(-5deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-5deg) translateY(-10px);
+  }
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.3;
   }
+
   50% {
     transform: scale(1.1);
     opacity: 0.5;
@@ -616,7 +661,9 @@ html[data-theme='dark'] .sectionTitle {
     font-size: 2rem;
   }
 
-  .features, .compatibility, .cta {
+  .features,
+  .compatibility,
+  .cta {
     padding: 4rem 1rem;
   }
 
@@ -666,6 +713,7 @@ html[data-theme='dark'] .sectionTitle {
 
   .jailbreakItem {
     width: calc(50% - 1.5rem);
+    min-width: 160px;
   }
 
   .sectionTitle {
@@ -713,7 +761,7 @@ html[data-theme='dark'] .sectionTitle {
 
   .jailbreakItem {
     width: calc(50% - 1rem);
-    min-width: 100px;
+    min-width: 160px;
     padding: 1.2rem;
   }
 

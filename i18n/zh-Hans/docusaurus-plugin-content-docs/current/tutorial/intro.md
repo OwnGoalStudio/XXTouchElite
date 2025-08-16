@@ -15,7 +15,7 @@ XXTouch Elite 使用 [Lua](https://www.lua.org/) (v5.3) 作为脚本语言，�
 ## 前置条件
 
 - XXTouch Elite 设计用于运行 iOS 14 及以上版本的 iPhone 或 iPad。
-- 你需要 [越狱设备](https://ios.cfw.guide/types-of-jailbreak/) 才能使用 XXTouch Elite。以下越狱方法已支持并测试：
+- XXTouch Elite 支持两种安装方式：[越狱](https://ios.cfw.guide/types-of-jailbreak/) 或 [TrollStore](https://ios.cfw.guide/installing-trollstore)（在受支持的设备/系统上）。以下越狱方法已支持并测试：
   - [unc0ver](https://unc0ver.dev/)
   - [Taurine](https://taurine.app/)
   - [Palera1n](https://palera.in/)（Rootless）
@@ -26,8 +26,10 @@ XXTouch Elite 使用 [Lua](https://www.lua.org/) (v5.3) 作为脚本语言，�
 ## 安装
 
 1. 从 Havoc 源购买 “[XXTouch Elite](https://havoc.app/package/xxtouchelite)”。
-2. 从 Sileo 包管理器安装“XXTouch Elite”。
+2. 从 Sileo 包管理器安装 “XXTouch Elite”。
 3. 安装后可能需要重启设备。
+
+如果你使用 TrollStore，请在受支持的设备上使用隔空投送 AirDrop 或其他方式分享 `.tipa` 安装包到设备上，选择 “TrollStore” 进行安装。
 
 ![Requirements.003](./img/Requirements.003.png)
 
