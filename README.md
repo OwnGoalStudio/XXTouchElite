@@ -4,7 +4,7 @@
 
 XXTouch Elite is the successor to XXTouch, which was originally hosted on BigBoss since 2015.
 
-It is now available on Havoc Repo and supports iOS 14+ with modern jailbreaks.
+It is now available on Havoc Repo and supports iOS 14+ with modern jailbreaks and [TrollStore](https://ios.cfw.guide/installing-trollstore/).
 
 [now-on-havoc]: https://havoc.app/package/xxtouchelite
 
@@ -15,15 +15,20 @@ It is now available on Havoc Repo and supports iOS 14+ with modern jailbreaks.
 “XXTouch Elite” is compatible with:
 
 - Any iPhone, or iPad from iOS 14 to 16
-- unc0ver/Taurine (up to iOS 14.8.1)
-- palera1n (up to iOS 16.x)
-- Dopamine with “Hide Jailbreak” **disabled**
-- Dopamine (RootHide) @ My Repo: **apt.82flex.com**
+- [unc0ver](https://unc0ver.dev)/[Taurine](https://taurine.app) (up to iOS 14.8.1)
+- [palera1n](https://palera.in) (up to iOS 16.x)
+- [Dopamine](https://ellekit.space/dopamine/) with “Hide Jailbreak” **disabled**
+- [Dopamine (RootHide)](https://github.com/roothide/Dopamine2-roothide/) @ My Repo: **apt.82flex.com**
+
+⚠️ Serotonin/NathanLR is **NOT** supported by “XXTouch Elite”, you have to install and use “XXTouch Elite TS” instead. ⚠️
+
+“XXTouch Elite TS” is compatible with:
+
+- Any iPhone, or iPad from iOS 14 to 17.0
+- TrollStore 2.x
 
 Use at your own risk if your device or jailbreak environment is not listed above.
 No refund will be given if you don’t read it carefully.
-
-⚠️ Serotonin/NathanLR is **NOT** supported by XXTouch Elite. ⚠️
 
 ## 🚀 Core Features
 
