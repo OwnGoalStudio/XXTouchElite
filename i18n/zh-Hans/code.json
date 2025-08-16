@@ -416,8 +416,8 @@
   "Compatible with iOS 14+": {
     "message": "兼容 iOS 14+"
   },
-  "XXTouch Elite works with modern jailbreaks including:": {
-    "message": "XXTouch Elite 支持以下现代越狱工具："
+  "XXTouch Elite works with modern jailbreaks and TrollStore:": {
+    "message": "XXTouch Elite 支持以下现代越狱工具和 TrollStore："
   },
   "Ready to automate your iOS device?": {
     "message": "准备好解放你的双手了吗？"
