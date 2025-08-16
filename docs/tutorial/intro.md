@@ -20,6 +20,14 @@ This documentation will guide you through the process of getting started with XX
   - [Taurine](https://taurine.app/)
   - [Palera1n](https://palera.in/) (Rootless)
   - [Dopamine](https://ellekit.space/dopamine/) (Rootless and RootHide)
+- The version that supports the TrollStore environment is called **XXTouch Elite TS**. Below is a detailed compatibility table. Please read it carefully before purchasing and installing:
+
+  | System Version | XXTouch Elite  | XXTouch Elite TS |
+  | -------------- | -------------- | ---------------- |
+  | iOS 14.x       | ✅             | ❌               |
+  | iOS 15.x       | ✅             | ✅               |
+  | iOS 16.x       | ✅             | ✅               |
+  | iOS 17.0       | ❌             | ✅               |
 
 ![Requirements.002](./img/Requirements.002.png)
 

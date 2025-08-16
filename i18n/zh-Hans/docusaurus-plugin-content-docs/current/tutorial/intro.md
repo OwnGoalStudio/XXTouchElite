@@ -20,6 +20,14 @@ XXTouch Elite 使用 [Lua](https://www.lua.org/) (v5.3) 作为脚本语言，�
   - [Taurine](https://taurine.app/)
   - [Palera1n](https://palera.in/)（Rootless）
   - [Dopamine](https://ellekit.space/dopamine/)（Rootless 和 RootHide）
+- 支持 TrollStore 环境的版本称为 **XXTouch Elite TS**，以下是一个详细的兼容性表格，请务必在购买和安装前仔细阅读：
+
+  | 系统版本   | XXTouch Elite  | XXTouch Elite TS |
+  | --------- | -------------- | ---------------- |
+  | iOS 14.x  | ✅             | ❌               |
+  | iOS 15.x  | ✅             | ✅               |
+  | iOS 16.x  | ✅             | ✅               |
+  | iOS 17.0  | ❌             | ✅               |
 
 ![Requirements.002](./img/Requirements.002.png)
 

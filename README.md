@@ -14,7 +14,7 @@ It is now available on Havoc Repo and supports iOS 14+ with modern jailbreaks an
 
 “XXTouch Elite” is compatible with:
 
-- Any iPhone, or iPad from iOS 14 to 16
+- Any iPhone, or iPad from iOS 14 to 16.x
 - [unc0ver](https://unc0ver.dev)/[Taurine](https://taurine.app) (up to iOS 14.8.1)
 - [palera1n](https://palera.in) (up to iOS 16.x)
 - [Dopamine](https://ellekit.space/dopamine/) with “Hide Jailbreak” **disabled**
@@ -24,8 +24,17 @@ It is now available on Havoc Repo and supports iOS 14+ with modern jailbreaks an
 
 “XXTouch Elite TS” is compatible with:
 
-- Any iPhone, or iPad from iOS 14 to 17.0
+- Any iPhone, or iPad from **iOS 15** to 17.0
 - [TrollStore](https://ios.cfw.guide/installing-trollstore/) 2.x
+
+⚠️ iOS 14 is **NOT** supported by “XXTouch Elite TS”, you have to jailbreak your device and install “XXTouch Elite” instead. ⚠️
+
+| System Version | XXTouch Elite  | XXTouch Elite TS |
+| -------------- | -------------- | ---------------- |
+| iOS 14.x       | ✅             | ❌               |
+| iOS 15.x       | ✅             | ✅               |
+| iOS 16.x       | ✅             | ✅               |
+| iOS 17.0       | ❌             | ✅               |
 
 Use at your own risk if your device or jailbreak environment is not listed above.
 No refund will be given if you don’t read it carefully.
