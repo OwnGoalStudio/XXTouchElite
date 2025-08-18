@@ -154,8 +154,10 @@
 }
 
 .button {
+  --btn-pad-y: 0.75rem;
+  --btn-pad-x: 1.75rem;
   border-radius: 30px !important;
-  padding: 0.75rem 1.75rem !important;
+  padding: var(--btn-pad-y) var(--btn-pad-x) !important;
   font-weight: 600 !important;
   transition: all 0.3s ease !important;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
@@ -212,6 +214,8 @@
   border: 2px solid rgba(255, 255, 255, 0.8) !important;
   color: white !important;
   backdrop-filter: blur(4px);
+  /* Compensate 2px border to match primary button total size */
+  padding: calc(var(--btn-pad-y) - 2px) calc(var(--btn-pad-x) - 2px) !important;
 }
 
 .buttonOutline:hover {
@@ -499,6 +503,217 @@ html[data-theme='dark'] .featureContent p {
   color: #b0b0b0;
 }
 
+/* --- Havoc Dropdown --- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* match .button spacing */
+  /* Inherit base .button padding via CSS variables */
+}
+
+
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 220px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 6px;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 120ms ease, transform 120ms ease;
+  z-index: 60;
+}
+
+.dropdownMenu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none !important;
+  color: var(--ifm-font-color-base) !important;
+}
+
+.dropdownItem:link,
+.dropdownItem:visited {
+  text-decoration: none !important;
+  color: var(--ifm-font-color-base) !important;
+}
+
+.dropdownItem:hover,
+.dropdownItem:focus-visible {
+  background: var(--ifm-hover-overlay);
+  outline: none;
+}
+
+.menuIcon {
+  width: 1.25rem;
+  text-align: center;
+}
+
+/* Hover bridge to prevent flicker when moving from button to menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 10px;
+  /* invisible bridge between button and menu */
+  background: transparent;
+}
+
+/* --- Mobile overlay for Havoc options --- */
+.mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  opacity: 0;
+  animation: overlayFadeIn 180ms ease forwards;
+}
+
+.mobilePanel {
+  width: min(520px, 92vw);
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 20px 20px 8px;
+  position: relative;
+  transform: translateY(8px);
+  opacity: 0;
+  animation: panelSlideIn 220ms ease forwards;
+}
+
+.mobileOverlay.closing {
+  animation: overlayFadeOut 200ms ease forwards;
+}
+
+.mobilePanel.closing {
+  animation: panelSlideOut 220ms ease forwards;
+}
+
+.mobileClose {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mobileTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 10px 4px;
+}
+
+.mobileOptions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 6px 4px 16px;
+}
+
+.mobileOption {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 14px 16px;
+  border-radius: 10px;
+  text-decoration: none !important;
+  color: var(--ifm-font-color-base) !important;
+  background: var(--ifm-hover-overlay);
+}
+
+.mobileOption:hover,
+.mobileOption:focus-visible {
+  background: rgba(75, 108, 183, 0.15);
+}
+
+@media (min-width: 481px) and (max-width: 960px) {
+  .mobilePanel {
+    width: min(560px, 88vw);
+  }
+}
+
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlayFadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes panelSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes panelSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
 html[data-theme='dark'] .compatibility {
   background: linear-gradient(180deg, #1e2125 0%, #171a1d 100%);
 }
@@ -749,6 +964,16 @@ html[data-theme='dark'] .sectionTitle {
     justify-content: center;
     padding: 0.7rem 1.5rem !important;
     font-size: 0.95rem !important;
+  }
+
+  /* Ensure Havoc dropdown fills the full row like other buttons */
+  .dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  .dropdownButton {
+    width: 100%;
   }
 
   .heroContent {

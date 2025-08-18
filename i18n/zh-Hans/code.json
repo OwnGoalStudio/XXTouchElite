@@ -427,5 +427,17 @@
   },
   "Get Started Now": {
     "message": "立即开始"
+  },
+  "Choose Edition": {
+    "message": "选择版本"
+  },
+  "Jailbreak Edition": {
+    "message": "越狱版"
+  },
+  "TrollStore Edition": {
+    "message": "巨魔版"
+  },
+  "Close": {
+    "message": "关闭"
   }
 }
