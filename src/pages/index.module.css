@@ -568,6 +568,10 @@ html[data-theme='dark'] .featureContent p {
 .menuIcon {
   width: 1.25rem;
   text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1; /* fix extra height on iOS 15 */
 }
 
 /* Hover bridge to prevent flicker when moving from button to menu */
@@ -624,21 +628,35 @@ html[data-theme='dark'] .featureContent p {
   animation: panelSlideOut 220ms ease forwards;
 }
 
+.mobileHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 40px;
+  margin: 0 2px 8px;
+}
+
 .mobileClose {
-  position: absolute;
-  top: 10px;
-  right: 12px;
   border: none;
   background: transparent;
   color: inherit;
   font-size: 1.5rem;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 .mobileTitle {
   font-size: 1.1rem;
   font-weight: 700;
-  margin: 0 0 10px 4px;
+  margin: 0 0 0 4px;
+  line-height: 1.2;
 }
 
 .mobileOptions {
@@ -653,10 +671,17 @@ html[data-theme='dark'] .featureContent p {
   align-items: center;
   gap: 0.6rem;
   padding: 14px 16px;
+  min-height: 48px; /* baseline target */
+  height: 48px; /* enforce consistent height on older iOS */
+  line-height: 1.25;
   border-radius: 10px;
   text-decoration: none !important;
   color: var(--ifm-font-color-base) !important;
   background: var(--ifm-hover-overlay);
+}
+
+.mobileOption span {
+  line-height: 1.2;
 }
 
 .mobileOption:hover,

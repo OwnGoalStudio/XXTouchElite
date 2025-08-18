@@ -364,16 +364,18 @@ function HavocDropdown() {
               )}
               onClick={(e) => e.stopPropagation()}
             >
-              <button
-                type="button"
-                className={styles.mobileClose}
-                aria-label={translate({ message: "Close" })}
-                onClick={() => setOpen(false)}
-              >
-                ×
-              </button>
-              <div className={styles.mobileTitle}>
-                <Translate>Choose Edition</Translate>
+              <div className={styles.mobileHeader}>
+                <div className={styles.mobileTitle}>
+                  <Translate>Choose Edition</Translate>
+                </div>
+                <button
+                  type="button"
+                  className={styles.mobileClose}
+                  aria-label={translate({ message: "Close" })}
+                  onClick={() => setOpen(false)}
+                >
+                  ×
+                </button>
               </div>
               <div className={styles.mobileOptions}>
                 <Link
