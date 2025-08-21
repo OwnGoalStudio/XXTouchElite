@@ -28,7 +28,11 @@ XXTouch Elite 使用 [Lua](https://www.lua.org/) (v5.3) 作为脚本语言，�
   | iOS 14.x  | ✅             | ❌               |
   | iOS 15.x  | ✅             | ✅               |
   | iOS 16.x  | ✅             | ✅               |
-  | iOS 17.0  | ❌             | ✅               |
+  | iOS 17.0  | ⚠️             | ✅               |
+  | iOS 17.x  | ⚠️             | ❌               |
+  | iOS 18.x  | ⚠️             | ❌               |
+
+  > ⚠️ *只有 Palera1n 支持搭载有 iOS 17+ 的 iPad（第七代）。*
 
 ![Requirements.002](./img/Requirements.002.png)
 

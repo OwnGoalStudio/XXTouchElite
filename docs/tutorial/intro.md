@@ -28,7 +28,11 @@ This documentation will guide you through the process of getting started with XX
   | iOS 14.x       | ✅             | ❌               |
   | iOS 15.x       | ✅             | ✅               |
   | iOS 16.x       | ✅             | ✅               |
-  | iOS 17.0       | ❌             | ✅               |
+  | iOS 17.0       | ⚠️             | ✅               |
+  | iOS 17.x       | ⚠️             | ❌               |
+  | iOS 18.x       | ⚠️             | ❌               |
+
+  > ⚠️ *Only Palera1n supports iPad 7th gen. with iOS 17+.*
 
 ![Requirements.002](./img/Requirements.002.png)
 
