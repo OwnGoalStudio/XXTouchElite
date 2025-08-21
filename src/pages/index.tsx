@@ -493,6 +493,21 @@ function HomepageCompatibility() {
             <span>Taurine</span>
           </a>
           <a
+            href="https://zhuxinlang.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.jailbreakItem}
+          >
+            <div className={styles.jailbreakIconWrapper}>
+              <img
+                src={useBaseUrl("img/xinaa15.png")}
+                alt="XinaA15"
+                className={styles.jailbreakIcon}
+              />
+            </div>
+            <span>XinaA15</span>
+          </a>
+          <a
             href="https://palera.in"
             target="_blank"
             rel="noopener noreferrer"

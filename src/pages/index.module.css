@@ -320,27 +320,32 @@
 
 .compatList {
   display: grid;
-  grid-template-columns: repeat(2, 160px);
+  grid-template-columns: repeat(2, 160px); /* 2+2+2 on small */
   gap: 2rem;
   margin: 2rem auto;
-  max-width: 1000px;
-  justify-content: center;
-  /* center the grid within container */
-  justify-items: center;
-  /* center items in each cell */
+  max-width: 1120px; /* allow 6 columns (6*160 + gaps) */
+  justify-content: center; /* center the grid within container */
+  justify-items: center; /* center items in each cell */
 }
 
-/* Medium screens: 3 columns => rows become 3+2 for 5 items */
+/* ≥640px: 3 columns => 3+3 */
 @media (min-width: 640px) {
   .compatList {
     grid-template-columns: repeat(3, 160px);
   }
 }
 
-/* Large screens: 5 columns => 5 items on one row */
+/* ≥960px: 4 columns => 4+2 */
 @media (min-width: 960px) {
   .compatList {
-    grid-template-columns: repeat(5, 160px);
+    grid-template-columns: repeat(4, 160px);
+  }
+}
+
+/* ≥1200px: 6 columns => 6 in 1 row */
+@media (min-width: 1200px) {
+  .compatList {
+    grid-template-columns: repeat(6, 160px);
   }
 }
 
