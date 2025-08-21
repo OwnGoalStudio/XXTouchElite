@@ -16,9 +16,10 @@ XXTouch Elite 使用 [Lua](https://www.lua.org/) (v5.3) 作为脚本语言，�
 
 - XXTouch Elite 设计用于运行 iOS 14 及以上版本的 iPhone 或 iPad。
 - XXTouch Elite 支持两种安装方式：[越狱](https://ios.cfw.guide/types-of-jailbreak/) 或 [TrollStore](https://ios.cfw.guide/installing-trollstore)（在受支持的设备/系统上）。以下越狱方法已支持并测试：
-  - [unc0ver](https://unc0ver.dev/)
-  - [Taurine](https://taurine.app/)
-  - [Palera1n](https://palera.in/)（Rootless）
+  - [unc0ver](https://unc0ver.dev)
+  - [Taurine](https://taurine.app)
+  - [XinaA15](https://zhuxinlang.github.io)
+  - [Palera1n](https://palera.in)（Rootless）
   - [Dopamine](https://ellekit.space/dopamine/)（Rootless 和 RootHide）
 - 支持 TrollStore 环境的版本称为 **XXTouch Elite TS**，以下是一个详细的兼容性表格，请务必在购买和安装前仔细阅读：
 

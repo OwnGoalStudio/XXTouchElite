@@ -16,6 +16,7 @@ It is now available on Havoc Repo and supports iOS 14+ with modern jailbreaks an
 
 - Any iPhone, or iPad from iOS 14 to 16.x
 - [unc0ver](https://unc0ver.dev)/[Taurine](https://taurine.app) (up to iOS 14.8.1)
+- [XinaA15](https://zhuxinlang.github.io) (up to iOS 15.4.1)
 - [palera1n](https://palera.in) (up to iOS 16.x)
 - [Dopamine](https://ellekit.space/dopamine/) with “Hide Jailbreak” **disabled**
 - [Dopamine (RootHide)](https://github.com/roothide/Dopamine2-roothide/) @ My Repo: **apt.82flex.com**

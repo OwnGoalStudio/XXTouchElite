@@ -16,9 +16,10 @@ This documentation will guide you through the process of getting started with XX
 
 - XXTouch Elite is designed to work on iPhone/iPad with iOS 14 and later.
 - XXTouch Elite supports two installation options: [Jailbreak](https://ios.cfw.guide/types-of-jailbreak/) or [TrollStore](https://ios.cfw.guide/installing-trollstore) (where supported). The following jailbreak methods are supported and tested:
-  - [unc0ver](https://unc0ver.dev/)
-  - [Taurine](https://taurine.app/)
-  - [Palera1n](https://palera.in/) (Rootless)
+  - [unc0ver](https://unc0ver.dev)
+  - [Taurine](https://taurine.app)
+  - [XinaA15](https://zhuxinlang.github.io)
+  - [Palera1n](https://palera.in) (Rootless)
   - [Dopamine](https://ellekit.space/dopamine/) (Rootless and RootHide)
 - The version that supports the TrollStore environment is called **XXTouch Elite TS**. Below is a detailed compatibility table. Please read it carefully before purchasing and installing:
 
