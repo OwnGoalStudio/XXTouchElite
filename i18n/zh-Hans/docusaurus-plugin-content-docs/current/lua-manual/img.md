@@ -220,7 +220,7 @@ image.video_to_album(视频文件路径)
 - 视频文件路径
   - *文本型*，支持的格式有 `mp4`、`m4v`、`mov` 等
 
-### 获取图片对象的尺寸 \(**image:size**\)
+### 获取图片对象的尺寸 \(**image\:size**\)
 
 #### 声明
 
@@ -250,7 +250,7 @@ w, h = img:size()
 sys.alert("逆时针旋转后，图像的宽："..w.."\n图像的高："..h)
 ```
 
-### 🌟 从图片对象创建拷贝图片对象 \(**image:copy**\)
+### 🌟 从图片对象创建拷贝图片对象 \(**image\:copy**\)
 
 #### 声明
 
@@ -272,7 +272,7 @@ scrn = screen.image()
 img2 = scrn:copy()
 ```
 
-### 🌟 截取部分区域新建图片对象 \(**image:crop**\)
+### 🌟 截取部分区域新建图片对象 \(**image\:crop**\)
 
 #### 声明
 
@@ -296,7 +296,7 @@ scrn = screen.image()
 img2 = scrn:crop(100, 100, 200, 200)
 ```
 
-### 销毁一个图片对象 \(**image:destroy**\)
+### 销毁一个图片对象 \(**image\:destroy**\)
 
 #### 声明
 
@@ -338,7 +338,7 @@ end
 sys.alert("屏幕动了")
 ```
 
-### 保存图片对象到相册 \(**image:save\_to\_album**\)
+### 保存图片对象到相册 \(**image\:save\_to\_album**\)
 
 #### 声明
 
@@ -378,7 +378,7 @@ else
 end
 ```
 
-### 输出图片对象到 PNG 文件或数据 \(**image:save\_to\_png\_file/image:png_data**\)
+### 输出图片对象到 PNG 文件或数据 \(**image\:save\_to\_png\_file/image\:png_data**\)
 
 #### 声明
 
@@ -400,7 +400,7 @@ PNG数据 = 图像:png_data()
 screen.image():save_to_png_file("/var/mobile/1.png")
 ```
 
-### 输出图片对象到 JPEG 文件或数据 \(**image:save\_to\_jpeg\_file/image:jpeg_data**\)
+### 输出图片对象到 JPEG 文件或数据 \(**image\:save\_to\_jpeg\_file/image\:jpeg_data**\)
 
 #### 声明
 
@@ -429,7 +429,7 @@ screen.image():save_to_jpeg_file("/var/mobile/1.jpg")
 screen.image():save_to_jpeg_file("/var/mobile/1.jpg", 0.4)
 ```
 
-### 旋转图片对象 \(**image:turn\_left,right,upondown**\)
+### 旋转图片对象 \(**image\:turn\_left,right,upondown**\)
 
 #### 声明
 
@@ -451,7 +451,7 @@ screen.image():save_to_jpeg_file("/var/mobile/1.jpg", 0.4)
 此过程不产生数据拷贝。
 :::
 
-### 缩放图片对象 \(**image:resize**\)
+### 缩放图片对象 \(**image\:resize**\)
 
 #### 声明
 
@@ -469,7 +469,7 @@ screen.image():save_to_jpeg_file("/var/mobile/1.jpg", 0.4)
 此函数基于 Apple 的 [Accelerate](https://developer.apple.com/documentation/accelerate) 框架实现，因此在 iOS 上运行效率较高。调用过程会产生数据拷贝。
 :::
 
-### OpenCV 缩放图片对象 \(**image:cv\_resize**\)
+### OpenCV 缩放图片对象 \(**image\:cv\_resize**\)
 
 #### 声明
 
@@ -487,7 +487,7 @@ screen.image():save_to_jpeg_file("/var/mobile/1.jpg", 0.4)
 此函数基于 [OpenCV](https://opencv.org/) 的 [`cv::resize`](https://docs.opencv.org/3.4/da/d54/group__imgproc__transform.html#ga47a974309e9102f5f08231edc7e7529d) 函数实现，调用过程会产生数据拷贝。
 :::
 
-### 翻转图片对象 \(**image:flip**\)
+### 翻转图片对象 \(**image\:flip**\)
 
 #### 声明
 
@@ -507,7 +507,7 @@ screen.image():save_to_jpeg_file("/var/mobile/1.jpg", 0.4)
 此函数基于 Apple 的 [Accelerate](https://developer.apple.com/documentation/accelerate) 框架实现，因此在 iOS 上运行效率较高。调用过程会产生数据拷贝。
 :::
 
-### OpenCV 翻转图片对象 \(**image:cv\_flip**\)
+### OpenCV 翻转图片对象 \(**image\:cv\_flip**\)
 
 #### 声明
 
@@ -527,7 +527,7 @@ screen.image():save_to_jpeg_file("/var/mobile/1.jpg", 0.4)
 此函数基于 [OpenCV](https://opencv.org/) 的 [`cv::flip`](https://docs.opencv.org/3.4/d2/de8/group__core__array.html#gaca7be533e3dac7feb70fc60635adf441) 和 [`cv::rotate`](https://docs.opencv.org/3.4/d2/de8/group__core__array.html#ga4ad01c0978b0ce64baa246811deeac24) 实现，调用过程会产生数据拷贝。
 :::
 
-### 获取图片对象某点颜色 \(**image:get\_color**\)
+### 获取图片对象某点颜色 \(**image\:get\_color**\)
 
 #### 声明
 
@@ -557,7 +557,7 @@ local clr = img:get_color(100, 100)
 sys.alert(string.format("图像上坐标 (100, 100) 的颜色为：0x%06x", clr))
 ```
 
-### 设置图片对象某点颜色 \(**image:set\_color**\)
+### 设置图片对象某点颜色 \(**image\:set\_color**\)
 
 #### 声明
 
@@ -577,7 +577,7 @@ sys.alert(string.format("图像上坐标 (100, 100) 的颜色为：0x%06x", clr)
 
 设置图片对象某点颜色。
 
-### 颜色替换 \(**image:replace\_color**\)
+### 颜色替换 \(**image\:replace\_color**\)
 
 #### 声明
 
@@ -599,7 +599,7 @@ sys.alert(string.format("图像上坐标 (100, 100) 的颜色为：0x%06x", clr)
 
 将图片对象上某种颜色（或及近似色）替换为另外的颜色，通常用于背景色移除或替换。
 
-### 图中贴图 \(**image:draw\_image**\)
+### 图中贴图 \(**image\:draw\_image**\)
 
 #### 声明
 
@@ -654,7 +654,7 @@ img:draw_image(txt, {
 })
 ```
 
-### OpenCV 阈值法二值化 \(**image:cv\_binarization**\)
+### OpenCV 阈值法二值化 \(**image\:cv\_binarization**\)
 
 #### 声明
 
@@ -677,7 +677,7 @@ img:draw_image(txt, {
 此方法是 [OpenCV](https://opencv.org/) 的 [cv::threshold](https://docs.opencv.org/3.4/d7/d4d/tutorial_py_thresholding.html) 方法的封装。
 :::
 
-### OpenCV 自适应二值化 \(**image:cv\_adaptive\_binarization**\)
+### OpenCV 自适应二值化 \(**image\:cv\_adaptive\_binarization**\)
 
 #### 声明
 
@@ -705,7 +705,7 @@ img:draw_image(txt, {
 此函数调用是 [OpenCV](https://opencv.org/) 的 [cv::adaptiveThreshold](https://docs.opencv.org/3.4/d7/d4d/tutorial_py_thresholding.html) 方法的封装。
 :::
 
-### 色偏法二值化 \(**image:binaryzation**\)
+### 色偏法二值化 \(**image\:binaryzation**\)
 
 #### 声明 1
 
@@ -748,7 +748,7 @@ local pic = screen.image(462, 242, 569, 272)
 pic = pic:binaryzation("9D5D39-0F1F26,D3D3D2-2C2C2D")
 ```
 
-### GPU 加速二值化 \(**image:binarization**\)
+### GPU 加速二值化 \(**image\:binarization**\)
 
 #### 声明
 
@@ -771,7 +771,7 @@ pic = pic:binaryzation("9D5D39-0F1F26,D3D3D2-2C2C2D")
 此方法是 Apple 提供的 [Vision](https://developer.apple.com/documentation/vision) 框架的 [`vImageConvert_Planar8toPlanar1`](https://developer.apple.com/documentation/accelerate/1533024-vimageconvert_planar8toplanar1) 方法的封装。
 :::
 
-### 图片多点颜色匹配 \(**image:is\_colors**\)
+### 图片多点颜色匹配 \(**image\:is\_colors**\)
 
 #### 声明
 
@@ -785,7 +785,7 @@ pic = pic:binaryzation("9D5D39-0F1F26,D3D3D2-2C2C2D")
 
 #### [参考 `screen.is_colors` 说明](./screen.md#-屏幕多点颜色匹配-screenis_colors)
 
-### 图中找色 \(**image:find\_color**\)
+### 图中找色 \(**image\:find\_color**\)
 
 #### 声明
 
@@ -799,7 +799,7 @@ pic = pic:binaryzation("9D5D39-0F1F26,D3D3D2-2C2C2D")
 
 #### [参考 `screen.find_color` 说明](./screen.md#-多点相似度模式找色-screenfind_color)
 
-### OpenCV 图中找图 \(**image:cv_find\_image**\)
+### OpenCV 图中找图 \(**image\:cv_find\_image**\)
 
 #### 声明
 
@@ -826,7 +826,7 @@ pic = pic:binaryzation("9D5D39-0F1F26,D3D3D2-2C2C2D")
 - 不支持传入 **相似度** 及搜索区域。
 - 不会对 **小图像** 进行多比例缩放调整。
 
-### 图片光学字符识别 \(**image:ocr_text**\)
+### 图片光学字符识别 \(**image\:ocr_text**\)
 
 #### 常用声明
 
@@ -840,7 +840,7 @@ pic = pic:binaryzation("9D5D39-0F1F26,D3D3D2-2C2C2D")
 
 #### [参考 `screen.ocr_text` 说明](./screen.md#-屏幕光学字符识别-screenocr_text)
 
-### Tesseract 图片光学字符识别 \(**image:tess\_ocr**\)
+### Tesseract 图片光学字符识别 \(**image\:tess\_ocr**\)
 
 #### 声明 1
 
@@ -872,7 +872,7 @@ require("image.tesseract")  -- 需要提前加载
 
 #### [参考 `screen.tess_ocr` 说明](./screen.md#-tesseract-屏幕光学字符识别-screentess_ocr)
 
-### 图片二维码识别 \(**image:qr\_decode**\)
+### 图片二维码识别 \(**image\:qr\_decode**\)
 
 #### 常用声明
 
@@ -886,7 +886,7 @@ require("image.tesseract")  -- 需要提前加载
 
 #### [参考 `screen.qr_decode` 说明](./screen.md#-屏幕二维码识别-screenqr_decode)
 
-### 图片矩形检测 \(**image:detect\_rectangles**\)
+### 图片矩形检测 \(**image\:detect\_rectangles**\)
 
 #### 常用声明
 
