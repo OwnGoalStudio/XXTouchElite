@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="520" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#444" />
+    </marker>
+  </defs>
+  <style>
+    .frame { fill: none; stroke: #111; stroke-width: 6; }
+    .screen { fill: #fafafa; stroke: #ccc; stroke-width: 2; }
+    .port { fill: #888; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #222; font-size: 20px; }
+    .title { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111; font-weight: 600; font-size: 24px; }
+    .axis { stroke: #444; stroke-width: 3; marker-end: url(#arrow); }
+    .axisLabel { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #444; font-size: 18px; }
+  </style>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" class="title">iPad — Default Orientation (Charging Port on Right)</text>
+
+  <!-- iPad body -->
+  <g transform="translate(100,80)">
+    <rect class="frame" rx="28" ry="28" x="0" y="0" width="700" height="360"/>
+    <rect class="screen" rx="18" ry="18" x="20" y="20" width="660" height="320"/>
+    
+    <!-- Charging port on the right -->
+    <rect class="port" x="706" y="168" width="8" height="24" rx="3" ry="3"/>
+    <text x="680" y="160" class="axisLabel">Charging port →</text>
+
+    <!-- Axes inside screen -->
+    <g transform="translate(60,70)">
+      <!-- X axis (to right) -->
+      <line class="axis" x1="0" y1="0" x2="140" y2="0"/>
+      <text class="axisLabel" x="150" y="4">X →</text>
+      <!-- Y axis (down) -->
+      <line class="axis" x1="0" y1="0" x2="0" y2="140"/>
+      <text class="axisLabel" x="6" y="156">Y ↓</text>
+    </g>
+
+    <!-- Caption inside -->
+    <text x="350" y="250" text-anchor="middle" class="label">Default coordinate system</text>
+    <text x="350" y="276" text-anchor="middle" class="label">Face the screen; charging port is on the right</text>
+  </g>
+</svg>

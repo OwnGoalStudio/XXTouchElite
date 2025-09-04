@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#444" />
+    </marker>
+  </defs>
+  <style>
+    .frame { fill: none; stroke: #111; stroke-width: 6; }
+    .screen { fill: #fafafa; stroke: #ccc; stroke-width: 2; }
+    .accent { fill: #111; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #222; font-size: 20px; }
+    .title { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111; font-weight: 600; font-size: 24px; }
+    .axis { stroke: #444; stroke-width: 3; marker-end: url(#arrow); }
+    .axisLabel { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #444; font-size: 18px; }
+  </style>
+
+  <!-- Title -->
+  <text x="450" y="48" text-anchor="middle" class="title">iPhone — Default Orientation (Portrait)</text>
+
+  <!-- Phone body -->
+  <g transform="translate(300,70)">
+    <rect class="frame" rx="36" ry="36" x="0" y="0" width="300" height="500"/>
+    <rect class="screen" rx="24" ry="24" x="15" y="40" width="270" height="445"/>
+
+    <!-- Earpiece notch -->
+    <rect class="accent" x="130" y="16" width="40" height="6" rx="3" ry="3"/>
+    <text x="150" y="12" text-anchor="middle" class="axisLabel">Earpiece</text>
+
+    <!-- Axes inside screen -->
+    <g transform="translate(45,90)">
+      <!-- X axis -->
+      <line class="axis" x1="0" y1="0" x2="120" y2="0"/>
+      <text class="axisLabel" x="130" y="4">X →</text>
+      <!-- Y axis (down) -->
+      <line class="axis" x1="0" y1="0" x2="0" y2="120"/>
+      <text class="axisLabel" x="6" y="136">Y ↓</text>
+    </g>
+
+    <!-- Caption inside -->
+    <text x="150" y="420" text-anchor="middle" class="label">Default coordinate system</text>
+    <text x="150" y="446" text-anchor="middle" class="label">Used for screenshots, taps, record/replay, Script UI</text>
+  </g>
+</svg>
