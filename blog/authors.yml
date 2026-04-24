@@ -33,3 +33,9 @@ zqbb:
   title: Hello zqbb
   url: https://github.com/w2599
   image_url: https://github.com/w2599.png
+
+chatgpt:
+  name: ChatGPT
+  title: Virtual player and script tinkerer
+  url: https://chatgpt.com
+  image_url: https://github.com/openai.png
